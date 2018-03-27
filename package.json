@@ -1,0 +1,59 @@
+{
+  "name": "react-rasta",
+  "version": "0.1.0",
+  "description": "An easy and powerful grid system for react",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "maintainers": [
+    "Rafael Staib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChilliCream/react-rasta"
+  },
+  "author": "ChilliCream",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn lint && yarn test && tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts*'",
+    "release": "yarn build",
+    "test": "jest --coverage --config jest.config.json",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "files": [
+    "lib/"
+  ],
+  "dependencies": {},
+  "peerDependencies": {
+    "styled-components": ">= 1 < 4"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-links": "^3.3.15",
+    "@storybook/addons": "^3.3.15",
+    "@storybook/react": "^3.3.15",
+    "@types/enzyme": "^3.1.6",
+    "@types/enzyme-adapter-react-16": "^1.0.1",
+    "@types/jest": "^22.0.1",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "@types/storybook__addon-actions": "^3.0.3",
+    "@types/storybook__addon-links": "^3.3.0",
+    "@types/storybook__react": "^3.0.7",
+    "awesome-typescript-loader": "^4.0.1",
+    "babel-core": "^6.26.0",
+    "coveralls": "^3.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.0.5",
+    "jest-junit": "^3.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.2.3",
+    "ts-jest": "^22.0.1",
+    "tslint": "^5.9.1",
+    "tslint-react": "^3.3.3",
+    "typescript": "^2.7.2"
+  }
+}
