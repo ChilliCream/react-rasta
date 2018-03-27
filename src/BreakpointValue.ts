@@ -1,19 +1,19 @@
-export type AllowedValues = boolean | number | string;
+export type BreakpointValue<TValue extends PropertyValue> = TValue | BreakpointValues<TValue>;
 
-export type BreakpointValue<TValue extends AllowedValues> = TValue | BreakpointValues<TValue>;
-
-export interface BreakpointValues<TValue extends AllowedValues> {
+export interface BreakpointValues<TValue extends PropertyValue> {
   [key: string]: TValue;
 }
 
 export interface BreakpointValuesMap {
-  [propKey: string]: BreakpointValues<AllowedValues>;
-}
-
-export interface BreakpointValueMap {
   [key: string]: PropertyValues;
 }
 
+export type PropertyValue = boolean | number | string;
+
+export interface PropertyValuesMap {
+  [key: string]: BreakpointValues<PropertyValue>;
+}
+
 export interface PropertyValues {
-  [propKey: string]: AllowedValues;
+  [key: string]: PropertyValue;
 }

@@ -1,7 +1,6 @@
 import { SimpleInterpolation, InterpolationValue } from 'styled-components';
 import BreakpointMap from './BreakpointMap';
-import { AllowedValues, BreakpointValue, BreakpointValuesMap, BreakpointValueMap, BreakpointValues }
-  from './BreakpointValue';
+import { BreakpointValuesMap, PropertyValuesMap, PropertyValue } from './BreakpointValue';
 import { css, injectGlobal } from './StyledComponents';
 import { Theme } from './Theme';
 
@@ -35,28 +34,42 @@ export function _ensureInjectingGlobal() {
   }
 }
 
-export function _map(valueMaps?: BreakpointValuesMap): BreakpointValueMap | null {
-  if (valueMaps != null) {
-    const propertyKeys = Object.keys(valueMaps);
-    const valueMap: BreakpointValueMap = {};
+export function _map(source?: PropertyValuesMap): BreakpointValuesMap | null {
+  if (source != null) {
+    const propertyKeys = Object.keys(source).filter(key => source[key] != null);
+    const destination: BreakpointValuesMap = {};
 
     for (let i = 0; i < propertyKeys.length; i++) {
       const propertyKey = propertyKeys[i];
-      const values = valueMaps[propertyKey];
+      const values = source[propertyKey];
       const breakpointKeys = Object.keys(values);
 
       for (let j = 0; j < breakpointKeys.length; j++) {
         const breakpointKey = breakpointKeys[j];
 
-        valueMap[breakpointKey] = valueMap[breakpointKey] || {};
-        valueMap[breakpointKey][propertyKey] = values[breakpointKey];
+        destination[breakpointKey] = destination[breakpointKey] || {};
+        destination[breakpointKey][propertyKey] = values[breakpointKey];
       }
     }
 
-    return valueMap;
+    return destination;
   }
 
   return null;
+}
+
+export interface RenderProvider {
+  [key: string]: (value?: PropertyValue) => string;
+}
+
+export function _render(valueMap: PropertyValuesMap, breakpoints: BreakpointMap, renderer: RenderProvider): string {
+  const values = _map(valueMap) || {};
+  const keys = Object.keys(values).filter(key => breakpoints[key] != null && typeof values[key] === 'object');
+  const propertyKeys = Object.keys(valueMap).filter(key => renderer[key] != null);
+
+  return keys.reduce((acc, key) => acc += _resolve(breakpoints, key)`
+    ${propertyKeys.reduce((acc2, key2) => acc2 += renderer[key2](values[key] && values[key][key2]), '')}
+  `, '');
 }
 
 export function _resolve(breakpoints: BreakpointMap, key: string) {

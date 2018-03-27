@@ -1,3 +1,5 @@
+import { Theme } from './Theme';
+
 export default interface BreakpointMap {
   [key: string]: number;
 }
@@ -9,3 +11,7 @@ export const defaultBreakpoints: BreakpointMap = {
   'lg': 992, // 960
   'xl': 1200 // 1140
 };
+
+export function _getBreakpoints(theme?: Theme): BreakpointMap {
+  return theme!.breakpoints || defaultBreakpoints;
+}

@@ -3,11 +3,11 @@ import * as _React from 'react';
 import * as _StyledComponents from 'styled-components';
 // -------------------------------------------------------------------
 import { InterpolationValue } from 'styled-components';
-import { defaultBreakpoints } from './BreakpointMap';
-import { BreakpointValue, BreakpointValues, BreakpointValuesMap } from './BreakpointValue';
+import { _getBreakpoints } from './BreakpointMap';
+import { BreakpointValue, BreakpointValues, PropertyValue } from './BreakpointValue';
 import styled from './StyledComponents';
 import ThemeProperties, { Theme } from './Theme';
-import { _getGutterWidth, _resolve, _ensureInjectingGlobal, _map } from './Utilities';
+import { _getGutterWidth, _ensureInjectingGlobal, _render } from './Utilities';
 
 export type ColumnSize = 'auto' | 'none' | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type ColumnOrder = 'first' | 'last' | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
@@ -26,39 +26,24 @@ const Column = styled.div.attrs({
 
   ${
     (props: ColumnProperties) => {
-      const breakpoints = props!.theme!.breakpoints || defaultBreakpoints;
-      const orderValues = props!.order as BreakpointValues<ColumnOrder>;
-      const sizeValues = props!.size as BreakpointValues<ColumnSize>;
-      const valueMap: BreakpointValuesMap = {};
+      const breakpoints = _getBreakpoints(props!.theme);
+      const renderer = {
+        order: (value?: PropertyValue) => _renderOrder(value as ColumnOrder),
+        size: (value?: PropertyValue) => _renderSize(value as ColumnSize)
+      };
+      const valueMap = {
+        order: props!.order as BreakpointValues<ColumnOrder>,
+        size: props!.size as BreakpointValues<ColumnSize>
+      };
       const width = _getGutterWidth(props.theme);
-      
-      if (orderValues != null) {
-        valueMap.order = orderValues;
-      }
-      
-      if (sizeValues != null) {
-        valueMap.size = sizeValues;
-      }
-
-      const values = _map(valueMap) || {};
-      const keys = Object.keys(values).filter(key => breakpoints[key] != null);
-
-      console.log(valueMap);
-      console.log(values);
-      console.log(keys);
 
       return `
         padding-right: ${width}px;
         padding-left: ${width}px;
 
-        ${
-          keys.reduce((acc, key) => acc += _resolve(breakpoints, key)`
-            ${_renderOrder(values[key]!.order as ColumnOrder)}
-            ${_renderSize(values[key]!.size as ColumnSize)}
-          `, '')
-        }
-        ${_renderOrder(props.order as ColumnOrder)}
-        ${_renderSize(props.size as ColumnSize)}
+        ${_render(valueMap, breakpoints, renderer)}
+        ${_renderOrder(props!.order as ColumnOrder)}
+        ${_renderSize(props!.size as ColumnSize)}
       `;
     }
   }
@@ -66,13 +51,13 @@ const Column = styled.div.attrs({
 
 export default Column;
 
-function _renderOrder(order?: ColumnOrder | -1 | 13): string {
-  if (order == null) {
+function _renderOrder(order?: ColumnOrder | 0 | 13): string {
+  if (order == null || typeof order === 'object') {
     return '';
   }
 
   if (order === 'first') {
-    return _renderOrder(-1);
+    return _renderOrder(0);
   }
 
   if (order === 'last') {
@@ -91,7 +76,7 @@ function _renderOrder(order?: ColumnOrder | -1 | 13): string {
 }
 
 function _renderSize(size?: ColumnSize): string {
-  if (size == null || size < 1 || size > 12) {
+  if (size == null || typeof size === 'object' || size < 1 || size > 12) {
     return '';
   }
 
@@ -117,7 +102,7 @@ function _renderSize(size?: ColumnSize): string {
   }
 
   const percentage = (size / 12 * 100).toFixed(6);
-
+  console.log(size);
   return `
     -webkit-box-flex: 0;
     -ms-flex: 0 0 ${percentage}%;
