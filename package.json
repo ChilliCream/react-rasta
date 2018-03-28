@@ -15,11 +15,11 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn lint && yarn test && tsc",
+    "build-storybook": "build-storybook",
     "lint": "tslint -c tslint.json 'src/**/*.ts*'",
     "release": "yarn build",
-    "test": "jest --coverage --config jest.config.json",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "test": "jest --coverage --config jest.config.json"
   },
   "files": [
     "lib/"

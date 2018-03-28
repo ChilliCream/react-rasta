@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      - YOURPACKAGE_COVERAGE: 1
     working_directory: ~/tmp
     docker:
       - image: circleci/node:7
