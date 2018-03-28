@@ -6,10 +6,8 @@ import { Theme } from './Theme';
 
 let _initialized: boolean = false;
 
-export function _getGutterWidth(theme?: Theme) {
-  const gutterWidth = theme!.gutterWidth || 30;
-
-  return gutterWidth / 2;
+export function _css(strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]): string {
+  return css(strings, ...interpolations).join('') as string;
 }
 
 export function _ensureInjectingGlobal() {
@@ -32,6 +30,12 @@ export function _ensureInjectingGlobal() {
     `;
     _initialized = true;
   }
+}
+
+export function _getGutterWidth(theme?: Theme) {
+  const gutterWidth = theme!.gutterWidth || 30;
+
+  return gutterWidth / 2;
 }
 
 export function _map(source?: PropertyValuesMap): BreakpointValuesMap | null {
@@ -77,14 +81,14 @@ export function _resolve(breakpoints: BreakpointMap, key: string) {
     const minWidth = breakpoints[key];
 
     if (minWidth == null || minWidth === 0) {
-      return _toString(css(strings, ...interpolations));
+      return _css(strings, ...interpolations);
     }
 
-    return _toString(css`
+    return _css`
       @media (min-width: ${minWidth}px) {
         ${css(strings, ...interpolations)}
       }
-    `);
+    `;
   };
 }
 

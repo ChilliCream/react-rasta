@@ -2,11 +2,11 @@
 import * as _React from 'react';
 import * as _StyledComponents from 'styled-components';
 // -------------------------------------------------------------------
-import { defaultBreakpoints } from './BreakpointMap';
-import { BreakpointValue, BreakpointValues } from './BreakpointValue';
+import { _getBreakpoints } from './BreakpointMap';
+import { BreakpointValue, BreakpointValues, PropertyValue } from './BreakpointValue';
 import ThemeProperties, { Theme } from './Theme';
 import styled from './StyledComponents';
-import { _getGutterWidth, _resolve, _ensureInjectingGlobal } from './Utilities';
+import { _getGutterWidth, _ensureInjectingGlobal, _render } from './Utilities';
 
 export interface ContainerProperties extends ThemeProperties {
   fluid?: BreakpointValue<boolean>;
@@ -22,24 +22,50 @@ const defaultWidth: BreakpointValues<number> = {
 
 const Container = styled.div`
   width: 100%;
-  padding-right: ${(props: ContainerProperties) => _getGutterWidth(props.theme)}px;
-  padding-left: ${(props: ContainerProperties) => _getGutterWidth(props.theme)}px;
   margin-right: auto;
   margin-left: auto;
 
-  ${(props: ContainerProperties) => (props.fluid) ? '' : _renderWidth(props.theme, props.width)}
+  ${
+    (props: ContainerProperties) => {
+      const width = _getGutterWidth(props.theme);
+
+      return `
+        padding-right: ${width}px;
+        padding-left: ${width}px;
+      `;
+    }
+  }
+  ${
+    (props: ContainerProperties) => {
+      if (props.fluid) {
+        return '';
+      } else {
+        const breakpoints = _getBreakpoints(props!.theme);
+        const renderer = {
+          width: (value?: PropertyValue) => _renderWidth(value as number)
+        };
+        const valueMap = {
+          width: props!.width || defaultWidth
+        };
+
+        return `
+          ${_render(valueMap, breakpoints, renderer)}
+        `;
+      }
+    }
+  }
 `;
 
 export default Container;
 
-function _renderWidth(theme?: Theme, width?: BreakpointValues<number>): string {
-  const breakpoints = theme!.breakpoints || defaultBreakpoints;
-  const values = width || defaultWidth;
-  const keys = Object.keys(values).filter(key => breakpoints[key] != null && breakpoints[key] > 0);
+function _renderWidth(width?: number): string {
+  if (width != null && typeof width === 'number') {
+    return `
+      max-width: ${width}px;
+    `;
+  }
 
-  return keys.reduce((acc, key) => acc += _resolve(breakpoints, key)`
-    max-width: ${values[key]}px;
-  `, '');
+  return '';
 }
 
 _ensureInjectingGlobal();

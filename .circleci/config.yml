@@ -1,14 +1,9 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/tmp
     docker:
-      - image: circleci/node:7.10
-
-    environment:
-      - YOURPACKAGE_COVERAGE: 1
-
-    working_directory: /project
-
+      - image: circleci/node:7
     steps:
       - checkout
 

@@ -17,9 +17,7 @@ export interface ColumnProperties extends ThemeProperties {
   size?: BreakpointValue<ColumnSize>;
 }
 
-const Column = styled.div.attrs({
-  className: 'rr-column'
-})`
+const Column = styled.div`
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -52,24 +50,22 @@ const Column = styled.div.attrs({
 export default Column;
 
 function _renderOrder(order?: ColumnOrder | 0 | 13): string {
-  if (order == null || typeof order === 'object') {
-    return '';
-  }
+  if (order != null && typeof order !== 'object') {
+    if (order === 'first') {
+      return _renderOrder(0);
+    }
 
-  if (order === 'first') {
-    return _renderOrder(0);
-  }
+    if (order === 'last') {
+      return _renderOrder(13);
+    }
 
-  if (order === 'last') {
-    return _renderOrder(13);
-  }
-
-  if (typeof order === 'number') {
-    return `
-      -webkit-box-ordinal-group: ${order};
-      -ms-flex-order: ${order - 1};
-      order: ${order - 1};
-    `;
+    if (typeof order === 'number') {
+      return `
+        -webkit-box-ordinal-group: ${order};
+        -ms-flex-order: ${order - 1};
+        order: ${order - 1};
+      `;
+    }
   }
 
   return '';
@@ -102,7 +98,7 @@ function _renderSize(size?: ColumnSize): string {
   }
 
   const percentage = (size / 12 * 100).toFixed(6);
-  console.log(size);
+
   return `
     -webkit-box-flex: 0;
     -ms-flex: 0 0 ${percentage}%;
