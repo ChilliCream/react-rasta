@@ -44,12 +44,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - build:
-        filters:
-          branches:
-            only: /.*/
-          tags:
-            only: /^\d+\.\d+\.\d+(\-\w*?.\d+)?$/
+      - build
       - cover:
         requires:
           - build
@@ -62,5 +57,7 @@ workflows:
         requires:
           - cover
         filters:
+          branches:
+            only: master
           tags:
             only: /^\d+\.\d+\.\d+(\-\w*?.\d+)?$/
