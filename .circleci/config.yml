@@ -45,12 +45,19 @@ workflows:
   build:
     jobs:
       - build
+        filters:
+          branches:
+            only: *
+          tags:
+            only: /^\d+\.\d+\.\d+(\-\w*?.\d+)?$/
       - cover:
         requires:
           - build
         filters:
           branches:
             only: master
+          tags:
+            only: /^\d+\.\d+\.\d+(\-\w*?.\d+)?$/
       - deploy:
         requires:
           - cover
