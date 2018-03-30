@@ -47,7 +47,7 @@ workflows:
       - build:
         filters:
           branches:
-            only: *
+            only: /.*/
           tags:
             only: /^\d+\.\d+\.\d+(\-\w*?.\d+)?$/
       - cover:
