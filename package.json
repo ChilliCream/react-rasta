@@ -1,6 +1,6 @@
 {
   "name": "react-rasta",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "An easy and powerful grid system for react",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -16,8 +16,8 @@
   "scripts": {
     "build": "yarn lint && yarn test && tsc",
     "build-storybook": "build-storybook",
+    "cover": "./node_modules/coveralls/bin/coveralls.js",
     "lint": "tslint -c tslint.json 'src/**/*.ts*'",
-    "release": "yarn build",
     "storybook": "start-storybook -p 6006",
     "test": "jest --coverage --config jest.config.json"
   },
@@ -47,7 +47,6 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.0.5",
-    "jest-junit": "^3.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "styled-components": "^3.2.3",

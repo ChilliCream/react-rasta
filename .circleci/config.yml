@@ -1,11 +1,9 @@
 version: 2
 jobs:
   build:
-    environment:
-      - YOURPACKAGE_COVERAGE: 1
     working_directory: ~/tmp
     docker:
-      - image: circleci/node:7
+      - image: circleci/node:8
     steps:
       - checkout
 
@@ -24,4 +22,38 @@ jobs:
 
       - run: yarn build
 
-      - run: coveralls
+  cover:
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:8
+    steps:
+      - run: yarn cover
+      - store_test_results:
+          path: coverage
+
+  deploy:
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:8
+    steps:
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/tmp/.npmrc
+      - run: yarn version --new-version $CIRCLE_TAG --no-git-tag-version 
+      - run: yarn publish
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+      - cover:
+        requires:
+          - build
+        filters:
+          branches:
+            only: master
+      - deploy:
+        requires:
+          - cover
+        filters:
+          tags:
+            only: /^\d+\.\d+\.\d+(\-\w*?.\d+)?$/
