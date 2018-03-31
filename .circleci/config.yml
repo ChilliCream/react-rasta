@@ -28,8 +28,6 @@ jobs:
       - image: circleci/node:8
     steps:
       - run: yarn cover
-      - store_test_results:
-          path: coverage
 
   deploy:
     working_directory: ~/tmp
