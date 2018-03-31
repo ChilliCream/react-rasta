@@ -1,0 +1,59 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: yarn build
+
+  cover:
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:8
+    steps:
+      - run: yarn cover
+
+  deploy:
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:8
+    steps:
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/tmp/.npmrc
+      - run: yarn version --new-version $CIRCLE_TAG --no-git-tag-version 
+      - run: yarn publish
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - cover:
+        requires:
+          - build
+        filters:
+          branches:
+            only: master
+      - deploy:
+        requires:
+          - cover
+        filters:
+          branches:
+            only: master
+          tags:
+            only: /^\d+\.\d+\.\d+(\-\w*?.\d+)?$/

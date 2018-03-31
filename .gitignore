@@ -1,0 +1,21 @@
+# Build
+lib/
+node_modules/
+
+# Editors & OS
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Test
+coverage/
+test/
+junit.xml
+
+# Output
+*.js
+*.js.map
+*.d.ts

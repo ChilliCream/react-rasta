@@ -1,0 +1,19 @@
+{
+  "coverageReporters": [
+    "cobertura",
+    "lcov"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json",
+    "node"
+  ],
+  "testRegex": ".*?\\.(test|spec)\\.(jsx?|tsx?)$",
+  "testResultsProcessor": "jest-junit",
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  }
+}
