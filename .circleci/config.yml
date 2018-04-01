@@ -30,7 +30,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: yarn install
-      - run: yarn test
+      - run: yarn build
       - run: yarn cover
 
   deploy:
@@ -47,8 +47,7 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/tmp/.npmrc
-      - run: yarn version --new-version ${CIRCLE_TAG} --no-git-tag-version 
-      - run: yarn publish
+      - run: yarn publish --new-version ${CIRCLE_TAG}
 
 workflows:
   version: 2
@@ -56,15 +55,19 @@ workflows:
     jobs:
       - build:
           filters:
+            branches:
+              ignore: master
             tags:
               ignore: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
+  build_and_cover:
+    jobs:
       - cover:
           filters:
             branches:
               only: master
             tags:
               ignore: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
-  deploy:
+  build_and_deploy:
     jobs:
       - deploy:
           filters:
