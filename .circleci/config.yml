@@ -64,5 +64,7 @@ workflows:
             - build
             - cover
           filters:
+            branches:
+              only: master
             tags:
               only: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
