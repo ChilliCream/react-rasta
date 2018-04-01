@@ -52,19 +52,23 @@ jobs:
 
 workflows:
   version: 2
-  build_and_deploy:
+  build:
     jobs:
-      - build
+      - build:
+          filters:
+            tags:
+              ignore: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
       - cover:
           filters:
             branches:
               only: master
+            tags:
+              ignore: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
+  deploy:
+    jobs:
       - deploy:
-          requires:
-            - build
-            - cover
           filters:
             branches:
-              only: master
+              ignore: /.*/
             tags:
               only: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
