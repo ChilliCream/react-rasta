@@ -16,7 +16,7 @@
   "scripts": {
     "build": "yarn lint && yarn test && tsc",
     "build-storybook": "build-storybook",
-    "cover": "./node_modules/coveralls/bin/coveralls.js",
+    "cover": "coveralls < coverage/lcov.info",
     "lint": "tslint -c tslint.json 'src/**/*.ts*'",
     "storybook": "start-storybook -p 6006",
     "test": "jest --coverage --config jest.config.json"
