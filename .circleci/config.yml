@@ -46,8 +46,8 @@ jobs:
           - v1-dependencies-
       - run: yarn install
       - run: yarn build
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/tmp/.npmrc
-      - run: yarn version --new-version $CIRCLE_TAG --no-git-tag-version 
+      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/tmp/.npmrc
+      - run: yarn version --new-version ${CIRCLE_TAG} --no-git-tag-version 
       - run: yarn publish
 
 workflows:
