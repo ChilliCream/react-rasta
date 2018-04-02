@@ -5,7 +5,7 @@
 
 A grid system for *React* projects to keep the layout structured and responsive.
 
-*React Rasta* is a 12 column grid system and works underneath with the *CSS flexbox* layout and is built with *styled components*. But because it can be difficult to work with *CSS flexbox*, *React Rasta* offers a simple *API* so you don't have to worry about that.
+*React Rasta* is a 12 column grid system and works underneath with the *CSS flexbox* layout. But because it can be difficult to work with *CSS flexbox*, *React Rasta* offers a simple *API* so you don't have to worry about that.
 
 ## Getting Started
 
