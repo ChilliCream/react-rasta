@@ -1,11 +1,36 @@
-import { BreakpointValuesMap } from './BreakpointValue';
-import { _map } from './Utilities';
+import { PropertyValuesMap } from './BreakpointValue';
+import { Theme } from './Theme';
+import { _getGutterWidth, _map } from './Utilities';
 
 describe('Utilities', () => {
-  describe('_map', () => {
-    it('Should return a valid map', () => {
+  describe('_getGutterWidth', () => {
+    it('Should return 15 if the theme is specified but gutterWidth is undefined', () => {
       // arrange
-      const input: BreakpointValuesMap = {
+      const theme: Theme = {};
+
+      // act
+      const output = _getGutterWidth(theme);
+
+      // arrange
+      expect(output).toEqual(15);
+    });
+
+    it('Should return 20 if the theme is specified and gutter width is set to 40', () => {
+      // arrange
+      const theme: Theme = { gutterWidth: 40 };
+
+      // act
+      const output = _getGutterWidth(theme);
+
+      // arrange
+      expect(output).toEqual(20);
+    });
+  });
+
+  describe('_map', () => {
+    it('Should map a PropertyValuesMap to BreakpointValuesMap', () => {
+      // arrange
+      const input: PropertyValuesMap = {
         'number': {
           'xs': 540,
           'md': 670

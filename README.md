@@ -51,7 +51,7 @@ export default class App extends React.Component {
                         Middle 2
                     </Column>
                     <Column size={3}>
-                        Left
+                        Right
                     </Column>
                 </Row>
             </Container>
