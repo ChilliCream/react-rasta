@@ -1,4 +1,8 @@
 {
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!src/**/*.story.{js,jsx,ts,tsx}"
+  ],
   "coverageReporters": [
     "cobertura",
     "lcov"
@@ -11,7 +15,7 @@
     "json",
     "node"
   ],
-  "testRegex": ".*?\\.(test|spec)\\.(jsx?|tsx?)$",
+  "testRegex": ".*?\\.(spec|test)\\.(jsx?|tsx?)$",
   "testResultsProcessor": "jest-junit",
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
