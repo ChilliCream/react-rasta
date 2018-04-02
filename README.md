@@ -3,7 +3,9 @@
 ![package](https://img.shields.io/npm/v/react-rasta.svg)](https://www.npmjs.com/package/react-rasta) [![license](https://img.shields.io/github/license/ChilliCream/react-rasta.svg)](https://github.com/ChilliCream/react-rasta/blob/master/LICENSE) 
 [![build](https://img.shields.io/circleci/project/github/ChilliCream/react-rasta.svg)](https://circleci.com/gh/ChilliCream/react-rasta/tree/master) [![coverage](https://img.shields.io/coveralls/ChilliCream/react-rasta.svg)](https://coveralls.io/github/ChilliCream/react-rasta?branch=master)
 
-A grid system for *React* projects to keep the page layout responsive and structured.
+A grid system for *React* projects to keep the layout structured and responsive.
+
+*React Rasta* is a 12 column grid system and works underneath with the *CSS flexbox* layout and is built with *styled components*. But because it can be difficult to work with *CSS flexbox*, *React Rasta* offers a simple *API* so you don't have to worry about that.
 
 ## Getting Started
 
@@ -13,13 +15,13 @@ Here you will find what is needed to get started.
 
 First things first. Install the package `react-rasta` with *yarn* or *npm*.
 
-When using *yarn* looks like this.
+When using *yarn* it looks like this.
 
 ```powershell
 yarn add react-rasta
 ```
 
-And when using *npm* looks like this.
+And when using *npm* it looks like this.
 
 ```powershell
 npm install react-rasta
