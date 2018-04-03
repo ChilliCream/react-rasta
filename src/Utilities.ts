@@ -1,13 +1,20 @@
-import { SimpleInterpolation, InterpolationValue } from 'styled-components';
-import BreakpointMap from './BreakpointMap';
-import { BreakpointValuesMap, PropertyValuesMap, PropertyValue } from './BreakpointValue';
-import { css, injectGlobal } from './StyledComponents';
-import { Theme } from './Theme';
+import { SimpleInterpolation, InterpolationValue } from "styled-components";
+import BreakpointMap from "./BreakpointMap";
+import {
+  BreakpointValuesMap,
+  PropertyValuesMap,
+  PropertyValue
+} from "./BreakpointValue";
+import { css, injectGlobal } from "./StyledComponents";
+import { Theme } from "./Theme";
 
 let _initialized: boolean = false;
 
-export function _css(strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]): string {
-  return css(strings, ...interpolations).join('') as string;
+export function _css(
+  strings: TemplateStringsArray,
+  ...interpolations: SimpleInterpolation[]
+): string {
+  return css(strings, ...interpolations).join("") as string;
 }
 
 export function _ensureInjectingGlobal() {
@@ -66,18 +73,37 @@ export interface RenderProvider {
   [key: string]: (value?: PropertyValue) => string;
 }
 
-export function _render(valueMap: PropertyValuesMap, breakpoints: BreakpointMap, renderer: RenderProvider): string {
+export function _render(
+  valueMap: PropertyValuesMap,
+  breakpoints: BreakpointMap,
+  renderer: RenderProvider
+): string {
   const values = _map(valueMap) || {};
-  const keys = Object.keys(values).filter(key => breakpoints[key] != null && typeof values[key] === 'object');
-  const propertyKeys = Object.keys(valueMap).filter(key => renderer[key] != null);
+  const keys = Object.keys(values).filter(
+    key => breakpoints[key] != null && typeof values[key] === "object"
+  );
+  const propertyKeys = Object.keys(valueMap).filter(
+    key => renderer[key] != null
+  );
 
-  return keys.reduce((acc, key) => acc += _resolve(breakpoints, key)`
-    ${propertyKeys.reduce((acc2, key2) => acc2 += renderer[key2](values[key] && values[key][key2]), '')}
-  `, '');
+  return keys.reduce(
+    (acc, key) =>
+      (acc += _resolve(breakpoints, key)`
+    ${propertyKeys.reduce(
+      (acc2, key2) =>
+        (acc2 += renderer[key2](values[key] && values[key][key2])),
+      ""
+    )}
+  `),
+    ""
+  );
 }
 
 export function _resolve(breakpoints: BreakpointMap, key: string) {
-  return (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]): string => {
+  return (
+    strings: TemplateStringsArray,
+    ...interpolations: SimpleInterpolation[]
+  ): string => {
     const minWidth = breakpoints[key];
 
     if (minWidth == null || minWidth === 0) {
@@ -93,5 +119,5 @@ export function _resolve(breakpoints: BreakpointMap, key: string) {
 }
 
 function _toString(from: InterpolationValue[]): string {
-  return from.join('') as string;
+  return from.join("") as string;
 }

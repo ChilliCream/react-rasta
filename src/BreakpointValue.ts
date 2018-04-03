@@ -1,4 +1,6 @@
-export type BreakpointValue<TValue extends PropertyValue> = TValue | BreakpointValues<TValue>;
+export type BreakpointValue<TValue extends PropertyValue> =
+  | TValue
+  | BreakpointValues<TValue>;
 
 export interface BreakpointValues<TValue extends PropertyValue> {
   [key: string]: TValue;

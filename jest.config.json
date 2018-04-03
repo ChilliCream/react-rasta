@@ -3,18 +3,8 @@
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/**/*.story.{js,jsx,ts,tsx}"
   ],
-  "coverageReporters": [
-    "cobertura",
-    "lcov"
-  ],
-  "moduleFileExtensions": [
-    "ts",
-    "tsx",
-    "js",
-    "jsx",
-    "json",
-    "node"
-  ],
+  "coverageReporters": ["cobertura", "lcov"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
   "testRegex": ".*?\\.(spec|test)\\.(jsx?|tsx?)$",
   "testResultsProcessor": "jest-junit",
   "transform": {

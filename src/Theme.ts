@@ -1,4 +1,4 @@
-import BreakpointMap from './BreakpointMap';
+import BreakpointMap from "./BreakpointMap";
 
 export interface Theme {
   breakpoints?: BreakpointMap;

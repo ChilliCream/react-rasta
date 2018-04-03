@@ -1,10 +1,10 @@
-import { PropertyValuesMap } from './BreakpointValue';
-import { Theme } from './Theme';
-import { _getGutterWidth, _map } from './Utilities';
+import { PropertyValuesMap } from "./BreakpointValue";
+import { Theme } from "./Theme";
+import { _getGutterWidth, _map } from "./Utilities";
 
-describe('Utilities', () => {
-  describe('_getGutterWidth', () => {
-    it('Should return 15 if the theme is specified but gutterWidth is undefined', () => {
+describe("Utilities", () => {
+  describe("_getGutterWidth", () => {
+    it("Should return 15 if the theme is specified but gutterWidth is undefined", () => {
       // arrange
       const theme: Theme = {};
 
@@ -15,7 +15,7 @@ describe('Utilities', () => {
       expect(output).toEqual(15);
     });
 
-    it('Should return 20 if the theme is specified and gutter width is set to 40', () => {
+    it("Should return 20 if the theme is specified and gutter width is set to 40", () => {
       // arrange
       const theme: Theme = { gutterWidth: 40 };
 
@@ -27,17 +27,17 @@ describe('Utilities', () => {
     });
   });
 
-  describe('_map', () => {
-    it('Should map a PropertyValuesMap to BreakpointValuesMap', () => {
+  describe("_map", () => {
+    it("Should map a PropertyValuesMap to BreakpointValuesMap", () => {
       // arrange
       const input: PropertyValuesMap = {
-        'number': {
-          'xs': 540,
-          'md': 670
+        number: {
+          xs: 540,
+          md: 670
         },
-        'string': {
-          'sm': 'value 1',
-          'md': 'value 2'
+        string: {
+          sm: "value 1",
+          md: "value 2"
         }
       };
 
@@ -46,15 +46,15 @@ describe('Utilities', () => {
 
       // arrange
       expect(output).toEqual({
-        'xs': {
-          'number': 540
+        xs: {
+          number: 540
         },
-        'sm': {
-          'string': 'value 1'
+        sm: {
+          string: "value 1"
         },
-        'md': {
-          'number': 670,
-          'string': 'value 2'
+        md: {
+          number: 670,
+          string: "value 2"
         }
       });
     });

@@ -18,11 +18,6 @@
     "noUnusedParameters": false,
     "declaration": true
   },
-  "include": [
-    "src/**/*.ts*"
-  ],
-  "exclude": [
-    "src/**/*.story.*",
-    "src/**/*.test.*"
-  ]
+  "include": ["src/**/*.ts*"],
+  "exclude": ["src/**/*.story.*", "src/**/*.test.*"]
 }
