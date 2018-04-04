@@ -1,7 +1,9 @@
-import BreakpointMap from './BreakpointMap';
+import BreakpointMap from "./BreakpointMap";
+import { BreakpointValues } from "./BreakpointValue";
 
 export interface Theme {
   breakpoints?: BreakpointMap;
+  containerWidth?: BreakpointValues<number>;
   gutterWidth?: number;
 }
 

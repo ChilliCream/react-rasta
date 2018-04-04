@@ -1,4 +1,8 @@
-export type BreakpointValue<TValue extends PropertyValue> = TValue | BreakpointValues<TValue>;
+import { ContainerProperties } from "./Container";
+
+export type BreakpointValue<TValue extends PropertyValue> =
+  | TValue
+  | BreakpointValues<TValue>;
 
 export interface BreakpointValues<TValue extends PropertyValue> {
   [key: string]: TValue;
@@ -16,4 +20,17 @@ export interface PropertyValuesMap {
 
 export interface PropertyValues {
   [key: string]: PropertyValue;
+}
+
+const defaultContainerWidth: BreakpointValues<number> = {
+  sm: 540,
+  md: 720,
+  lg: 960,
+  xl: 1140
+};
+
+export function _getContainerWidth(
+  props?: ContainerProperties
+): BreakpointValues<number> {
+  return props!.width || props!.theme!.containerWidth || defaultContainerWidth;
 }
