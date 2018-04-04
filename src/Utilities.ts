@@ -8,35 +8,11 @@ import {
 import { css, injectGlobal } from "./StyledComponents";
 import { Theme } from "./Theme";
 
-let _initialized: boolean = false;
-
 export function _css(
   strings: TemplateStringsArray,
   ...interpolations: SimpleInterpolation[]
 ): string {
   return css(strings, ...interpolations).join("") as string;
-}
-
-export function _ensureInjectingGlobal() {
-  if (!_initialized) {
-    injectGlobal`
-      @-ms-viewport {
-        width: device-width;
-      }
-
-      html {
-        box-sizing: border-box;
-        -ms-overflow-style: scrollbar;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
-    `;
-    _initialized = true;
-  }
 }
 
 export function _getGutterWidth(theme?: Theme) {

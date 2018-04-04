@@ -9,9 +9,10 @@ import {
   BreakpointValues,
   PropertyValue
 } from "./BreakpointValue";
+import "./Global";
 import styled from "./StyledComponents";
 import ThemeProperties, { Theme } from "./Theme";
-import { _getGutterWidth, _ensureInjectingGlobal, _render } from "./Utilities";
+import { _getGutterWidth, _render } from "./Utilities";
 
 export type ColumnSize =
   | "auto"
@@ -136,5 +137,3 @@ function _renderSize(size?: ColumnSize): string {
     max-width: ${percentage}%;
   `;
 }
-
-_ensureInjectingGlobal();

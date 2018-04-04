@@ -9,9 +9,10 @@ import {
   PropertyValue,
   _getContainerWidth
 } from "./BreakpointValue";
+import "./Global";
 import ThemeProperties, { Theme } from "./Theme";
 import styled from "./StyledComponents";
-import { _ensureInjectingGlobal, _getGutterWidth, _render } from "./Utilities";
+import { _getGutterWidth, _render } from "./Utilities";
 
 export interface ContainerProperties extends ThemeProperties {
   fluid?: BreakpointValue<boolean>;
@@ -60,5 +61,3 @@ function _renderWidth(width?: number): string {
 
   return "";
 }
-
-_ensureInjectingGlobal();

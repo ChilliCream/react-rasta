@@ -9,14 +9,10 @@ import {
   PropertyValue
 } from "./BreakpointValue";
 import Column from "./Column";
+import "./Global";
 import styled from "./StyledComponents";
 import ThemeProperties, { Theme } from "./Theme";
-import {
-  _getGutterWidth,
-  _ensureInjectingGlobal,
-  _render,
-  _css
-} from "./Utilities";
+import { _getGutterWidth, _render, _css } from "./Utilities";
 
 export interface RowProperties extends ThemeProperties {
   noGutter?: BreakpointValue<boolean>;
@@ -66,5 +62,3 @@ function _renderNoGutter(noGutter?: boolean): string {
 
   return "";
 }
-
-_ensureInjectingGlobal();
