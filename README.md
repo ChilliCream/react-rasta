@@ -2,7 +2,7 @@
 
 [![release](https://img.shields.io/github/release/ChilliCream/react-rasta.svg)](https://github.com/ChilliCream/react-rasta/releases) [
 ![package](https://img.shields.io/npm/v/react-rasta.svg)](https://www.npmjs.com/package/react-rasta) [![license](https://img.shields.io/github/license/ChilliCream/react-rasta.svg)](https://github.com/ChilliCream/react-rasta/blob/master/LICENSE)
-[![build](https://img.shields.io/circleci/project/github/ChilliCream/react-rasta.svg)](https://circleci.com/gh/ChilliCream/react-rasta/tree/master) [![coverage](https://img.shields.io/coveralls/ChilliCream/react-rasta.svg)](https://coveralls.io/github/ChilliCream/react-rasta?branch=master) (https://github.com/prettier/prettier) [![better code](https://bettercodehub.com/edge/badge/ChilliCream/react-rasta)](https://bettercodehub.com/results/ChilliCream/react-rasta) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)]
+[![build](https://img.shields.io/circleci/project/github/ChilliCream/react-rasta.svg)](https://circleci.com/gh/ChilliCream/react-rasta/tree/master) [![coverage](https://img.shields.io/coveralls/ChilliCream/react-rasta.svg)](https://coveralls.io/github/ChilliCream/react-rasta?branch=master) [![better code](https://bettercodehub.com/edge/badge/ChilliCream/react-rasta)](https://bettercodehub.com/results/ChilliCream/react-rasta) [![code prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 **The most powerful and flexible grid system for _React_**
 
