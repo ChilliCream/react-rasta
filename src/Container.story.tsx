@@ -2,9 +2,26 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
-import Column from "./Column";
-import Container from "./Container";
-import Row from "./Row";
+import {
+  BreakpointMap,
+  BreakpointValues,
+  Column,
+  Container,
+  Row,
+  ThemeProvider
+} from ".";
+
+const breakpoints: BreakpointMap = {
+  phone: 0,
+  tablet: 600,
+  desktop: 800
+};
+
+const containerWidth: BreakpointValues<number> = {
+  // do not specify phone here
+  tablet: 560,
+  desktop: 760
+};
 
 storiesOf("Container", module).add("default", () => (
   <div>
@@ -52,5 +69,15 @@ storiesOf("Container", module).add("default", () => (
         <Column>Auto</Column>
       </Row>
     </Container>
+    <ThemeProvider theme={{ breakpoints, containerWidth }}>
+      <Container>
+        <Row>
+          <Column size={3}>Left</Column>
+          <Column size={{ phone: 9, tablet: 3 }}>Middle 1</Column>
+          <Column size={{ phone: 9, tablet: 3 }}>Middle 2</Column>
+          <Column size={3}>Right</Column>
+        </Row>
+      </Container>
+    </ThemeProvider>
   </div>
 ));

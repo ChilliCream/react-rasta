@@ -4,7 +4,7 @@ export default interface BreakpointMap {
   [key: string]: number;
 }
 
-export const defaultBreakpoints: BreakpointMap = {
+const defaultBreakpoints: BreakpointMap = {
   xs: 0,
   sm: 576, // 540
   md: 768, // 720

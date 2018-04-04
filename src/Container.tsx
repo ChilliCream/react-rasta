@@ -6,23 +6,17 @@ import { _getBreakpoints } from "./BreakpointMap";
 import {
   BreakpointValue,
   BreakpointValues,
-  PropertyValue
+  PropertyValue,
+  _getContainerWidth
 } from "./BreakpointValue";
 import ThemeProperties, { Theme } from "./Theme";
 import styled from "./StyledComponents";
-import { _getGutterWidth, _ensureInjectingGlobal, _render } from "./Utilities";
+import { _ensureInjectingGlobal, _getGutterWidth, _render } from "./Utilities";
 
 export interface ContainerProperties extends ThemeProperties {
   fluid?: BreakpointValue<boolean>;
   width?: BreakpointValues<number>;
 }
-
-const defaultWidth: BreakpointValues<number> = {
-  sm: 540,
-  md: 720,
-  lg: 960,
-  xl: 1140
-};
 
 const Container = styled.div`
   width: 100%;
@@ -45,7 +39,7 @@ const Container = styled.div`
         width: (value?: PropertyValue) => _renderWidth(value as number)
       };
       const valueMap = {
-        width: props!.width || defaultWidth
+        width: _getContainerWidth(props)
       };
 
       return `
