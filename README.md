@@ -12,7 +12,7 @@ so you don't have to worry about that.
 
 ## Getting Started
 
-Here you will find what is needed to get started.
+Here you will find all you need to get started quickly.
 
 ### Install Package
 
@@ -32,7 +32,7 @@ npm install react-rasta
 
 ### Code Example
 
-_React Rasta_ implements all features from the _bootstrap_ grid system and adds more flexibility on top of it.
+_React Rasta_ implements all features from the _Bootstrap_ grid system and adds more flexibility on top of it.
 
 ```tsx
 //App.tsx

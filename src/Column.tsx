@@ -2,14 +2,14 @@
 import * as _React from "react";
 import * as _StyledComponents from "styled-components";
 // -------------------------------------------------------------------
-import { InterpolationValue } from "styled-components";
+import "./utils/bootstrap";
 import { _getBreakpoints } from "./BreakpointMap";
 import {
   BreakpointValue,
   BreakpointValues,
   PropertyValue
 } from "./BreakpointValue";
-import "./Global";
+import { InterpolationValue } from "styled-components";
 import styled from "./StyledComponents";
 import ThemeProperties, { Theme } from "./Theme";
 import { _getGutterWidth, _render } from "./Utilities";

@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should match the snapshot (fluid property set to true)  1`] = `
+.c0 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Container /> should match the snapshot (ignores width when fluid is set) 1`] = `
+.c0 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+<div
+  className="c0"
+  width={
+    Object {
+      "md": 300,
+      "sm": 200,
+      "xs": 100,
+    }
+  }
+/>
+`;
+
+exports[`<Container /> should match the snapshot (no properties set) 1`] = `
+.c0 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width:1200px) {
+  .c0 {
+    max-width: 1140px;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Container /> should match the snapshot (width property set to { xs: 100, sm: 200, md: 300 }) 1`] = `
+.c0 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 100px;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    max-width: 200px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    max-width: 300px;
+  }
+}
+
+<div
+  className="c0"
+  width={
+    Object {
+      "md": 300,
+      "sm": 200,
+      "xs": 100,
+    }
+  }
+/>
+`;

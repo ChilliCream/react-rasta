@@ -12,7 +12,7 @@ export function _css(
   strings: TemplateStringsArray,
   ...interpolations: SimpleInterpolation[]
 ): string {
-  return css(strings, ...interpolations).join("") as string;
+  return _flatten(css(strings, ...interpolations));
 }
 
 export function _getGutterWidth(theme?: Theme) {
@@ -65,12 +65,12 @@ export function _render(
   return keys.reduce(
     (acc, key) =>
       (acc += _resolve(breakpoints, key)`
-    ${propertyKeys.reduce(
-      (acc2, key2) =>
-        (acc2 += renderer[key2](values[key] && values[key][key2])),
-      ""
-    )}
-  `),
+        ${propertyKeys.reduce(
+          (acc2, key2) =>
+            (acc2 += renderer[key2](values[key] && values[key][key2])),
+          ""
+        )}
+      `),
     ""
   );
 }
@@ -88,12 +88,12 @@ export function _resolve(breakpoints: BreakpointMap, key: string) {
 
     return _css`
       @media (min-width: ${minWidth}px) {
-        ${css(strings, ...interpolations)}
+        ${css(strings, ...interpolations)};
       }
     `;
   };
 }
 
-function _toString(from: InterpolationValue[]): string {
-  return from.join("") as string;
+function _flatten(interpolations: InterpolationValue[]): string {
+  return interpolations.join("") as string;
 }

@@ -1,4 +1,4 @@
-import { injectGlobal } from "./StyledComponents";
+import { injectGlobal } from "../StyledComponents";
 
 let _initialized: boolean = false;
 
@@ -8,12 +8,12 @@ function _bootstrap() {
         @-ms-viewport {
           width: device-width;
         }
-  
+
         html {
           box-sizing: border-box;
           -ms-overflow-style: scrollbar;
         }
-  
+
         *,
         *::before,
         *::after {

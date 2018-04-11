@@ -4,7 +4,7 @@ import { _getGutterWidth, _map } from "./Utilities";
 
 describe("Utilities", () => {
   describe("_getGutterWidth", () => {
-    it("Should return 15 if the theme is specified but gutterWidth is undefined", () => {
+    it("should return 15 if the theme is specified but gutterWidth is undefined", () => {
       // arrange
       const theme: Theme = {};
 
@@ -15,7 +15,7 @@ describe("Utilities", () => {
       expect(output).toEqual(15);
     });
 
-    it("Should return 20 if the theme is specified and gutter width is set to 40", () => {
+    it("should return 20 if the theme is specified and gutter width is set to 40", () => {
       // arrange
       const theme: Theme = { gutterWidth: 40 };
 
@@ -28,7 +28,7 @@ describe("Utilities", () => {
   });
 
   describe("_map", () => {
-    it("Should map a PropertyValuesMap to BreakpointValuesMap", () => {
+    it("should map a PropertyValuesMap to BreakpointValuesMap", () => {
       // arrange
       const input: PropertyValuesMap = {
         number: {

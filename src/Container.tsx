@@ -2,6 +2,7 @@
 import * as _React from "react";
 import * as _StyledComponents from "styled-components";
 // -------------------------------------------------------------------
+import "./utils/bootstrap";
 import { _getBreakpoints } from "./BreakpointMap";
 import {
   BreakpointValue,
@@ -9,13 +10,12 @@ import {
   PropertyValue,
   _getContainerWidth
 } from "./BreakpointValue";
-import "./Global";
 import ThemeProperties, { Theme } from "./Theme";
 import styled from "./StyledComponents";
 import { _getGutterWidth, _render } from "./Utilities";
 
 export interface ContainerProperties extends ThemeProperties {
-  fluid?: BreakpointValue<boolean>;
+  fluid?: boolean;
   width?: BreakpointValues<number>;
 }
 

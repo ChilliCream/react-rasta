@@ -2,6 +2,7 @@
 import * as _React from "react";
 import * as _StyledComponents from "styled-components";
 // -------------------------------------------------------------------
+import "./utils/bootstrap";
 import { _getBreakpoints } from "./BreakpointMap";
 import {
   BreakpointValue,
@@ -9,7 +10,6 @@ import {
   PropertyValue
 } from "./BreakpointValue";
 import Column from "./Column";
-import "./Global";
 import styled from "./StyledComponents";
 import ThemeProperties, { Theme } from "./Theme";
 import { _getGutterWidth, _render, _css } from "./Utilities";
