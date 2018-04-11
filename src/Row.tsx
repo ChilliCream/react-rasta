@@ -10,9 +10,12 @@ import {
   PropertyValue
 } from "./BreakpointValue";
 import Column from "./Column";
-import styled from "./StyledComponents";
-import ThemeProperties, { Theme } from "./Theme";
-import { _getGutterWidth, _render, _css } from "./Utilities";
+import Theme from "./theming/Theme";
+import ThemeProperties from "./theming/ThemeProperties";
+import styled from "./theming/StyledComponents";
+import css from "./utils/css";
+import render from "./utils/render";
+import gutterWidth from "./theming/gutterWidth";
 
 export interface RowProperties extends ThemeProperties {
   noGutter?: BreakpointValue<boolean>;
@@ -28,31 +31,31 @@ const Row = styled.div`
   ${(props: RowProperties) => {
     const breakpoints = _getBreakpoints(props!.theme);
     const renderer = {
-      noGutter: (value?: PropertyValue) => _renderNoGutter(value as boolean)
+      noGutter: (value?: PropertyValue) => renderNoGutter(value as boolean)
     };
     const valueMap = {
       noGutter: props!.noGutter as BreakpointValues<boolean>
     };
-    const width = _getGutterWidth(props.theme);
+    const width = gutterWidth(props.theme);
 
     return `
         margin-right: -${width}px;
         margin-left: -${width}px;
 
-        ${_render(valueMap, breakpoints, renderer)}
-        ${_renderNoGutter(props!.noGutter as boolean)}
+        ${render(valueMap, breakpoints, renderer)}
+        ${renderNoGutter(props!.noGutter as boolean)}
       `;
   }};
 `;
 
 export default Row;
 
-function _renderNoGutter(noGutter?: boolean): string {
+function renderNoGutter(noGutter?: boolean): string {
   if (noGutter != null && typeof noGutter === "boolean" && noGutter) {
-    return _css`
+    return css`
       margin-right: 0;
       margin-left: 0;
-    
+
       > ${Column} {
         padding-right: 0;
         padding-left: 0;

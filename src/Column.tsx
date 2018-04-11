@@ -10,9 +10,11 @@ import {
   PropertyValue
 } from "./BreakpointValue";
 import { InterpolationValue } from "styled-components";
-import styled from "./StyledComponents";
-import ThemeProperties, { Theme } from "./Theme";
-import { _getGutterWidth, _render } from "./Utilities";
+import Theme from "./theming/Theme";
+import ThemeProperties from "./theming/ThemeProperties";
+import styled from "./theming/StyledComponents";
+import render from "./utils/render";
+import gutterWidth from "./theming/gutterWidth";
 
 export type ColumnSize =
   | "auto"
@@ -58,36 +60,36 @@ const Column = styled.div`
   ${(props: ColumnProperties) => {
     const breakpoints = _getBreakpoints(props!.theme);
     const renderer = {
-      order: (value?: PropertyValue) => _renderOrder(value as ColumnOrder),
-      size: (value?: PropertyValue) => _renderSize(value as ColumnSize)
+      order: (value?: PropertyValue) => renderOrder(value as ColumnOrder),
+      size: (value?: PropertyValue) => renderSize(value as ColumnSize)
     };
     const valueMap = {
       order: props!.order as BreakpointValues<ColumnOrder>,
       size: props!.size as BreakpointValues<ColumnSize>
     };
-    const width = _getGutterWidth(props.theme);
+    const width = gutterWidth(props.theme);
 
     return `
         padding-right: ${width}px;
         padding-left: ${width}px;
 
-        ${_render(valueMap, breakpoints, renderer)}
-        ${_renderOrder(props!.order as ColumnOrder)}
-        ${_renderSize(props!.size as ColumnSize)}
+        ${render(valueMap, breakpoints, renderer)}
+        ${renderOrder(props!.order as ColumnOrder)}
+        ${renderSize(props!.size as ColumnSize)}
       `;
   }};
 `;
 
 export default Column;
 
-function _renderOrder(order?: ColumnOrder | 0 | 13): string {
+function renderOrder(order?: ColumnOrder | 0 | 13): string {
   if (order != null && typeof order !== "object") {
     if (order === "first") {
-      return _renderOrder(0);
+      return renderOrder(0);
     }
 
     if (order === "last") {
-      return _renderOrder(13);
+      return renderOrder(13);
     }
 
     if (typeof order === "number") {
@@ -102,7 +104,7 @@ function _renderOrder(order?: ColumnOrder | 0 | 13): string {
   return "";
 }
 
-function _renderSize(size?: ColumnSize): string {
+function renderSize(size?: ColumnSize): string {
   if (size == null || typeof size === "object" || size < 1 || size > 12) {
     return "";
   }

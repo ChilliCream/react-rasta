@@ -1,4 +1,4 @@
-import { injectGlobal } from "../StyledComponents";
+import { injectGlobal } from "../theming/StyledComponents";
 
 let _initialized: boolean = false;
 

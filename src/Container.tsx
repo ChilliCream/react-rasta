@@ -10,9 +10,11 @@ import {
   PropertyValue,
   _getContainerWidth
 } from "./BreakpointValue";
-import ThemeProperties, { Theme } from "./Theme";
-import styled from "./StyledComponents";
-import { _getGutterWidth, _render } from "./Utilities";
+import Theme from "./theming/Theme";
+import ThemeProperties from "./theming/ThemeProperties";
+import styled from "./theming/StyledComponents";
+import render from "./utils/render";
+import gutterWidth from "./theming/gutterWidth";
 
 export interface ContainerProperties extends ThemeProperties {
   fluid?: boolean;
@@ -25,7 +27,7 @@ const Container = styled.div`
   margin-left: auto;
 
   ${(props: ContainerProperties) => {
-    const width = _getGutterWidth(props.theme);
+    const width = gutterWidth(props.theme);
 
     return `
         padding-right: ${width}px;
@@ -37,22 +39,22 @@ const Container = styled.div`
     } else {
       const breakpoints = _getBreakpoints(props!.theme);
       const renderer = {
-        width: (value?: PropertyValue) => _renderWidth(value as number)
+        width: (value?: PropertyValue) => renderWidth(value as number)
       };
       const valueMap = {
         width: _getContainerWidth(props)
       };
 
       return `
-          ${_render(valueMap, breakpoints, renderer)}
-        `;
+        ${render(valueMap, breakpoints, renderer)}
+      `;
     }
   }};
 `;
 
 export default Container;
 
-function _renderWidth(width?: number): string {
+function renderWidth(width?: number): string {
   if (width != null && typeof width === "number") {
     return `
       max-width: ${width}px;

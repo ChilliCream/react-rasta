@@ -1,4 +1,4 @@
-import { Theme } from "./Theme";
+import Theme from "./theming/Theme";
 
 export default interface BreakpointMap {
   [key: string]: number;
