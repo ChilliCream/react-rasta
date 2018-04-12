@@ -1,5 +1,4 @@
-import BreakpointMap from "../BreakpointMap";
-import { BreakpointValues } from "../BreakpointValue";
+import { BreakpointMap, BreakpointValues } from "../media";
 
 export default interface Theme {
   breakpoints?: BreakpointMap;

@@ -1,4 +1,4 @@
-import { BreakpointValuesMap, PropertyValuesMap } from "../BreakpointValue";
+import { BreakpointValuesMap, PropertyValuesMap } from "../media";
 
 export default (source?: PropertyValuesMap): BreakpointValuesMap | null => {
   if (source != null) {

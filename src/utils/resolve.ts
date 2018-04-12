@@ -1,7 +1,7 @@
-import BreakpointMap from "../BreakpointMap";
-import _css from "./css";
-import { css } from "../theming/StyledComponents";
 import { SimpleInterpolation } from "styled-components";
+import _css from "./css";
+import { BreakpointMap } from "../media";
+import { css } from "../theme/StyledComponents";
 
 export default (breakpoints: BreakpointMap, key: string) => {
   return (

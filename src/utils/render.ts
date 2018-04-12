@@ -1,8 +1,7 @@
-import BreakpointMap from "../BreakpointMap";
-import { PropertyValuesMap } from "../BreakpointValue";
 import map from "./map";
 import RenderProvider from "./RenderProvider";
 import resolve from "./resolve";
+import { BreakpointMap, PropertyValuesMap } from "../media";
 
 export default (
   valueMap: PropertyValuesMap,

@@ -1,6 +1,6 @@
-import flatten from "./flatten";
-import { css } from "../theming/StyledComponents";
 import { SimpleInterpolation } from "styled-components";
+import flatten from "./flatten";
+import { css } from "../theme/StyledComponents";
 
 export default (
   strings: TemplateStringsArray,
