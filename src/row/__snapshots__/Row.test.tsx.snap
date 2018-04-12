@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Row /> should match the snapshot (no properties set) 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Row /> should match the snapshot (noGutter property set to true)  1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Row /> should match the snapshot (width property set to { xs: true, sm: false, md: true }) 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .c0 > .sc-bdVaJa {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
