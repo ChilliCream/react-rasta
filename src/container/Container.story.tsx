@@ -2,22 +2,16 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
-import {
-  BreakpointMap,
-  BreakpointValues,
-  Column,
-  Container,
-  Row,
-  ThemeProvider
-} from ".";
+import { Column, Container, Row } from "..";
+import { ThemeProvider } from "../theme/StyledComponents";
 
-const breakpoints: BreakpointMap = {
+const breakpoints = {
   phone: 0,
   tablet: 600,
   desktop: 800
 };
 
-const containerWidth: BreakpointValues<number> = {
+const containerWidth = {
   // do not specify phone here
   tablet: 560,
   desktop: 760

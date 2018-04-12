@@ -2,7 +2,7 @@
 
 [![release](https://img.shields.io/github/release/ChilliCream/react-rasta.svg)](https://github.com/ChilliCream/react-rasta/releases) [
 ![package](https://img.shields.io/npm/v/react-rasta.svg)](https://www.npmjs.com/package/react-rasta) [![license](https://img.shields.io/github/license/ChilliCream/react-rasta.svg)](https://github.com/ChilliCream/react-rasta/blob/master/LICENSE)
-[![build](https://img.shields.io/circleci/project/github/ChilliCream/react-rasta.svg)](https://circleci.com/gh/ChilliCream/react-rasta/tree/master) [![coverage](https://img.shields.io/coveralls/ChilliCream/react-rasta.svg)](https://coveralls.io/github/ChilliCream/react-rasta?branch=master) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![BCH compliance](https://bettercodehub.com/edge/badge/ChilliCream/react-rasta)](https://bettercodehub.com/results/ChilliCream/react-rasta)
+[![build](https://img.shields.io/circleci/project/github/ChilliCream/react-rasta.svg)](https://circleci.com/gh/ChilliCream/react-rasta/tree/master) [![coverage](https://img.shields.io/coveralls/ChilliCream/react-rasta.svg)](https://coveralls.io/github/ChilliCream/react-rasta?branch=master) [![better code](https://bettercodehub.com/edge/badge/ChilliCream/react-rasta)](https://bettercodehub.com/results/ChilliCream/react-rasta) [![code prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 **The most powerful and flexible grid system for _React_**
 
@@ -12,7 +12,7 @@ so you don't have to worry about that.
 
 ## Getting Started
 
-Here you will find what is needed to get started.
+Here you will find all you need to get started quickly.
 
 ### Install Package
 
@@ -32,7 +32,7 @@ npm install react-rasta
 
 ### Code Example
 
-_React Rasta_ implements all features from the _bootstrap_ grid system and adds more flexibility on top of it.
+_React Rasta_ implements all features from the _Bootstrap_ grid system and adds more flexibility on top of it.
 
 ```tsx
 //App.tsx

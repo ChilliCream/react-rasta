@@ -1,7 +1,6 @@
-export { default as BreakpointMap } from "./BreakpointMap";
-export { BreakpointValue, BreakpointValues } from "./BreakpointValue";
-export { default as Column } from "./Column";
-export { default as Container } from "./Container";
-export { default as Row } from "./Row";
-export { ThemeProvider } from "./StyledComponents";
-export { Theme } from "./Theme";
+export { BreakpointMap, BreakpointValue, BreakpointValues } from "./media";
+export { default as Column } from "./column";
+export { default as Container } from "./container";
+export { default as Row } from "./row";
+export { ThemeProvider } from "./theme/StyledComponents";
+export { default as Theme } from "./theme/Theme";
