@@ -1,0 +1,76 @@
+import render from "./render";
+import { breakpoints } from "../media";
+
+describe("render", () => {
+  it("should render as expected (input: { width: { xs: 111 } })", () => {
+    // arrange
+    const breakpointsMap = breakpoints();
+    const renderer = {
+      width: (value?) => `width: ${value}px;`
+    };
+    const valueMap = {
+      width: {
+        xs: 111
+      }
+    };
+
+    // act
+    const output = render(valueMap, breakpointsMap, renderer);
+
+    // assert
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("width:111px;");
+  });
+
+  it("should render as expected (input: { width: { md: 222 } })", () => {
+    // arrange
+    const breakpointsMap = breakpoints();
+    const renderer = {
+      width: (value?) => `width: ${value}px;`
+    };
+    const valueMap = {
+      width: {
+        md: 222
+      }
+    };
+
+    // act
+    const output = render(valueMap, breakpointsMap, renderer);
+
+    // assert
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
+      "@media(min-width:768px){width:222px;}"
+    );
+  });
+
+  it("should render as expected (input: { width: {} })", () => {
+    // arrange
+    const breakpointsMap = breakpoints();
+    const renderer = {
+      width: (value?) => `width: ${value}px;`
+    };
+    const valueMap = {
+      width: {}
+    };
+
+    // act
+    const output = render(valueMap, breakpointsMap, renderer);
+
+    // assert
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+  });
+
+  it("should render as expected (input: {})", () => {
+    // arrange
+    const breakpointsMap = breakpoints();
+    const renderer = {
+      width: (value?) => `width: ${value}px;`
+    };
+    const valueMap = {};
+
+    // act
+    const output = render(valueMap, breakpointsMap, renderer);
+
+    // assert
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+  });
+});
