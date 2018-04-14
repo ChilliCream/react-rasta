@@ -16,7 +16,7 @@ export default (breakpoints: BreakpointMap, key: string) => {
 
     return _css`
       @media (min-width: ${minWidth}px) {
-        ${css(strings, ...interpolations)};
+        ${css(strings, ...interpolations)}
       }
     `;
   };

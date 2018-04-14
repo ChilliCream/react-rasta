@@ -3,5 +3,5 @@ import defaultBreakpoints from "./defaultBreakpoints";
 import { Theme } from "../theme";
 
 export default (theme?: Theme): BreakpointMap => {
-  return theme!.breakpoints || defaultBreakpoints;
+  return (theme && theme!.breakpoints) || defaultBreakpoints;
 };
