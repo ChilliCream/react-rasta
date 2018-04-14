@@ -14,7 +14,86 @@ exports[`<Column /> should match the snapshot (no properties set) 1`] = `
 />
 `;
 
-exports[`<Column /> should match the snapshot (order property set to { xs: 'first', sm: 3, md: 'last' })  1`] = `
+exports[`<Column /> should match the snapshot (offset: { xs: 3, sm: 4, md: 8 })  1`] = `
+.c0 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 25.000000%;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    margin-left: 33.333333%;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    margin-left: 66.666667%;
+  }
+}
+
+<div
+  className="c0"
+  offset={
+    Object {
+      "md": 8,
+      "sm": 4,
+      "xs": 3,
+    }
+  }
+/>
+`;
+
+exports[`<Column /> should match the snapshot (offset: 3)  1`] = `
+.c0 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 25.000000%;
+}
+
+<div
+  className="c0"
+  offset={3}
+/>
+`;
+
+exports[`<Column /> should match the snapshot (offset: 3, order: 3, size: 9) 1`] = `
+.c0 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 25.000000%;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 75.000000%;
+  -webkit-flex: 0 0 75.000000%;
+  -ms-flex: 0 0 75.000000%;
+  flex: 0 0 75.000000%;
+  max-width: 75.000000%;
+}
+
+<div
+  className="c0"
+  offset={3}
+  order={3}
+  size={9}
+/>
+`;
+
+exports[`<Column /> should match the snapshot (order: { xs: 'first', sm: 3, md: 'last' })  1`] = `
 .c0 {
   position: relative;
   width: 100%;
@@ -60,34 +139,7 @@ exports[`<Column /> should match the snapshot (order property set to { xs: 'firs
 />
 `;
 
-exports[`<Column /> should match the snapshot (order property set to 3 size property is set 9) 1`] = `
-.c0 {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 75.000000%;
-  -webkit-flex: 0 0 75.000000%;
-  -ms-flex: 0 0 75.000000%;
-  flex: 0 0 75.000000%;
-  max-width: 75.000000%;
-}
-
-<div
-  className="c0"
-  order={3}
-  size={9}
-/>
-`;
-
-exports[`<Column /> should match the snapshot (order property set to 5)  1`] = `
+exports[`<Column /> should match the snapshot (order: 5)  1`] = `
 .c0 {
   position: relative;
   width: 100%;
@@ -107,7 +159,7 @@ exports[`<Column /> should match the snapshot (order property set to 5)  1`] = `
 />
 `;
 
-exports[`<Column /> should match the snapshot (order property set to 5)  2`] = `
+exports[`<Column /> should match the snapshot (size: 7)  1`] = `
 .c0 {
   position: relative;
   width: 100%;
@@ -128,7 +180,7 @@ exports[`<Column /> should match the snapshot (order property set to 5)  2`] = `
 />
 `;
 
-exports[`<Column /> should match the snapshot (size property set to { xs: 'auto', sm: 7, md: 'none' })  1`] = `
+exports[`<Column /> should match the snapshot (size: { xs: 'auto', sm: 7, md: 'none' })  1`] = `
 .c0 {
   position: relative;
   width: 100%;
