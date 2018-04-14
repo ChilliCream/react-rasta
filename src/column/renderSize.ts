@@ -1,4 +1,5 @@
 import ColumnSize from "./ColumnSize";
+import { percentage } from "../utils";
 
 export default (size?: ColumnSize): string => {
   if (size == null || typeof size === "object" || size < 1 || size > 12) {
@@ -26,12 +27,12 @@ export default (size?: ColumnSize): string => {
     `;
   }
 
-  const percentage = (size / 12 * 100).toFixed(6);
+  const calculatedPercentage = percentage(size);
 
   return `
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 ${percentage}%;
-    flex: 0 0 ${percentage}%;
-    max-width: ${percentage}%;
+    -ms-flex: 0 0 ${calculatedPercentage}%;
+    flex: 0 0 ${calculatedPercentage}%;
+    max-width: ${calculatedPercentage}%;
   `;
 };
