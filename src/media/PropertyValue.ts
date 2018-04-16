@@ -1,3 +1,3 @@
-type PropertyValue = boolean | number | string;
+type PropertyValue = boolean | number | string | undefined;
 
 export default PropertyValue;

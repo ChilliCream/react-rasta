@@ -1,6 +1,6 @@
 import ColumnOrder from "./ColumnOrder";
 
-export default function renderOrder(order?: ColumnOrder | 0 | 13): string {
+const renderOrder = (order?: ColumnOrder | 0 | 13): string => {
   if (order != null && typeof order !== "object") {
     if (order === "first") {
       return renderOrder(0);
@@ -20,4 +20,6 @@ export default function renderOrder(order?: ColumnOrder | 0 | 13): string {
   }
 
   return "";
-}
+};
+
+export default renderOrder;

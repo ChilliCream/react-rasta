@@ -3,11 +3,13 @@ import * as _React from "react";
 import * as _StyledComponents from "styled-components";
 // -------------------------------------------------------------------
 import "../utils/bootstrap";
-import renderNoGutter from "./renderNoGutter";
+import renderDirection from "./renderDirection";
+import renderGutter from "./renderGutter";
+import RowDirection from "./RowDirection";
 import RowProperties from "./RowProperties";
-import { breakpoints, BreakpointValues, PropertyValue } from "../media";
-import { gutterWidth, styled, Theme } from "../theme";
-import { css, render } from "../utils";
+import { BreakpointValue, PropertyValue } from "../media";
+import { styled, Theme } from "../theme";
+import { render } from "../utils";
 
 const Row = styled.div`
   display: -webkit-box;
@@ -17,22 +19,17 @@ const Row = styled.div`
   flex-wrap: wrap;
 
   ${(props: RowProperties) => {
-    const breakpointsMap = breakpoints(props!.theme);
     const renderer = {
-      noGutter: (value?: PropertyValue) => renderNoGutter(value as boolean)
+      direction: (value?: PropertyValue) =>
+        renderDirection(value as RowDirection),
+      gutter: (value?: PropertyValue) => renderGutter(value as boolean)
     };
     const valueMap = {
-      noGutter: props!.noGutter as BreakpointValues<boolean>
+      direction: props!.direction as BreakpointValue<RowDirection>,
+      gutter: props!.noGutter as BreakpointValue<boolean>
     };
-    const width = gutterWidth(props.theme);
 
-    return `
-        margin-right: -${width}px;
-        margin-left: -${width}px;
-
-        ${render(valueMap, breakpointsMap, renderer)}
-        ${renderNoGutter(props!.noGutter as boolean)}
-      `;
+    return render(valueMap, renderer, props!.theme);
   }};
 `;
 

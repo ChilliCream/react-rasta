@@ -1,13 +1,18 @@
+import prepare from "./prepare";
 import { BreakpointValuesMap, PropertyValuesMap } from "../media";
+import { Theme } from "../theme";
 
-export default (source?: PropertyValuesMap): BreakpointValuesMap | null => {
+export default (
+  source?: PropertyValuesMap,
+  theme?: Theme
+): BreakpointValuesMap | null => {
   if (source != null) {
-    const propertyKeys = Object.keys(source).filter(key => source[key] != null);
+    const propertyKeys = Object.keys(source);
     const destination: BreakpointValuesMap = {};
 
     for (let i = 0; i < propertyKeys.length; i++) {
       const propertyKey = propertyKeys[i];
-      const values = source[propertyKey];
+      const values = prepare(source[propertyKey], theme);
       const breakpointKeys = Object.keys(values);
 
       for (let j = 0; j < breakpointKeys.length; j++) {

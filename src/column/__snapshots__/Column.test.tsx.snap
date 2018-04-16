@@ -5,8 +5,6 @@ exports[`<Column /> should match the snapshot (no properties set) 1`] = `
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 <div
@@ -19,8 +17,6 @@ exports[`<Column /> should match the snapshot (offset: { xs: 3, sm: 4, md: 8 }) 
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-left: 25.000000%;
 }
 
@@ -53,8 +49,6 @@ exports[`<Column /> should match the snapshot (offset: 3)  1`] = `
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-left: 25.000000%;
 }
 
@@ -69,8 +63,6 @@ exports[`<Column /> should match the snapshot (offset: 3, order: 3, size: 9) 1`]
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-left: 25.000000%;
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
@@ -98,8 +90,6 @@ exports[`<Column /> should match the snapshot (order: { xs: 'first', sm: 3, md: 
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   -webkit-order: -1;
@@ -144,8 +134,6 @@ exports[`<Column /> should match the snapshot (order: 5)  1`] = `
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
   -webkit-box-ordinal-group: 5;
   -ms-flex-order: 4;
   -webkit-order: 4;
@@ -164,8 +152,6 @@ exports[`<Column /> should match the snapshot (size: 7)  1`] = `
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 58.333333%;
   -webkit-flex: 0 0 58.333333%;
@@ -185,8 +171,6 @@ exports[`<Column /> should match the snapshot (size: { xs: 'auto', sm: 7, md: 'n
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
   -ms-flex-preferred-size: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
