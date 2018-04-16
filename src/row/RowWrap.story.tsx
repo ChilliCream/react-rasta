@@ -9,10 +9,10 @@ storiesOf("RowWrap", module)
     <div>
       <Container>
         <Row wrap={"nowrap"}>
-          <Column size={3}>Nowrap 1</Column>
-          <Column size={3}>Nowrap 2</Column>
-          <Column size={3}>Nowrap 3</Column>
-          <Column size={3}>Nowrap 4</Column>
+          <Column size={6}>Nowrap 1</Column>
+          <Column size={6}>Nowrap 2</Column>
+          <Column size={6}>Nowrap 3</Column>
+          <Column size={6}>Nowrap 4</Column>
         </Row>
       </Container>
     </div>
@@ -21,10 +21,10 @@ storiesOf("RowWrap", module)
     <div>
       <Container>
         <Row wrap={"wrap"}>
-          <Column size={3}>Wrap 1</Column>
-          <Column size={3}>Wrap 2</Column>
-          <Column size={3}>Wrap 3</Column>
-          <Column size={3}>Wrap 4</Column>
+          <Column size={6}>Wrap 1</Column>
+          <Column size={6}>Wrap 2</Column>
+          <Column size={6}>Wrap 3</Column>
+          <Column size={6}>Wrap 4</Column>
         </Row>
       </Container>
     </div>
@@ -33,10 +33,10 @@ storiesOf("RowWrap", module)
     <div>
       <Container>
         <Row wrap={"wrap-reverse"}>
-          <Column size={3}>Wrap Reverse 1</Column>
-          <Column size={3}>Wrap Reverse 2</Column>
-          <Column size={3}>Wrap Reverse 3</Column>
-          <Column size={3}>Wrap Reverse 4</Column>
+          <Column size={6}>Wrap Reverse 1</Column>
+          <Column size={6}>Wrap Reverse 2</Column>
+          <Column size={6}>Wrap Reverse 3</Column>
+          <Column size={6}>Wrap Reverse 4</Column>
         </Row>
       </Container>
     </div>
