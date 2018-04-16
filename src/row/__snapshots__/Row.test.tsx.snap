@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Row /> should match the snapshot (direction: 'column', noGutter: true, wrap: 'nowrap') 1`] = `
+exports[`<Row /> should match the snapshot (direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap') 1`] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,6 +8,12 @@ exports[`<Row /> should match the snapshot (direction: 'column', noGutter: true,
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: column !important;
@@ -125,6 +131,91 @@ exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-rev
       "xs": "row",
     }
   }
+/>
+`;
+
+exports[`<Row /> should match the snapshot (justifyContent: 'space-between')  1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  -webkit-box-pack: justify !important;
+  -webkit-justify-content: space-between !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Row /> should match the snapshot (justifyContent: { xs: 'space-around', sm: 'flex-end', md: 'flex-start' }) 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute !important;
+  -webkit-box-pack: space-around !important;
+  -webkit-justify-content: space-around !important;
+  -ms-flex-pack: space-around !important;
+  justify-content: space-around !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+    -webkit-box-pack: end !important;
+    -webkit-justify-content: flex-end !important;
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+<div
+  className="c0"
 />
 `;
 

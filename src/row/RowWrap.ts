@@ -1,3 +1,3 @@
-type RowDirection = "nowrap" | "wrap" | "wrap-reverse";
+type RowWrap = "nowrap" | "wrap" | "wrap-reverse";
 
-export default RowDirection;
+export default RowWrap;

@@ -43,7 +43,7 @@ describe("renderWrap", () => {
     );
   });
 
-  it("should render direction appropriate (input: undefined)", () => {
+  it("should render wrap appropriate (input: undefined)", () => {
     // arrange
     const input = undefined;
 
