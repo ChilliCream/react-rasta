@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Row /> should match the snapshot (direction: 'column', noGutter: true) 1`] = `
+exports[`<Row /> should match the snapshot (direction: 'column', noGutter: true, wrap: 'nowrap') 1`] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,10 +8,6 @@ exports[`<Row /> should match the snapshot (direction: 'column', noGutter: true)
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: column !important;
@@ -20,6 +16,10 @@ exports[`<Row /> should match the snapshot (direction: 'column', noGutter: true)
   flex-direction: column !important;
   margin-right: 0;
   margin-left: 0;
+  -ms-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .c0 > .sc-bdVaJa {
@@ -30,6 +30,7 @@ exports[`<Row /> should match the snapshot (direction: 'column', noGutter: true)
 <div
   className="c0"
   direction="column"
+  wrap="nowrap"
 />
 `;
 
@@ -41,10 +42,6 @@ exports[`<Row /> should match the snapshot (direction: 'row')  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: row !important;
@@ -53,6 +50,10 @@ exports[`<Row /> should match the snapshot (direction: 'row')  1`] = `
   flex-direction: row !important;
   margin-right: -15px;
   margin-left: -15px;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .c0 > .sc-bdVaJa {
@@ -74,10 +75,6 @@ exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-rev
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: row !important;
@@ -86,6 +83,10 @@ exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-rev
   flex-direction: row !important;
   margin-right: -15px;
   margin-left: -15px;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .c0 > .sc-bdVaJa {
@@ -101,13 +102,6 @@ exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-rev
     -webkit-flex-direction: row-reverse !important;
     -ms-flex-direction: row-reverse !important;
     flex-direction: row-reverse !important;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
-  .c0 > .sc-bdVaJa {
-    padding-right: 15px;
-    padding-left: 15px;
   }
 }
 
@@ -119,13 +113,6 @@ exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-rev
     -webkit-flex-direction: column !important;
     -ms-flex-direction: column !important;
     flex-direction: column !important;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
-  .c0 > .sc-bdVaJa {
-    padding-right: 15px;
-    padding-left: 15px;
   }
 }
 
@@ -149,12 +136,12 @@ exports[`<Row /> should match the snapshot (no properties set) 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .c0 > .sc-bdVaJa {
@@ -175,12 +162,12 @@ exports[`<Row /> should match the snapshot (noGutter: { xs: true, sm: false, md:
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 0;
+  margin-left: 0;
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: 0;
-  margin-left: 0;
 }
 
 .c0 > .sc-bdVaJa {
@@ -225,12 +212,12 @@ exports[`<Row /> should match the snapshot (noGutter: true)  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 0;
+  margin-left: 0;
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: 0;
-  margin-left: 0;
 }
 
 .c0 > .sc-bdVaJa {
@@ -240,5 +227,83 @@ exports[`<Row /> should match the snapshot (noGutter: true)  1`] = `
 
 <div
   className="c0"
+/>
+`;
+
+exports[`<Row /> should match the snapshot (wrap: 'wrap-reverse')  1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  -ms-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+<div
+  className="c0"
+  wrap="wrap-reverse"
+/>
+`;
+
+exports[`<Row /> should match the snapshot (wrap: { xs: 'nowrap', sm: 'wrap-reverse', md: 'wrap' }) 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  -ms-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -ms-flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+<div
+  className="c0"
+  wrap={
+    Object {
+      "md": "wrap",
+      "sm": "wrap-reverse",
+      "xs": "nowrap",
+    }
+  }
 />
 `;

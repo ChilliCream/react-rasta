@@ -1,7 +1,12 @@
 import map from "./map";
 import RenderProvider from "./RenderProvider";
 import resolve from "./resolve";
-import { BreakpointMap, breakpoints, PropertyValuesMap } from "../media";
+import {
+  BreakpointMap,
+  breakpoints,
+  PropertyValues,
+  PropertyValuesMap
+} from "../media";
 import { Theme } from "../theme";
 
 export default (
@@ -10,23 +15,38 @@ export default (
   theme?: Theme
 ): string => {
   const breakpointsMap = breakpoints(theme);
-  const values = map(valueMap, theme) || {};
-  const keys = Object.keys(values).filter(
-    key => breakpointsMap[key] != null && typeof values[key] === "object"
+  const breakpointValues = map(valueMap, theme) || {};
+  const breakpointKeys = Object.keys(breakpointValues).filter(
+    breakpointKey =>
+      breakpointsMap[breakpointKey] != null &&
+      typeof breakpointValues[breakpointKey] === "object"
   );
   const propertyKeys = Object.keys(valueMap).filter(
-    key => renderer[key] != null
+    propertyKey => renderer[propertyKey] != null
   );
+  const previousValues: PropertyValues = {};
+  let count = 0;
 
-  return keys.reduce(
-    (acc, key) =>
-      (acc += resolve(breakpointsMap, key)`
-        ${propertyKeys.reduce(
-          (acc2, key2) =>
-            (acc2 += renderer[key2](values[key] && values[key][key2])),
-          ""
-        )}
-      `),
-    ""
-  );
+  return breakpointKeys.reduce((acc, breakpointKey) => {
+    count++;
+
+    return (
+      acc +
+      resolve(breakpointsMap, breakpointKey)`
+        ${propertyKeys.reduce((acc2, propertyKey) => {
+          const value =
+            breakpointValues[breakpointKey] &&
+            breakpointValues[breakpointKey][propertyKey];
+
+          if (count > 1 && previousValues[propertyKey] === value) {
+            return acc2;
+          } else {
+            previousValues[propertyKey] = value;
+
+            return acc2 + renderer[propertyKey](value);
+          }
+        }, "")}
+      `
+    );
+  }, "");
 };

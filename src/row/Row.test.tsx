@@ -55,14 +55,29 @@ describe("<Row />", () => {
     expect(result).toMatchSnapshot();
   });
 
-  it("should match the snapshot (direction: 'column', noGutter: true)", () => {
-    // arrange
-    const offset = 3;
-    const order = 3;
-    const size = 9;
-
+  it("should match the snapshot (wrap: 'wrap-reverse') ", () => {
     // act
-    const result = shallow(<Row direction={"column"} noGutter={true} />);
+    const result = shallow(<Row wrap={"wrap-reverse"} />);
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
+  it("should match the snapshot (wrap: { xs: 'nowrap', sm: 'wrap-reverse', md: 'wrap' })", () => {
+    // act
+    const result = shallow(
+      <Row wrap={{ xs: "nowrap", sm: "wrap-reverse", md: "wrap" }} />
+    );
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
+  it("should match the snapshot (direction: 'column', noGutter: true, wrap: 'nowrap')", () => {
+    // act
+    const result = shallow(
+      <Row direction={"column"} noGutter={true} wrap={"nowrap"} />
+    );
 
     // assert
     expect(result).toMatchSnapshot();

@@ -42,4 +42,15 @@ describe("resolve", () => {
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("width:666px;");
   });
+
+  it("should resolve media breakpoints (input: 'sm', css body empty)", () => {
+    // arrange
+    const breakpointsMap = breakpoints();
+
+    // act
+    const output = resolve(breakpointsMap, "sm")``;
+
+    // assert
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+  });
 });
