@@ -6,7 +6,7 @@ import "../utils/bootstrap";
 import ContainerProperties from "./ContainerProperties";
 import renderWidth from "./renderWidth";
 import getWidth from "./width";
-import { breakpoints, PropertyValue } from "../media";
+import { PropertyValue } from "../media";
 import { gutterWidth, styled, Theme } from "../theme";
 import { render } from "../utils";
 
@@ -19,14 +19,13 @@ const Container = styled.div`
     const width = gutterWidth(props.theme);
 
     return `
-        padding-right: ${width}px;
-        padding-left: ${width}px;
-      `;
+      padding-right: ${width}px;
+      padding-left: ${width}px;
+    `;
   }} ${(props: ContainerProperties) => {
     if (props.fluid) {
       return "";
     } else {
-      const breakpointsMap = breakpoints(props!.theme);
       const renderer = {
         width: (value?: PropertyValue) => renderWidth(value as number)
       };
@@ -34,9 +33,7 @@ const Container = styled.div`
         width: getWidth(props)
       };
 
-      return `
-        ${render(valueMap, breakpointsMap, renderer)}
-      `;
+      return render(valueMap, renderer, props!.theme);
     }
   }};
 `;

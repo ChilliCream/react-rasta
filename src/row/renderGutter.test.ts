@@ -1,15 +1,15 @@
 // Module mocks must mocked before importing modules
 jest.mock("../utils/bootstrap", () => jest.fn());
 
-import renderNoGutter from "./renderNoGutter";
+import renderGutter from "./renderGutter";
 
-describe("renderNoGutter", () => {
+describe("renderGutter", () => {
   it("should render container width (input: true)", () => {
     // arrange
     const input = true;
 
     // act
-    const output = renderNoGutter(input);
+    const output = renderGutter(input);
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toMatch(
@@ -22,10 +22,12 @@ describe("renderNoGutter", () => {
     const input = false;
 
     // act
-    const output = renderNoGutter(input);
+    const output = renderGutter(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toMatch(
+      /margin\-right:\-15px;margin\-left:\-15px;>.*?{padding\-right:15px;padding\-left:15px;}/gi
+    );
   });
 
   it("should render container width (input: undefined)", () => {
@@ -33,9 +35,11 @@ describe("renderNoGutter", () => {
     const input = undefined;
 
     // act
-    const output = renderNoGutter(input);
+    const output = renderGutter(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toMatch(
+      /margin\-right:\-15px;margin\-left:\-15px;>.*?{padding\-right:15px;padding\-left:15px;}/gi
+    );
   });
 });

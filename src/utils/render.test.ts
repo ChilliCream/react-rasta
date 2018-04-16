@@ -1,12 +1,10 @@
 import render from "./render";
-import { breakpoints } from "../media";
 
 describe("render", () => {
   it("should render as expected (input: { width: { xs: 111 } })", () => {
     // arrange
-    const breakpointsMap = breakpoints();
     const renderer = {
-      width: (value?) => `width: ${value}px;`
+      width: (value?) => (value && `width: ${value}px;`) || ""
     };
     const valueMap = {
       width: {
@@ -15,7 +13,7 @@ describe("render", () => {
     };
 
     // act
-    const output = render(valueMap, breakpointsMap, renderer);
+    const output = render(valueMap, renderer);
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("width:111px;");
@@ -23,9 +21,8 @@ describe("render", () => {
 
   it("should render as expected (input: { width: { md: 222 } })", () => {
     // arrange
-    const breakpointsMap = breakpoints();
     const renderer = {
-      width: (value?) => `width: ${value}px;`
+      width: (value?) => (value && `width: ${value}px;`) || ""
     };
     const valueMap = {
       width: {
@@ -34,7 +31,7 @@ describe("render", () => {
     };
 
     // act
-    const output = render(valueMap, breakpointsMap, renderer);
+    const output = render(valueMap, renderer);
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
@@ -44,16 +41,15 @@ describe("render", () => {
 
   it("should render as expected (input: { width: {} })", () => {
     // arrange
-    const breakpointsMap = breakpoints();
     const renderer = {
-      width: (value?) => `width: ${value}px;`
+      width: (value?) => (value && `width: ${value}px;`) || ""
     };
     const valueMap = {
       width: {}
     };
 
     // act
-    const output = render(valueMap, breakpointsMap, renderer);
+    const output = render(valueMap, renderer);
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
@@ -61,14 +57,13 @@ describe("render", () => {
 
   it("should render as expected (input: {})", () => {
     // arrange
-    const breakpointsMap = breakpoints();
     const renderer = {
-      width: (value?) => `width: ${value}px;`
+      width: (value?) => (value && `width: ${value}px;`) || ""
     };
     const valueMap = {};
 
     // act
-    const output = render(valueMap, breakpointsMap, renderer);
+    const output = render(valueMap, renderer);
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");

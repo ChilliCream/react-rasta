@@ -33,4 +33,26 @@ describe("percentage", () => {
     // assert
     expect(output).toBe("100.000000");
   });
+
+  it("should return '0' (input: 13)", () => {
+    // arrange
+    const input = undefined;
+
+    // act
+    const output = percentage(input);
+
+    // assert
+    expect(output).toBe("0");
+  });
+
+  it("should return '0' (input: undefined)", () => {
+    // arrange
+    const input = undefined;
+
+    // act
+    const output = percentage(input);
+
+    // assert
+    expect(output).toBe("0");
+  });
 });

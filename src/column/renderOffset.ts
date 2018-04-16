@@ -1,7 +1,7 @@
 import ColumnOffset from "./ColumnOffset";
 import { percentage } from "../utils";
 
-export default function renderOrder(offset?: ColumnOffset): string {
+export default (offset?: ColumnOffset): string => {
   if (
     offset != null &&
     typeof offset === "number" &&
@@ -14,4 +14,4 @@ export default function renderOrder(offset?: ColumnOffset): string {
   }
 
   return "";
-}
+};
