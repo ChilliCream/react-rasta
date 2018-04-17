@@ -1,6 +1,6 @@
 {
   "name": "react-rasta",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "The most powerful and flexible grid system for React",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -11,6 +11,9 @@
   },
   "author": "ChilliCream",
   "license": "MIT",
+  "keywords": [
+    "grid", "layout", "css", "flexbox"
+  ],
   "scripts": {
     "build": "yarn prettier && yarn lint && yarn test:coverage && tsc",
     "build-storybook": "build-storybook",
