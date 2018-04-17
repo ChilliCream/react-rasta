@@ -1,55 +1,94 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import BlueSquare from "../__storybook__/BlueSquare";
+import Story from "../__storybook__/Story";
+import Title from "../__storybook__/Title";
 
 import { Column, Container, Row } from "..";
 
 storiesOf("RowDirection", module)
   .add("column", () => (
-    <div>
+    <Story>
+      <Title>column</Title>
       <Container>
         <Row direction={"column"}>
-          <Column size={3}>Column 1</Column>
-          <Column size={3}>Column 2</Column>
-          <Column size={3}>Column 3</Column>
-          <Column size={3}>Column 4</Column>
+          <Column size={3}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("column-reverse", () => (
-    <div>
+    <Story>
+      <Title>column-reverse</Title>
       <Container>
         <Row direction={"column-reverse"}>
-          <Column size={3}>Column Reverse 1</Column>
-          <Column size={3}>Column Reverse 2</Column>
-          <Column size={3}>Column Reverse 3</Column>
-          <Column size={3}>Column Reverse 4</Column>
+          <Column size={3}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("row", () => (
-    <div>
+    <Story>
+      <Title>row</Title>
       <Container>
         <Row direction={"row"}>
-          <Column size={3}>Row 1</Column>
-          <Column size={3}>Row 2</Column>
-          <Column size={3}>Row 3</Column>
-          <Column size={3}>Row 4</Column>
+          <Column size={3}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("row-reverse", () => (
-    <div>
+    <Story>
+      <Title>row-reverse</Title>
       <Container>
         <Row direction={"row-reverse"}>
-          <Column size={3}>Row Reverse 1</Column>
-          <Column size={3}>Row Reverse 2</Column>
-          <Column size={3}>Row Reverse 3</Column>
-          <Column size={3}>Row Reverse 4</Column>
+          <Column size={3}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={3}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ));

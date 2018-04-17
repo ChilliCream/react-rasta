@@ -1,43 +1,73 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import BlueSquare from "../__storybook__/BlueSquare";
+import Story from "../__storybook__/Story";
+import Title from "../__storybook__/Title";
 
 import { Column, Container, Row } from "..";
 
 storiesOf("RowWrap", module)
   .add("nowrap", () => (
-    <div>
+    <Story>
+      <Title>nowrap</Title>
       <Container>
         <Row wrap={"nowrap"}>
-          <Column size={6}>Nowrap 1</Column>
-          <Column size={6}>Nowrap 2</Column>
-          <Column size={6}>Nowrap 3</Column>
-          <Column size={6}>Nowrap 4</Column>
+          <Column size={6}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("wrap", () => (
-    <div>
+    <Story>
+      <Title>wrap</Title>
       <Container>
         <Row wrap={"wrap"}>
-          <Column size={6}>Wrap 1</Column>
-          <Column size={6}>Wrap 2</Column>
-          <Column size={6}>Wrap 3</Column>
-          <Column size={6}>Wrap 4</Column>
+          <Column size={6}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("wrap-reverse", () => (
-    <div>
+    <Story>
+      <Title>wrap-reverse</Title>
       <Container>
         <Row wrap={"wrap-reverse"}>
-          <Column size={6}>Wrap Reverse 1</Column>
-          <Column size={6}>Wrap Reverse 2</Column>
-          <Column size={6}>Wrap Reverse 3</Column>
-          <Column size={6}>Wrap Reverse 4</Column>
+          <Column size={6}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={6}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ));

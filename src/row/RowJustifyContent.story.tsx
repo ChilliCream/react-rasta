@@ -1,67 +1,115 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import BlueSquare from "../__storybook__/BlueSquare";
+import Story from "../__storybook__/Story";
+import Title from "../__storybook__/Title";
 
 import { Column, Container, Row } from "..";
 
 storiesOf("RowJustifyContent", module)
   .add("center", () => (
-    <div>
+    <Story>
+      <Title>center</Title>
       <Container>
         <Row justifyContent={"center"}>
-          <Column size={2}>Center 1</Column>
-          <Column size={2}>Center 2</Column>
-          <Column size={2}>Center 3</Column>
-          <Column size={2}>Center 4</Column>
+          <Column size={2}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("flex-end", () => (
-    <div>
+    <Story>
+      <Title>flex-end</Title>
       <Container>
         <Row justifyContent={"flex-end"}>
-          <Column size={2}>FlexEnd 1</Column>
-          <Column size={2}>FlexEnd 2</Column>
-          <Column size={2}>FlexEnd 3</Column>
-          <Column size={2}>FlexEnd 4</Column>
+          <Column size={2}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("flex-start", () => (
-    <div>
+    <Story>
+      <Title>flex-start</Title>
       <Container>
         <Row justifyContent={"flex-start"}>
-          <Column size={2}>FlexStart 1</Column>
-          <Column size={2}>FlexStart 2</Column>
-          <Column size={2}>FlexStart 3</Column>
-          <Column size={2}>FlexStart 4</Column>
+          <Column size={2}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("space-around", () => (
-    <div>
+    <Story>
+      <Title>space-around</Title>
       <Container>
         <Row justifyContent={"space-around"}>
-          <Column size={2}>SpaceAround 1</Column>
-          <Column size={2}>SpaceAround 2</Column>
-          <Column size={2}>SpaceAround 3</Column>
-          <Column size={2}>SpaceAround 4</Column>
+          <Column size={2}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ))
   .add("space-between", () => (
-    <div>
+    <Story>
+      <Title>space-between</Title>
       <Container>
         <Row justifyContent={"space-between"}>
-          <Column size={2}>SpaceBetween 1</Column>
-          <Column size={2}>SpaceBetween 2</Column>
-          <Column size={2}>SpaceBetween 3</Column>
-          <Column size={2}>SpaceBetween 4</Column>
+          <Column size={2}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
         </Row>
       </Container>
-    </div>
+    </Story>
   ));
