@@ -27,12 +27,12 @@ yarn add react-rasta
 And when using _npm_ it looks like this.
 
 ```powershell
-npm install react-rasta
+npm install react-rasta --save
 ```
 
 ### Code Example
 
-_React Rasta_ implements all features from the _Bootstrap_ grid system and adds more flexibility on top of it.
+_React Rasta_ implements all features from the _Bootstrap V4_ grid system and adds more flexibility on top of it.
 
 ```tsx
 //App.tsx

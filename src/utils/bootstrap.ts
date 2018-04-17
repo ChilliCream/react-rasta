@@ -2,7 +2,7 @@ import { injectGlobal } from "../theme/StyledComponents";
 
 let _initialized: boolean = false;
 
-function _bootstrap() {
+function bootstrap() {
   if (!_initialized) {
     injectGlobal`
         @-ms-viewport {
@@ -24,4 +24,4 @@ function _bootstrap() {
   }
 }
 
-_bootstrap();
+bootstrap();
