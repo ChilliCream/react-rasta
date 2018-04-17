@@ -9,4 +9,4 @@ export default interface RowProperties extends ThemeProperties {
   justifyContent?: BreakpointValue<RowJustifyContent>;
   noGutter?: BreakpointValue<boolean>;
   wrap?: BreakpointValue<RowWrap>;
-}
+};

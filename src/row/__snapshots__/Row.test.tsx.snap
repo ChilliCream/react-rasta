@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Row /> should match the snapshot (direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap') 1`] = `
+exports[
+  `<Row /> should match the snapshot (direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap') 1`
+] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,7 +75,9 @@ exports[`<Row /> should match the snapshot (direction: 'row')  1`] = `
 />
 `;
 
-exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-reverse', md: 'column' }) 1`] = `
+exports[
+  `<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-reverse', md: 'column' }) 1`
+] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,7 +138,9 @@ exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-rev
 />
 `;
 
-exports[`<Row /> should match the snapshot (justifyContent: 'space-between')  1`] = `
+exports[
+  `<Row /> should match the snapshot (justifyContent: 'space-between')  1`
+] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,7 +172,9 @@ exports[`<Row /> should match the snapshot (justifyContent: 'space-between')  1`
 />
 `;
 
-exports[`<Row /> should match the snapshot (justifyContent: { xs: 'space-around', sm: 'flex-end', md: 'flex-start' }) 1`] = `
+exports[
+  `<Row /> should match the snapshot (justifyContent: { xs: 'space-around', sm: 'flex-end', md: 'flex-start' }) 1`
+] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,7 +253,9 @@ exports[`<Row /> should match the snapshot (no properties set) 1`] = `
 />
 `;
 
-exports[`<Row /> should match the snapshot (noGutter: { xs: true, sm: false, md: true }) 1`] = `
+exports[
+  `<Row /> should match the snapshot (noGutter: { xs: true, sm: false, md: true }) 1`
+] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,7 +358,9 @@ exports[`<Row /> should match the snapshot (wrap: 'wrap-reverse')  1`] = `
 />
 `;
 
-exports[`<Row /> should match the snapshot (wrap: { xs: 'nowrap', sm: 'wrap-reverse', md: 'wrap' }) 1`] = `
+exports[
+  `<Row /> should match the snapshot (wrap: { xs: 'nowrap', sm: 'wrap-reverse', md: 'wrap' }) 1`
+] = `
 .c0 {
   display: -webkit-box;
   display: -ms-flexbox;

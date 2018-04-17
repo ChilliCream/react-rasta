@@ -30,7 +30,9 @@ const Row = styled.div`
       wrap: (value?: PropertyValue) => renderWrap(value as RowWrap)
     };
     const valueMap = {
-      justifyContent: props!.justifyContent as BreakpointValue<RowJustifyContent>,
+      justifyContent: props!.justifyContent as BreakpointValue<
+        RowJustifyContent
+      >,
       direction: props!.direction as BreakpointValue<RowDirection>,
       gutter: props!.noGutter as BreakpointValue<boolean>,
       wrap: props!.wrap as BreakpointValue<RowWrap>

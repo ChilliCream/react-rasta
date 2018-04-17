@@ -56,7 +56,7 @@
     ],
     "quotemark": [true, "double", "jsx-double"],
     "radix": true,
-    "semicolon": [true, "always"],
+    "semicolon": [false, "always"],
     "switch-default": true,
 
     "trailing-comma": [false],
