@@ -8,4 +8,4 @@ export default interface ColumnProperties extends ThemeProperties {
   offset?: BreakpointValue<ColumnOffset>;
   order?: BreakpointValue<ColumnOrder>;
   size?: BreakpointValue<ColumnSize>;
-}
+};

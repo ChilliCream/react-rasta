@@ -7,85 +7,106 @@ import Title from "../__storybook__/Title";
 
 import { Column, Container, Row } from "..";
 
-storiesOf("RowDirection", module)
-  .add("column", () => (
+storiesOf("RowJustifyContent", module)
+  .add("center", () => (
     <Story>
-      <Title>column</Title>
+      <Title>center</Title>
       <Container>
-        <Row direction={"column"}>
-          <Column size={3}>
+        <Row justifyContent={"center"}>
+          <Column size={2}>
             <BlueSquare>1</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>2</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>3</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>4</BlueSquare>
           </Column>
         </Row>
       </Container>
     </Story>
   ))
-  .add("column-reverse", () => (
+  .add("flex-end", () => (
     <Story>
-      <Title>column-reverse</Title>
+      <Title>flex-end</Title>
       <Container>
-        <Row direction={"column-reverse"}>
-          <Column size={3}>
+        <Row justifyContent={"flex-end"}>
+          <Column size={2}>
             <BlueSquare>1</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>2</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>3</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>4</BlueSquare>
           </Column>
         </Row>
       </Container>
     </Story>
   ))
-  .add("row", () => (
+  .add("flex-start", () => (
     <Story>
-      <Title>row</Title>
+      <Title>flex-start</Title>
       <Container>
-        <Row direction={"row"}>
-          <Column size={3}>
+        <Row justifyContent={"flex-start"}>
+          <Column size={2}>
             <BlueSquare>1</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>2</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>3</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>4</BlueSquare>
           </Column>
         </Row>
       </Container>
     </Story>
   ))
-  .add("row-reverse", () => (
+  .add("space-around", () => (
     <Story>
-      <Title>row-reverse</Title>
+      <Title>space-around</Title>
       <Container>
-        <Row direction={"row-reverse"}>
-          <Column size={3}>
+        <Row justifyContent={"space-around"}>
+          <Column size={2}>
             <BlueSquare>1</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>2</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
             <BlueSquare>3</BlueSquare>
           </Column>
-          <Column size={3}>
+          <Column size={2}>
+            <BlueSquare>4</BlueSquare>
+          </Column>
+        </Row>
+      </Container>
+    </Story>
+  ))
+  .add("space-between", () => (
+    <Story>
+      <Title>space-between</Title>
+      <Container>
+        <Row justifyContent={"space-between"}>
+          <Column size={2}>
+            <BlueSquare>1</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>2</BlueSquare>
+          </Column>
+          <Column size={2}>
+            <BlueSquare>3</BlueSquare>
+          </Column>
+          <Column size={2}>
             <BlueSquare>4</BlueSquare>
           </Column>
         </Row>

@@ -3,7 +3,6 @@ import * as _React from "react";
 import * as _StyledComponents from "styled-components";
 // -------------------------------------------------------------------
 import "../utils/bootstrap";
-import { InterpolationValue } from "styled-components";
 import ColumnProperties from "./ColumnProperties";
 import ColumnOffset from "./ColumnOffset";
 import ColumnOrder from "./ColumnOrder";

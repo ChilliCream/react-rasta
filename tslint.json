@@ -15,7 +15,7 @@
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
     "label-position": true,
-    "max-line-length": [true, 120],
+    "max-line-length": [false, 120],
     "member-ordering": [
       true,
       "public-before-private",
@@ -56,7 +56,7 @@
     ],
     "quotemark": [true, "double", "jsx-double"],
     "radix": true,
-    "semicolon": [true, "always"],
+    "semicolon": [false, "always"],
     "switch-default": true,
 
     "trailing-comma": [false],

@@ -12,7 +12,9 @@ exports[`<Column /> should match the snapshot (no properties set) 1`] = `
 />
 `;
 
-exports[`<Column /> should match the snapshot (offset: { xs: 3, sm: 4, md: 8 })  1`] = `
+exports[
+  `<Column /> should match the snapshot (offset: { xs: 3, sm: 4, md: 8 })  1`
+] = `
 .c0 {
   position: relative;
   width: 100%;
@@ -58,7 +60,9 @@ exports[`<Column /> should match the snapshot (offset: 3)  1`] = `
 />
 `;
 
-exports[`<Column /> should match the snapshot (offset: 3, order: 3, size: 9) 1`] = `
+exports[
+  `<Column /> should match the snapshot (offset: 3, order: 3, size: 9) 1`
+] = `
 .c0 {
   position: relative;
   width: 100%;
@@ -85,7 +89,9 @@ exports[`<Column /> should match the snapshot (offset: 3, order: 3, size: 9) 1`]
 />
 `;
 
-exports[`<Column /> should match the snapshot (order: { xs: 'first', sm: 3, md: 'last' })  1`] = `
+exports[
+  `<Column /> should match the snapshot (order: { xs: 'first', sm: 3, md: 'last' })  1`
+] = `
 .c0 {
   position: relative;
   width: 100%;
@@ -166,7 +172,9 @@ exports[`<Column /> should match the snapshot (size: 7)  1`] = `
 />
 `;
 
-exports[`<Column /> should match the snapshot (size: { xs: 'auto', sm: 7, md: 'none' })  1`] = `
+exports[
+  `<Column /> should match the snapshot (size: { xs: 'auto', sm: 7, md: 'none' })  1`
+] = `
 .c0 {
   position: relative;
   width: 100%;
