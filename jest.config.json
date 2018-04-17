@@ -1,6 +1,7 @@
 {
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
+    "!src/__storybook__/**/*.*",
     "!src/**/*.story.{js,jsx,ts,tsx}"
   ],
   "coverageReporters": ["cobertura", "lcov"],
