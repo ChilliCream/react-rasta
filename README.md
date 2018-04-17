@@ -35,11 +35,10 @@ npm install react-rasta --save
 _React Rasta_ implements all features from the _Bootstrap V4_ grid system and adds more flexibility on top of it.
 
 ```tsx
-//App.tsx
-import * as React from "react";
+import { Component } from "react";
 import { Column, Container, Row } from "react-rasta";
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <Container>
@@ -58,30 +57,22 @@ export default class App extends React.Component {
 Breakpoints (which will end up in media queries) could be redefined via `ThemeProvider`.
 
 ```tsx
-//App.tsx
-import * as React from "react";
-import {
-  BreakpointMap,
-  BreakpointValues,
-  Column,
-  Container,
-  Row,
-  ThemeProvider
-} from "react-rasta";
+import { Component } from "react";
+import { Column, Container, Row, ThemeProvider } from "react-rasta";
 
-const breakpoints: BreakpointMap = {
+const breakpoints = {
   phone: 0,
   tablet: 600,
   desktop: 800
 };
 
-const containerWidth: BreakpointValues<number> = {
+const containerWidth = {
   // do not specify phone here
   tablet: 560,
   desktop: 760
 };
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <ThemeProvider theme={{ breakpoints, containerWidth }}>
