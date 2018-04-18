@@ -1,6 +1,3 @@
-// Module mocks must mocked before importing modules
-jest.mock("../utils/bootstrap", () => jest.fn());
-
 import renderDirection from "./renderDirection";
 
 describe("renderDirection", () => {

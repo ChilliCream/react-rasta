@@ -11,9 +11,7 @@
   },
   "author": "ChilliCream",
   "license": "MIT",
-  "keywords": [
-    "grid", "layout", "css", "flexbox"
-  ],
+  "keywords": ["grid", "layout", "css", "flexbox"],
   "scripts": {
     "build": "yarn prettier && yarn lint && yarn test:coverage && tsc",
     "build-storybook": "build-storybook",

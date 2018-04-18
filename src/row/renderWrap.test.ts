@@ -1,6 +1,3 @@
-// Module mocks must mocked before importing modules
-jest.mock("../utils/bootstrap", () => jest.fn());
-
 import renderWrap from "./renderWrap";
 
 describe("renderWrap", () => {

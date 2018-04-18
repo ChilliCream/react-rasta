@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should verify the API shape 1`] = `
+Object {
+  "RenderProvider": undefined,
+  "css": [Function],
+  "flatten": [Function],
+  "map": [Function],
+  "percentage": [Function],
+  "render": [Function],
+  "resolve": [Function],
+}
+`;

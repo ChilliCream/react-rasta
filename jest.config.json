@@ -6,6 +6,7 @@
   ],
   "coverageReporters": ["cobertura", "lcov"],
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "setupTestFrameworkScriptFile": "./test.config.ts",
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "testRegex": ".*?\\.(spec|test)\\.(jsx?|tsx?)$",
   "testResultsProcessor": "jest-junit",
