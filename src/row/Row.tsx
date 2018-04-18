@@ -1,10 +1,12 @@
 import "../utils/bootstrap";
 import { ClassAttributes, HTMLAttributes } from "react";
 import { StyledComponentClass } from "styled-components";
+import renderAlignItems from "./renderAlignItems";
 import renderDirection from "./renderDirection";
 import renderGutter from "./renderGutter";
 import renderJustifyContent from "./renderJustifyContent";
 import renderWrap from "./renderWrap";
+import RowAlignItems from "./RowAlignItems";
 import RowDirection from "./RowDirection";
 import RowJustifyContent from "./RowJustifyContent";
 import RowProperties from "./RowProperties";
@@ -18,6 +20,8 @@ const Row = styled.div`
 
   ${(props: RowProperties) => {
     const renderer = {
+      alignItems: (value?: PropertyValue) =>
+        renderAlignItems(value as RowAlignItems),
       justifyContent: (value?: PropertyValue) =>
         renderJustifyContent(value as RowJustifyContent),
       direction: (value?: PropertyValue) =>
@@ -26,6 +30,7 @@ const Row = styled.div`
       wrap: (value?: PropertyValue) => renderWrap(value as RowWrap)
     };
     const valueMap = {
+      alignItems: props!.alignItems as BreakpointValue<RowAlignItems>,
       justifyContent: props!.justifyContent as BreakpointValue<
         RowJustifyContent
       >,

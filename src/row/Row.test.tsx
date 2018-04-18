@@ -13,6 +13,24 @@ describe("<Row />", () => {
     expect(result).toMatchSnapshot();
   });
 
+  it("should match the snapshot (alignItems: 'strech') ", () => {
+    // act
+    const result = shallow(<Row alignItems={"stretch"} />);
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
+  it("should match the snapshot (alignItems: { xs: 'baseline', sm: 'center', md: 'flex-end' })", () => {
+    // act
+    const result = shallow(
+      <Row alignItems={{ xs: "baseline", sm: "center", md: "flex-end" }} />
+    );
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
   it("should match the snapshot (direction: 'row') ", () => {
     // act
     const result = shallow(<Row direction={"row"} />);

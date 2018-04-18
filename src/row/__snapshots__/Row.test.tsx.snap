@@ -1,5 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Row /> should match the snapshot (alignItems: 'strech')  1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch !important;
+  -webkit-box-align: stretch !important;
+  -ms-flex-align: stretch !important;
+  align-items: stretch !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[
+  `<Row /> should match the snapshot (alignItems: { xs: 'baseline', sm: 'center', md: 'flex-end' }) 1`
+] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline !important;
+  -webkit-box-align: baseline !important;
+  -ms-flex-align: baseline !important;
+  align-items: baseline !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-align-items: center !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    -webkit-align-items: flex-end !important;
+    -webkit-box-align: flex-end !important;
+    -ms-flex-align: flex-end !important;
+    align-items: flex-end !important;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[
   `<Row /> should match the snapshot (direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap') 1`
 ] = `
