@@ -10,7 +10,7 @@ describe("renderJustifyContent", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important;"
+      "justify-content:center!important;"
     );
   });
 
@@ -23,7 +23,7 @@ describe("renderJustifyContent", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-pack:end!important;-ms-flex-pack:end!important;justify-content:flex-end!important;"
+      "justify-content:flex-end!important;"
     );
   });
 
@@ -36,7 +36,7 @@ describe("renderJustifyContent", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-pack:start!important;-ms-flex-pack:start!important;justify-content:flex-start!important;"
+      "justify-content:flex-start!important;"
     );
   });
 
@@ -49,7 +49,7 @@ describe("renderJustifyContent", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-ms-flex-pack:distribute!important;justify-content:space-around!important;"
+      "justify-content:space-around!important;"
     );
   });
 
@@ -62,7 +62,7 @@ describe("renderJustifyContent", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-pack:justify!important;-ms-flex-pack:justify!important;justify-content:space-between!important;"
+      "justify-content:space-between!important;"
     );
   });
 

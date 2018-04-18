@@ -5,26 +5,18 @@ exports[
 ] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center !important;
-  -ms-flex-pack: center !important;
-  -webkit-box-pack: center !important;
   -webkit-justify-content: center !important;
   -ms-flex-pack: center !important;
   justify-content: center !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: column !important;
   -webkit-flex-direction: column !important;
   -ms-flex-direction: column !important;
   flex-direction: column !important;
   margin-right: 0;
   margin-left: 0;
-  -ms-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -45,20 +37,14 @@ exports[
 exports[`<Row /> should match the snapshot (direction: 'row')  1`] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: row !important;
   -webkit-flex-direction: row !important;
   -ms-flex-direction: row !important;
   flex-direction: row !important;
   margin-right: -15px;
   margin-left: -15px;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -80,20 +66,14 @@ exports[
 ] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: row !important;
   -webkit-flex-direction: row !important;
   -ms-flex-direction: row !important;
   flex-direction: row !important;
   margin-right: -15px;
   margin-left: -15px;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -106,9 +86,6 @@ exports[
 
 @media (min-width:576px) {
   .c0 {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-    -ms-flex-direction: row-reverse !important;
     -webkit-flex-direction: row-reverse !important;
     -ms-flex-direction: row-reverse !important;
     flex-direction: row-reverse !important;
@@ -117,9 +94,6 @@ exports[
 
 @media (min-width:768px) {
   .c0 {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-    -ms-flex-direction: column !important;
     -webkit-flex-direction: column !important;
     -ms-flex-direction: column !important;
     flex-direction: column !important;
@@ -143,20 +117,15 @@ exports[
 ] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify !important;
-  -ms-flex-pack: justify !important;
   -webkit-box-pack: justify !important;
   -webkit-justify-content: space-between !important;
   -ms-flex-pack: justify !important;
   justify-content: space-between !important;
   margin-right: -15px;
   margin-left: -15px;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -177,19 +146,15 @@ exports[
 ] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute !important;
   -webkit-box-pack: space-around !important;
   -webkit-justify-content: space-around !important;
   -ms-flex-pack: space-around !important;
   justify-content: space-around !important;
   margin-right: -15px;
   margin-left: -15px;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -203,8 +168,6 @@ exports[
 @media (min-width:576px) {
   .c0 {
     -webkit-box-pack: end !important;
-    -ms-flex-pack: end !important;
-    -webkit-box-pack: end !important;
     -webkit-justify-content: flex-end !important;
     -ms-flex-pack: end !important;
     justify-content: flex-end !important;
@@ -213,8 +176,6 @@ exports[
 
 @media (min-width:768px) {
   .c0 {
-    -webkit-box-pack: start !important;
-    -ms-flex-pack: start !important;
     -webkit-box-pack: start !important;
     -webkit-justify-content: flex-start !important;
     -ms-flex-pack: start !important;
@@ -230,14 +191,11 @@ exports[
 exports[`<Row /> should match the snapshot (no properties set) 1`] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: -15px;
   margin-left: -15px;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -258,14 +216,11 @@ exports[
 ] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: 0;
   margin-left: 0;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -308,14 +263,11 @@ exports[
 exports[`<Row /> should match the snapshot (noGutter: true)  1`] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: 0;
   margin-left: 0;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -334,14 +286,11 @@ exports[`<Row /> should match the snapshot (noGutter: true)  1`] = `
 exports[`<Row /> should match the snapshot (wrap: 'wrap-reverse')  1`] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: -15px;
   margin-left: -15px;
-  -ms-flex-wrap: wrap-reverse;
   -webkit-flex-wrap: wrap-reverse;
   -ms-flex-wrap: wrap-reverse;
   flex-wrap: wrap-reverse;
@@ -363,14 +312,11 @@ exports[
 ] = `
 .c0 {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: -15px;
   margin-left: -15px;
-  -ms-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -383,7 +329,6 @@ exports[
 
 @media (min-width:576px) {
   .c0 {
-    -ms-flex-wrap: wrap-reverse;
     -webkit-flex-wrap: wrap-reverse;
     -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse;
@@ -392,7 +337,6 @@ exports[
 
 @media (min-width:768px) {
   .c0 {
-    -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;

@@ -14,8 +14,6 @@ import { styled, Theme } from "../theme";
 import { render } from "../utils";
 
 const Row = styled.div`
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 
   ${(props: RowProperties) => {
