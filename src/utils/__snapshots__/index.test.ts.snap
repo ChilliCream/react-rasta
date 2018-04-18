@@ -2,7 +2,7 @@
 
 exports[`index should verify the API shape 1`] = `
 Object {
-  "RenderProvider": undefined,
+  "RenderProvider": Object {},
   "css": [Function],
   "flatten": [Function],
   "map": [Function],

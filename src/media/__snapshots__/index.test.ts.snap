@@ -2,13 +2,13 @@
 
 exports[`index should verify the API shape 1`] = `
 Object {
-  "BreakpointMap": undefined,
-  "BreakpointValue": undefined,
-  "BreakpointValues": undefined,
-  "BreakpointValuesMap": undefined,
-  "PropertyValue": undefined,
-  "PropertyValues": undefined,
-  "PropertyValuesMap": undefined,
+  "BreakpointMap": Object {},
+  "BreakpointValue": Object {},
+  "BreakpointValues": Object {},
+  "BreakpointValuesMap": Object {},
+  "PropertyValue": Object {},
+  "PropertyValues": Object {},
+  "PropertyValuesMap": Object {},
   "breakpoints": [Function],
   "defaultBreakpointKey": [Function],
   "defaultBreakpoints": Object {

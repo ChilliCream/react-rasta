@@ -1,8 +1,6 @@
-// These imports are needed for declaration files
-import * as _React from "react";
-import * as _StyledComponents from "styled-components";
-// -------------------------------------------------------------------
 import "../utils/bootstrap";
+import { ClassAttributes, HTMLAttributes } from "react";
+import { StyledComponentClass } from "styled-components";
 import ColumnProperties from "./ColumnProperties";
 import ColumnOffset from "./ColumnOffset";
 import ColumnOrder from "./ColumnOrder";

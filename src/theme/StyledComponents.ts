@@ -1,7 +1,5 @@
-// These imports are needed for declaration files
-import * as _React from "react";
+import { ComponentClass, StatelessComponent } from "react";
 import * as styledComponents from "styled-components";
-// -------------------------------------------------------------------
 import { ThemedStyledComponentsModule } from "styled-components";
 import Theme from "./Theme";
 

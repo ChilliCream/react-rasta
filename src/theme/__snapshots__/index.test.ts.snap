@@ -2,8 +2,8 @@
 
 exports[`index should verify the API shape 1`] = `
 Object {
-  "Theme": undefined,
-  "ThemeProperties": undefined,
+  "Theme": Object {},
+  "ThemeProperties": Object {},
   "gutterWidth": [Function],
   "styled": [Function],
 }
