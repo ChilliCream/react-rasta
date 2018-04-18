@@ -12,8 +12,6 @@ const renderOrder = (order?: ColumnOrder | 0 | 13): string => {
 
     if (typeof order === "number") {
       return `
-        -webkit-box-ordinal-group: ${order};
-        -ms-flex-order: ${order - 1};
         order: ${order - 1};
       `;
     }

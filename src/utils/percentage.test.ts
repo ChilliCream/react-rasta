@@ -36,7 +36,7 @@ describe("percentage", () => {
 
   it("should return '0' (input: 13)", () => {
     // arrange
-    const input = undefined;
+    const input = 13;
 
     // act
     const output = percentage(input);

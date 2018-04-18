@@ -1,6 +1,3 @@
-// Module mocks must mocked before importing modules
-jest.mock("../utils/bootstrap", () => jest.fn());
-
 import renderDirection from "./renderDirection";
 
 describe("renderDirection", () => {
@@ -13,8 +10,7 @@ describe("renderDirection", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-orient:vertical!important;-webkit-box-direction:normal!important;" +
-        "-ms-flex-direction:column!important;flex-direction:column!important;"
+      "flex-direction:column!important;"
     );
   });
 
@@ -27,8 +23,7 @@ describe("renderDirection", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-orient:vertical!important;-webkit-box-direction:reverse!important;" +
-        "-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important;"
+      "flex-direction:column-reverse!important;"
     );
   });
 
@@ -41,8 +36,7 @@ describe("renderDirection", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;" +
-        "-ms-flex-direction:row!important;flex-direction:row!important;"
+      "flex-direction:row!important;"
     );
   });
 
@@ -55,8 +49,7 @@ describe("renderDirection", () => {
 
     // assert
     expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-webkit-box-orient:horizontal!important;-webkit-box-direction:reverse!important;" +
-        "-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important;"
+      "flex-direction:row-reverse!important;"
     );
   });
 

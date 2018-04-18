@@ -1,14 +1,8 @@
-// Module mocks must mocked before importing modules
-jest.mock("../utils/bootstrap", () => jest.fn());
-
 import "jest-styled-components";
-import { configure, shallow } from "enzyme";
-import * as Adapter from "enzyme-adapter-react-16";
+import { shallow } from "enzyme";
 import * as React from "react";
 import styled from "styled-components";
 import Column from "./Column";
-
-configure({ adapter: new Adapter() });
 
 describe("<Column />", () => {
   it("should match the snapshot (no properties set)", () => {

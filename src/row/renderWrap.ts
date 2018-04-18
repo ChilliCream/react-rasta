@@ -8,7 +8,6 @@ function renderWrap(wrap?: RowWrap): string {
 
   if (wrap === "nowrap" || wrap === "wrap" || wrap === "wrap-reverse") {
     return css`
-      -ms-flex-wrap: ${wrap};
       flex-wrap: ${wrap};
     `;
   }

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should verify the API shape 1`] = `
+Object {
+  "BreakpointMap": Object {},
+  "BreakpointValue": Object {},
+  "BreakpointValues": Object {},
+  "Column": [Function],
+  "Container": [Function],
+  "Row": [Function],
+  "Theme": Object {},
+  "ThemeProvider": [Function],
+}
+`;

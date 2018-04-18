@@ -1,6 +1,3 @@
-// Module mocks must mocked before importing modules
-jest.mock("../utils/bootstrap", () => jest.fn());
-
 import renderWrap from "./renderWrap";
 
 describe("renderWrap", () => {
@@ -12,9 +9,7 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-ms-flex-wrap:nowrap;flex-wrap:nowrap;"
-    );
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:nowrap;");
   });
 
   it("should render wrap appropriate (input: 'wrap')", () => {
@@ -25,9 +20,7 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-ms-flex-wrap:wrap;flex-wrap:wrap;"
-    );
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:wrap;");
   });
 
   it("should render wrap appropriate (input: 'wrap-reverse')", () => {
@@ -38,9 +31,7 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse;"
-    );
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:wrap-reverse;");
   });
 
   it("should render wrap appropriate (input: undefined)", () => {
@@ -51,8 +42,6 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "-ms-flex-wrap:wrap;flex-wrap:wrap;"
-    );
+    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:wrap;");
   });
 });

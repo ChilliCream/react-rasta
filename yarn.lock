@@ -3867,7 +3867,7 @@ iferr@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
 
-immutable@^3.8.1:
+immutable@^3.8.1, immutable@^3.8.2:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
@@ -7456,15 +7456,17 @@ tslib@^1.8.0, tslib@^1.8.1:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.0.tgz#e37a86fda8cbbaf23a057f473c9f4dc64e5fc2e8"
 
-tslint-config-prettier@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/tslint-config-prettier/-/tslint-config-prettier-1.10.0.tgz#5063c413d43de4f6988c73727f65ecfc239054ec"
-
 tslint-react@^3.3.3:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-3.5.1.tgz#a5ca48034bf583fb63b42763bb89fa23062d5390"
   dependencies:
     tsutils "^2.13.1"
+
+tslint-sonarts@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/tslint-sonarts/-/tslint-sonarts-1.6.0.tgz#b21366029d83e2426d207174255bb2e09525e162"
+  dependencies:
+    immutable "^3.8.2"
 
 tslint@^5.9.1:
   version "5.9.1"
