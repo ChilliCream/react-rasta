@@ -22,7 +22,7 @@
     "test": "jest --config jest.config.json",
     "test:coverage": "jest --coverage --config jest.config.json"
   },
-  "files": ["lib/"],
+  "files": ["lib", "src"],
   "peerDependencies": {
     "styled-components": ">= 1 < 4"
   },
