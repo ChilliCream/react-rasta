@@ -1,5 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Row /> should match the snapshot (alignContent: 'flex-end', alignItems: 'baseline', direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap') 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: flex-end !important;
+  -ms-flex-line-pack: end !important;
+  align-content: flex-end !important;
+  -webkit-align-items: baseline !important;
+  -webkit-box-align: baseline !important;
+  -ms-flex-align: baseline !important;
+  align-items: baseline !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  -webkit-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+  margin-right: 0;
+  margin-left: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+<div
+  className="c0"
+  direction="column"
+  wrap="nowrap"
+/>
+`;
+
+exports[`<Row /> should match the snapshot (alignContent: 'space-between')  1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: space-between !important;
+  -ms-flex-line-pack: space-between !important;
+  align-content: space-between !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Row /> should match the snapshot (alignContent: { xs: 'space-around', sm: 'flex-end', md: 'flex-start' }) 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: space-around !important;
+  -ms-flex-line-pack: space-around !important;
+  align-content: space-around !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > .sc-bdVaJa {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-align-content: flex-end !important;
+    -ms-flex-line-pack: end !important;
+    align-content: flex-end !important;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    -webkit-align-content: flex-start !important;
+    -ms-flex-line-pack: start !important;
+    align-content: flex-start !important;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`<Row /> should match the snapshot (alignItems: 'strech')  1`] = `
 .c0 {
   display: -webkit-box;
@@ -27,9 +134,7 @@ exports[`<Row /> should match the snapshot (alignItems: 'strech')  1`] = `
 />
 `;
 
-exports[
-  `<Row /> should match the snapshot (alignItems: { xs: 'baseline', sm: 'center', md: 'flex-end' }) 1`
-] = `
+exports[`<Row /> should match the snapshot (alignItems: { xs: 'baseline', sm: 'center', md: 'flex-end' }) 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -74,40 +179,6 @@ exports[
 />
 `;
 
-exports[
-  `<Row /> should match the snapshot (direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap') 1`
-] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center !important;
-  -webkit-justify-content: center !important;
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
-  -webkit-flex-direction: column !important;
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
-  margin-right: 0;
-  margin-left: 0;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.c0 > .sc-bdVaJa {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-<div
-  className="c0"
-  direction="column"
-  wrap="nowrap"
-/>
-`;
-
 exports[`<Row /> should match the snapshot (direction: 'row')  1`] = `
 .c0 {
   display: -webkit-box;
@@ -135,9 +206,7 @@ exports[`<Row /> should match the snapshot (direction: 'row')  1`] = `
 />
 `;
 
-exports[
-  `<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-reverse', md: 'column' }) 1`
-] = `
+exports[`<Row /> should match the snapshot (direction: { xs: 'row', sm: 'row-reverse', md: 'column' }) 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -186,9 +255,7 @@ exports[
 />
 `;
 
-exports[
-  `<Row /> should match the snapshot (justifyContent: 'space-between')  1`
-] = `
+exports[`<Row /> should match the snapshot (justifyContent: 'space-between')  1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -215,9 +282,7 @@ exports[
 />
 `;
 
-exports[
-  `<Row /> should match the snapshot (justifyContent: { xs: 'space-around', sm: 'flex-end', md: 'flex-start' }) 1`
-] = `
+exports[`<Row /> should match the snapshot (justifyContent: { xs: 'space-around', sm: 'flex-end', md: 'flex-start' }) 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -285,9 +350,7 @@ exports[`<Row /> should match the snapshot (no properties set) 1`] = `
 />
 `;
 
-exports[
-  `<Row /> should match the snapshot (noGutter: { xs: true, sm: false, md: true }) 1`
-] = `
+exports[`<Row /> should match the snapshot (noGutter: { xs: true, sm: false, md: true }) 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -381,9 +444,7 @@ exports[`<Row /> should match the snapshot (wrap: 'wrap-reverse')  1`] = `
 />
 `;
 
-exports[
-  `<Row /> should match the snapshot (wrap: { xs: 'nowrap', sm: 'wrap-reverse', md: 'wrap' }) 1`
-] = `
+exports[`<Row /> should match the snapshot (wrap: { xs: 'nowrap', sm: 'wrap-reverse', md: 'wrap' }) 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;

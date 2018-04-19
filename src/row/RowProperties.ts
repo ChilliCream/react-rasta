@@ -1,3 +1,4 @@
+import RowAlignContent from "./RowAlignContent";
 import RowAlignItems from "./RowAlignItems";
 import RowDirection from "./RowDirection";
 import RowJustifyContent from "./RowJustifyContent";
@@ -6,6 +7,7 @@ import { BreakpointValue } from "../media";
 import { ThemeProperties } from "../theme";
 
 export default interface RowProperties extends ThemeProperties {
+  alignContent?: BreakpointValue<RowAlignContent>;
   alignItems?: BreakpointValue<RowAlignItems>;
   direction?: BreakpointValue<RowDirection>;
   justifyContent?: BreakpointValue<RowJustifyContent>;

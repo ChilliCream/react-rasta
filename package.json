@@ -19,8 +19,8 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts*'",
     "prettier": "prettier \"./*.+(js|json|md)\" \"./src/**/*.*\" --write",
     "storybook": "start-storybook -p 6006",
-    "test": "jest --config jest.config.json",
-    "test:coverage": "jest --coverage --config jest.config.json"
+    "test": "jest --runInBand --config jest.config.json",
+    "test:coverage": "jest --runInBand --coverage --config jest.config.json"
   },
   "files": ["lib", "src"],
   "peerDependencies": {
