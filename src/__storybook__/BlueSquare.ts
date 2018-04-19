@@ -6,12 +6,13 @@ import styled from "styled-components";
 
 const BlueSquare = styled.div`
   background: #0a5991;
+  border: 5px solid #ccc;
   color #fff;
   font-size: 2em;
-  margin: 15px 0;
   padding: 30px 0;
   text-align: center;
   width: 100%;
+  height: 100%;
 `;
 
 export default BlueSquare;

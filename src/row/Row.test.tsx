@@ -13,6 +13,30 @@ describe("<Row />", () => {
     expect(result).toMatchSnapshot();
   });
 
+  it("should match the snapshot (alignContent: 'space-between') ", () => {
+    // act
+    const result = shallow(<Row alignContent={"space-between"} />);
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
+  it("should match the snapshot (alignContent: { xs: 'space-around', sm: 'flex-end', md: 'flex-start' })", () => {
+    // act
+    const result = shallow(
+      <Row
+        alignContent={{
+          xs: "space-around",
+          sm: "flex-end",
+          md: "flex-start"
+        }}
+      />
+    );
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
   it("should match the snapshot (alignItems: 'strech') ", () => {
     // act
     const result = shallow(<Row alignItems={"stretch"} />);
@@ -109,10 +133,12 @@ describe("<Row />", () => {
     expect(result).toMatchSnapshot();
   });
 
-  it("should match the snapshot (direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap')", () => {
+  it("should match the snapshot (alignContent: 'flex-end', alignItems: 'baseline', direction: 'column', justifyContent: center, noGutter: true, wrap: 'nowrap')", () => {
     // act
     const result = shallow(
       <Row
+        alignContent={"flex-end"}
+        alignItems={"baseline"}
         direction={"column"}
         justifyContent={"center"}
         noGutter={true}

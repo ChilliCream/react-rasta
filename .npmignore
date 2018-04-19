@@ -1,0 +1,31 @@
+# Build
+.circleci/
+.storybook/
+node_modules/
+
+# Editors & OS
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Test
+coverage/
+test/
+junit.xml
+
+# Source
+src/**/__snapshots__/*.snap
+src/__storybook__/
+src/**/*.story.*
+src/**/*.test.*
+
+# Config
+/.bettercodehub.yml
+/jest.config.json
+/test.config.ts
+/tsconfig.json
+/tslint.config
+/yarn.lock
