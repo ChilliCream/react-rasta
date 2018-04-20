@@ -13,6 +13,24 @@ describe("<Column />", () => {
     expect(result).toMatchSnapshot();
   });
 
+  it("should match the snapshot (alignSelf: 'strech') ", () => {
+    // act
+    const result = shallow(<Column alignSelf={"stretch"} />);
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
+  it("should match the snapshot (alignSelf: { xs: 'baseline', sm: 'center', md: 'flex-end' })", () => {
+    // act
+    const result = shallow(
+      <Column alignSelf={{ xs: "baseline", sm: "center", md: "flex-end" }} />
+    );
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
   it("should match the snapshot (offset: 3) ", () => {
     // arrange
     const offset = 3;
@@ -66,7 +84,7 @@ describe("<Column />", () => {
     expect(result).toMatchSnapshot();
   });
 
-  it("should match the snapshot (offset: 3, order: 3, size: 9)", () => {
+  it("should match the snapshot (alignSelf: 'stretch', offset: 3, order: 3, size: 9)", () => {
     // arrange
     const offset = 3;
     const order = 3;
@@ -74,7 +92,7 @@ describe("<Column />", () => {
 
     // act
     const result = shallow(
-      <Column offset={offset} order={order} size={size} />
+      <Column alignSelf={"stretch"} offset={offset} order={order} size={size} />
     );
 
     // assert
