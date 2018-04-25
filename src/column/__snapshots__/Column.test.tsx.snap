@@ -1,5 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Column /> should match the snapshot (alignSelf: 'strech')  1`] = `
+.c0 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  -webkit-align-self: stretch !important;
+  -ms-flex-item-align: stretch !important;
+  align-self: stretch !important;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[
+  `<Column /> should match the snapshot (alignSelf: 'stretch', offset: 3, order: 3, size: 9) 1`
+] = `
+.c0 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  -webkit-align-self: stretch !important;
+  -ms-flex-item-align: stretch !important;
+  align-self: stretch !important;
+  margin-left: 25.000000%;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  -webkit-flex: 0 0 75.000000%;
+  -ms-flex: 0 0 75.000000%;
+  flex: 0 0 75.000000%;
+  max-width: 75.000000%;
+}
+
+<div
+  className="c0"
+  offset={3}
+  order={3}
+  size={9}
+/>
+`;
+
+exports[
+  `<Column /> should match the snapshot (alignSelf: { xs: 'baseline', sm: 'center', md: 'flex-end' }) 1`
+] = `
+.c0 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  -webkit-align-self: baseline !important;
+  -ms-flex-item-align: baseline !important;
+  align-self: baseline !important;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-align-self: center !important;
+    -ms-flex-item-align: center !important;
+    align-self: center !important;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    -webkit-align-self: flex-end !important;
+    -ms-flex-item-align: end !important;
+    align-self: flex-end !important;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`<Column /> should match the snapshot (no properties set) 1`] = `
 .c0 {
   position: relative;
@@ -57,31 +133,6 @@ exports[`<Column /> should match the snapshot (offset: 3)  1`] = `
 <div
   className="c0"
   offset={3}
-/>
-`;
-
-exports[
-  `<Column /> should match the snapshot (offset: 3, order: 3, size: 9) 1`
-] = `
-.c0 {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  margin-left: 25.000000%;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  -webkit-flex: 0 0 75.000000%;
-  -ms-flex: 0 0 75.000000%;
-  flex: 0 0 75.000000%;
-  max-width: 75.000000%;
-}
-
-<div
-  className="c0"
-  offset={3}
-  order={3}
-  size={9}
 />
 `;
 
