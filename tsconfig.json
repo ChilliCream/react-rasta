@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "lib",
-    "module": "commonjs",
+    "module": "umd",
     "target": "es5",
     "lib": ["es6", "dom"],
     "allowSyntheticDefaultImports": true,

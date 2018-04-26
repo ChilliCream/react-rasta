@@ -1,6 +1,7 @@
 # Build
 lib/
 node_modules/
+*.tgz
 
 # Editors & OS
 .DS_Store

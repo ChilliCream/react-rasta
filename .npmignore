@@ -2,6 +2,8 @@
 .circleci/
 .storybook/
 node_modules/
+*.tgz
+tslint.json
 
 # Editors & OS
 .DS_Store
@@ -17,7 +19,7 @@ test/
 junit.xml
 
 # Source
-src/**/__snapshots__/*.snap
+src/**/__snapshots__/*.*
 src/__storybook__/
 src/**/*.story.*
 src/**/*.test.*

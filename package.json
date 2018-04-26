@@ -22,7 +22,6 @@
     "test": "jest --runInBand --config jest.config.json",
     "test:coverage": "jest --runInBand --coverage --config jest.config.json"
   },
-  "files": ["lib", "src"],
   "peerDependencies": {
     "styled-components": ">= 1 < 4"
   },
