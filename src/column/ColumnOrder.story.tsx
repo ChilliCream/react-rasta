@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
 import Story from "../__storybook__/Story";
 import Title from "../__storybook__/Title";
 
@@ -29,25 +28,25 @@ storiesOf("ColumnOrder", module).add("order", () => (
           size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }}
           order={{ sm: "last" }}
         >
-          <BlueSquare>1</BlueSquare>
+          1
         </Column>
         <Column size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }} order={{ sm: 5 }}>
-          <BlueSquare>2</BlueSquare>
+          2
         </Column>
         <Column size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }} order={{ sm: 4 }}>
-          <BlueSquare>3</BlueSquare>
+          3
         </Column>
         <Column size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }} order={{ sm: 3 }}>
-          <BlueSquare>4</BlueSquare>
+          4
         </Column>
         <Column size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }} order={{ sm: 2 }}>
-          <BlueSquare>5</BlueSquare>
+          5
         </Column>
         <Column
           size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }}
           order={{ sm: "first" }}
         >
-          <BlueSquare>6</BlueSquare>
+          6
         </Column>
       </Row>
     </Container>

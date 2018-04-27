@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
 import Story from "../__storybook__/Story";
 import Title from "../__storybook__/Title";
 
@@ -13,18 +12,10 @@ storiesOf("RowJustifyContent", module)
       <Title>center</Title>
       <Container>
         <Row justifyContent={"center"}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -34,18 +25,10 @@ storiesOf("RowJustifyContent", module)
       <Title>flex-end</Title>
       <Container>
         <Row justifyContent={"flex-end"}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -55,18 +38,10 @@ storiesOf("RowJustifyContent", module)
       <Title>flex-start</Title>
       <Container>
         <Row justifyContent={"flex-start"}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -76,18 +51,10 @@ storiesOf("RowJustifyContent", module)
       <Title>space-around</Title>
       <Container>
         <Row justifyContent={"space-around"}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -97,18 +64,10 @@ storiesOf("RowJustifyContent", module)
       <Title>space-between</Title>
       <Container>
         <Row justifyContent={"space-between"}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>

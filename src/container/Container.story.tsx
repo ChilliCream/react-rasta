@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
 import Story from "../__storybook__/Story";
 import Title from "../__storybook__/Title";
 
@@ -26,9 +25,7 @@ storiesOf("Container", module)
       <Title>fluid</Title>
       <Container fluid>
         <Row>
-          <Column>
-            <BlueSquare>1</BlueSquare>
-          </Column>
+          <Column>1</Column>
         </Row>
       </Container>
     </Story>
@@ -39,18 +36,10 @@ storiesOf("Container", module)
       <ThemeProvider theme={{ breakpoints, containerWidth }}>
         <Container>
           <Row>
-            <Column size={3}>
-              <BlueSquare>1</BlueSquare>
-            </Column>
-            <Column size={{ phone: 9, tablet: 3 }}>
-              <BlueSquare>2</BlueSquare>
-            </Column>
-            <Column size={{ phone: 9, tablet: 3 }}>
-              <BlueSquare>3</BlueSquare>
-            </Column>
-            <Column size={3}>
-              <BlueSquare>4</BlueSquare>
-            </Column>
+            <Column size={3}>1</Column>
+            <Column size={{ phone: 9, tablet: 3 }}>2</Column>
+            <Column size={{ phone: 9, tablet: 3 }}>3</Column>
+            <Column size={3}>4</Column>
           </Row>
         </Container>
       </ThemeProvider>

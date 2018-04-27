@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
 import Story from "../__storybook__/Story";
 import Title from "../__storybook__/Title";
 
@@ -13,16 +12,14 @@ storiesOf("ColumnOffset", module).add("offset", () => (
     <Container>
       <Row>
         <Column offset={3} size={3}>
-          <BlueSquare>Offset 3</BlueSquare>
+          Offset 3
         </Column>
         <Column offset={3} size={3}>
-          <BlueSquare>Offset 3</BlueSquare>
+          Offset 3
         </Column>
-        <Column size={3}>
-          <BlueSquare>Offset 0</BlueSquare>
-        </Column>
+        <Column size={3}>Offset 0</Column>
         <Column offset={6} size={3}>
-          <BlueSquare>Offset 6</BlueSquare>
+          Offset 6
         </Column>
       </Row>
     </Container>

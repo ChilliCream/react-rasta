@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
 import Story from "../__storybook__/Story";
 import Title from "../__storybook__/Title";
 
@@ -11,19 +10,19 @@ storiesOf("ColumnAlignSelf", module)
   .add("baseline", () => (
     <Story>
       <Title>baseline</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row style={{ height: 200 }}>
+      <Container>
+        <Row>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>1</BlueSquare>
+            1
           </Column>
           <Column alignSelf={"baseline"} size={2}>
-            <BlueSquare>2</BlueSquare>
+            2
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>3</BlueSquare>
+            3
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>4</BlueSquare>
+            4
           </Column>
         </Row>
       </Container>
@@ -32,19 +31,19 @@ storiesOf("ColumnAlignSelf", module)
   .add("center", () => (
     <Story>
       <Title>center</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row style={{ height: 200 }}>
+      <Container>
+        <Row>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>1</BlueSquare>
+            1
           </Column>
           <Column alignSelf={"center"} size={2}>
-            <BlueSquare>2</BlueSquare>
+            2
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>3</BlueSquare>
+            3
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>4</BlueSquare>
+            4
           </Column>
         </Row>
       </Container>
@@ -53,19 +52,19 @@ storiesOf("ColumnAlignSelf", module)
   .add("flex-end", () => (
     <Story>
       <Title>flex-end</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row style={{ height: 200 }}>
+      <Container>
+        <Row>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>1</BlueSquare>
+            1
           </Column>
           <Column alignSelf={"flex-end"} size={2}>
-            <BlueSquare>2</BlueSquare>
+            2
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>3</BlueSquare>
+            3
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>4</BlueSquare>
+            4
           </Column>
         </Row>
       </Container>
@@ -74,19 +73,19 @@ storiesOf("ColumnAlignSelf", module)
   .add("flex-start", () => (
     <Story>
       <Title>flex-start</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row style={{ height: 200 }}>
+      <Container>
+        <Row>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>1</BlueSquare>
+            1
           </Column>
           <Column alignSelf={"flex-start"} size={2}>
-            <BlueSquare>2</BlueSquare>
+            2
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>3</BlueSquare>
+            3
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>4</BlueSquare>
+            4
           </Column>
         </Row>
       </Container>
@@ -95,19 +94,19 @@ storiesOf("ColumnAlignSelf", module)
   .add("stretch", () => (
     <Story>
       <Title>stretch</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row style={{ height: 200 }}>
+      <Container>
+        <Row>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>1</BlueSquare>
+            1
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>2</BlueSquare>
+            2
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>3</BlueSquare>
+            3
           </Column>
           <Column alignSelf={"stretch"} size={2}>
-            <BlueSquare>4</BlueSquare>
+            4
           </Column>
         </Row>
       </Container>

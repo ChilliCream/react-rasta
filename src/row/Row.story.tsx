@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
 import Story from "../__storybook__/Story";
 import Title from "../__storybook__/Title";
 
@@ -25,12 +24,8 @@ storiesOf("Row", module).add("noGutter", () => (
     <Title>noGutter</Title>
     <Container>
       <Row noGutter>
-        <Column size={6}>
-          <BlueSquare>1</BlueSquare>
-        </Column>
-        <Column size={6}>
-          <BlueSquare>2</BlueSquare>
-        </Column>
+        <Column size={6}>1</Column>
+        <Column size={6}>2</Column>
       </Row>
     </Container>
   </Story>
