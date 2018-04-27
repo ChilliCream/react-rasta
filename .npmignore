@@ -19,8 +19,8 @@ test/
 junit.xml
 
 # Source
+src/__utils__/
 src/**/__snapshots__/*.*
-src/__storybook__/
 src/**/*.story.*
 src/**/*.test.*
 

@@ -1,4 +1,5 @@
 import renderAlignContent from "./renderAlignContent";
+import flatten from "../__utils__/flatten";
 
 describe("renderAlignContent", () => {
   it("should render align-content appropriate (input: 'center')", () => {
@@ -9,9 +10,7 @@ describe("renderAlignContent", () => {
     const output = renderAlignContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-content:center!important;"
-    );
+    expect(flatten(output)).toBe("align-content:center!important;");
   });
 
   it("should render align-content appropriate (input: 'flex-end')", () => {
@@ -22,9 +21,7 @@ describe("renderAlignContent", () => {
     const output = renderAlignContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-content:flex-end!important;"
-    );
+    expect(flatten(output)).toBe("align-content:flex-end!important;");
   });
 
   it("should render align-content appropriate (input: 'flex-start')", () => {
@@ -35,9 +32,7 @@ describe("renderAlignContent", () => {
     const output = renderAlignContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-content:flex-start!important;"
-    );
+    expect(flatten(output)).toBe("align-content:flex-start!important;");
   });
 
   it("should render align-content appropriate (input: 'space-around')", () => {
@@ -48,9 +43,7 @@ describe("renderAlignContent", () => {
     const output = renderAlignContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-content:space-around!important;"
-    );
+    expect(flatten(output)).toBe("align-content:space-around!important;");
   });
 
   it("should render align-content appropriate (input: 'space-between')", () => {
@@ -61,9 +54,7 @@ describe("renderAlignContent", () => {
     const output = renderAlignContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-content:space-between!important;"
-    );
+    expect(flatten(output)).toBe("align-content:space-between!important;");
   });
 
   it("should render align-content appropriate (input: 'stretch')", () => {
@@ -74,9 +65,7 @@ describe("renderAlignContent", () => {
     const output = renderAlignContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-content:stretch!important;"
-    );
+    expect(flatten(output)).toBe("align-content:stretch!important;");
   });
 
   it("should render align-content appropriate (input: undefined)", () => {
@@ -87,6 +76,6 @@ describe("renderAlignContent", () => {
     const output = renderAlignContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });

@@ -1,4 +1,5 @@
 import renderAlignSelf from "./renderAlignSelf";
+import flatten from "../__utils__/flatten";
 
 describe("renderAlignSelf", () => {
   it("should render align-self appropriate (input: 'baseline')", () => {
@@ -9,9 +10,7 @@ describe("renderAlignSelf", () => {
     const output = renderAlignSelf(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-self:baseline!important;"
-    );
+    expect(flatten(output)).toBe("align-self:baseline!important;");
   });
 
   it("should render align-self appropriate (input: 'center')", () => {
@@ -22,9 +21,7 @@ describe("renderAlignSelf", () => {
     const output = renderAlignSelf(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-self:center!important;"
-    );
+    expect(flatten(output)).toBe("align-self:center!important;");
   });
 
   it("should render align-self appropriate (input: 'flex-end')", () => {
@@ -35,9 +32,7 @@ describe("renderAlignSelf", () => {
     const output = renderAlignSelf(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-self:flex-end!important;"
-    );
+    expect(flatten(output)).toBe("align-self:flex-end!important;");
   });
 
   it("should render align-self appropriate (input: 'flex-start')", () => {
@@ -48,9 +43,7 @@ describe("renderAlignSelf", () => {
     const output = renderAlignSelf(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-self:flex-start!important;"
-    );
+    expect(flatten(output)).toBe("align-self:flex-start!important;");
   });
 
   it("should render align-self appropriate (input: 'stretch')", () => {
@@ -61,9 +54,7 @@ describe("renderAlignSelf", () => {
     const output = renderAlignSelf(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-self:stretch!important;"
-    );
+    expect(flatten(output)).toBe("align-self:stretch!important;");
   });
 
   it("should render allign-items appropriate (input: undefined)", () => {
@@ -74,6 +65,6 @@ describe("renderAlignSelf", () => {
     const output = renderAlignSelf(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });

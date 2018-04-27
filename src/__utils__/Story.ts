@@ -11,21 +11,20 @@ const Story = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  text-align: center;
 
-  > ${Container},
-  > ${Container} > ${Row} {
+  ${Container},
+  ${Row} {
     background: #ccc;
     height: 300px;
   }
 
-  > ${Container} > ${Row} > ${Column} {
+  ${Row} > ${Column} {
     background: #0a5991;
     border: 5px solid #ccc;
     color #fff;
     font-size: 2em;
-    text-align: center;
     line-height: 65px;
+    text-align: center;
   }
 `;
 

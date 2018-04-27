@@ -1,4 +1,5 @@
 import renderDirection from "./renderDirection";
+import flatten from "../__utils__/flatten";
 
 describe("renderDirection", () => {
   it("should render direction appropriate (input: 'column')", () => {
@@ -9,9 +10,7 @@ describe("renderDirection", () => {
     const output = renderDirection(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "flex-direction:column!important;"
-    );
+    expect(flatten(output)).toBe("flex-direction:column!important;");
   });
 
   it("should render direction appropriate (input: 'column-reverse')", () => {
@@ -22,9 +21,7 @@ describe("renderDirection", () => {
     const output = renderDirection(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "flex-direction:column-reverse!important;"
-    );
+    expect(flatten(output)).toBe("flex-direction:column-reverse!important;");
   });
 
   it("should render direction appropriate (input: 'row')", () => {
@@ -35,9 +32,7 @@ describe("renderDirection", () => {
     const output = renderDirection(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "flex-direction:row!important;"
-    );
+    expect(flatten(output)).toBe("flex-direction:row!important;");
   });
 
   it("should render direction appropriate (input: 'row-reverse')", () => {
@@ -48,9 +43,7 @@ describe("renderDirection", () => {
     const output = renderDirection(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "flex-direction:row-reverse!important;"
-    );
+    expect(flatten(output)).toBe("flex-direction:row-reverse!important;");
   });
 
   it("should render direction appropriate (input: undefined)", () => {
@@ -61,6 +54,6 @@ describe("renderDirection", () => {
     const output = renderDirection(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });
