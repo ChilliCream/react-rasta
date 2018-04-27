@@ -5,19 +5,6 @@ import Story from "../__storybook__/Story";
 import Title from "../__storybook__/Title";
 
 import { Column, Container, Row } from "..";
-import { ThemeProvider } from "../theme/StyledComponents";
-
-const breakpoints = {
-  phone: 0,
-  tablet: 600,
-  desktop: 800
-};
-
-const containerWidth = {
-  // do not specify phone here
-  tablet: 560,
-  desktop: 760
-};
 
 storiesOf("ColumnFlex", module).add("flex", () => (
   <Story>

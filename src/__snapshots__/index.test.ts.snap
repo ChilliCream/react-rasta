@@ -2,6 +2,7 @@
 
 exports[`index should verify the API shape 1`] = `
 Object {
+  "Break": [Function],
   "BreakpointMap": Object {},
   "BreakpointValue": Object {},
   "BreakpointValues": Object {},
