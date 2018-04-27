@@ -10,7 +10,7 @@ describe("renderFlex", () => {
     const output = renderFlex(input);
 
     // assert
-    expect(flatten(output)).toBe("flex:auto!important;");
+    expect(flatten(output)).toBe("flex-grow:1!important;");
   });
 
   it("should render flex appropriate (input: 'none')", () => {
@@ -21,7 +21,7 @@ describe("renderFlex", () => {
     const output = renderFlex(input);
 
     // assert
-    expect(flatten(output)).toBe("flex:initial!important;");
+    expect(flatten(output)).toBe("");
   });
 
   it("should render flex appropriate (input: 'shrink')", () => {
@@ -32,7 +32,7 @@ describe("renderFlex", () => {
     const output = renderFlex(input);
 
     // assert
-    expect(flatten(output)).toBe("flex:none!important;");
+    expect(flatten(output)).toBe("flex-shrink:0!important;");
   });
 
   it("should render flex appropriate (input: undefined)", () => {

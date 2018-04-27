@@ -5,12 +5,7 @@ export default (flex?: ColumnFlex): string => {
   switch (flex) {
     case "grow":
       return css`
-        flex: auto !important;
-      `;
-
-    case "none":
-      return css`
-        flex: initial !important;
+        flex-grow: 1 !important;
       `;
 
     case "shrink":
