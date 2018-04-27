@@ -1,5 +1,6 @@
 import resolve from "./resolve";
 import { breakpoints } from "../media";
+import flatten from "../__utils__/flatten";
 
 describe("resolve", () => {
   it("should resolve media breakpoints (input: 'xs')", () => {
@@ -12,7 +13,7 @@ describe("resolve", () => {
     `;
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("width:444px;");
+    expect(flatten(output)).toBe("width:444px;");
   });
 
   it("should resolve media breakpoints (input: 'sm')", () => {
@@ -25,9 +26,7 @@ describe("resolve", () => {
     `;
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "@media(min-width:576px){width:555px;}"
-    );
+    expect(flatten(output)).toBe("@media(min-width:576px){width:555px;}");
   });
 
   it("should resolve media breakpoints (input: 'not-exists')", () => {
@@ -40,7 +39,7 @@ describe("resolve", () => {
     `;
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("width:666px;");
+    expect(flatten(output)).toBe("width:666px;");
   });
 
   it("should resolve media breakpoints (input: 'sm', css body empty)", () => {
@@ -51,6 +50,6 @@ describe("resolve", () => {
     const output = resolve(breakpointsMap, "sm")``;
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });

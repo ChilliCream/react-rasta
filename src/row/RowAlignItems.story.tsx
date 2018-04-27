@@ -1,9 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
-import Story from "../__storybook__/Story";
-import Title from "../__storybook__/Title";
+import Story from "../__utils__/Story";
+import Title from "../__utils__/Title";
 
 import { Column, Container, Row } from "..";
 
@@ -11,20 +10,12 @@ storiesOf("RowAlignItems", module)
   .add("baseline", () => (
     <Story>
       <Title>baseline</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row alignItems={"baseline"} style={{ height: 200 }}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+      <Container>
+        <Row alignItems={"baseline"}>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -32,20 +23,12 @@ storiesOf("RowAlignItems", module)
   .add("center", () => (
     <Story>
       <Title>center</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row alignItems={"center"} style={{ height: 200 }}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+      <Container>
+        <Row alignItems={"center"}>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -53,20 +36,12 @@ storiesOf("RowAlignItems", module)
   .add("flex-end", () => (
     <Story>
       <Title>flex-end</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row alignItems={"flex-end"} style={{ height: 200 }}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+      <Container>
+        <Row alignItems={"flex-end"}>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -74,20 +49,12 @@ storiesOf("RowAlignItems", module)
   .add("flex-start", () => (
     <Story>
       <Title>flex-start</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row alignItems={"flex-start"} style={{ height: 200 }}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+      <Container>
+        <Row alignItems={"flex-start"}>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -95,20 +62,12 @@ storiesOf("RowAlignItems", module)
   .add("stretch", () => (
     <Story>
       <Title>stretch</Title>
-      <Container style={{ background: "#ccc", height: 200 }}>
-        <Row alignItems={"stretch"} style={{ height: 200 }}>
-          <Column size={2}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={2}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+      <Container>
+        <Row alignItems={"stretch"}>
+          <Column size={2}>1</Column>
+          <Column size={2}>2</Column>
+          <Column size={2}>3</Column>
+          <Column size={2}>4</Column>
         </Row>
       </Container>
     </Story>

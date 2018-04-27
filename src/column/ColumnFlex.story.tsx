@@ -6,21 +6,21 @@ import Title from "../__utils__/Title";
 
 import { Column, Container, Row } from "..";
 
-storiesOf("ColumnOffset", module).add("offset", () => (
+storiesOf("ColumnFlex", module).add("flex", () => (
   <Story>
-    <Title>offset</Title>
+    <Title>flex</Title>
     <Container>
       <Row>
-        <Column offset={3} size={3}>
-          Offset 3
+        <Column size={"none"} flex={"grow"}>
+          grow grow grow grow
         </Column>
-        <Column offset={3} size={3}>
-          Offset 3
+        <Column size={"auto"} flex={"shrink"}>
+          shrink
         </Column>
-        <Column size={3}>Offset 0</Column>
-        <Column offset={6} size={3}>
-          Offset 6
+        <Column size={"none"} flex={"none"}>
+          none
         </Column>
+        <Column size={"none"}>undefined</Column>
       </Row>
     </Container>
   </Story>

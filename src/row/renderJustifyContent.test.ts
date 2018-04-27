@@ -1,4 +1,5 @@
 import renderJustifyContent from "./renderJustifyContent";
+import flatten from "../__utils__/flatten";
 
 describe("renderJustifyContent", () => {
   it("should render justify-content appropriate (input: 'center')", () => {
@@ -9,9 +10,7 @@ describe("renderJustifyContent", () => {
     const output = renderJustifyContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "justify-content:center!important;"
-    );
+    expect(flatten(output)).toBe("justify-content:center!important;");
   });
 
   it("should render justify-content appropriate (input: 'flex-end')", () => {
@@ -22,9 +21,7 @@ describe("renderJustifyContent", () => {
     const output = renderJustifyContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "justify-content:flex-end!important;"
-    );
+    expect(flatten(output)).toBe("justify-content:flex-end!important;");
   });
 
   it("should render justify-content appropriate (input: 'flex-start')", () => {
@@ -35,9 +32,7 @@ describe("renderJustifyContent", () => {
     const output = renderJustifyContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "justify-content:flex-start!important;"
-    );
+    expect(flatten(output)).toBe("justify-content:flex-start!important;");
   });
 
   it("should render justify-content appropriate (input: 'space-around')", () => {
@@ -48,9 +43,7 @@ describe("renderJustifyContent", () => {
     const output = renderJustifyContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "justify-content:space-around!important;"
-    );
+    expect(flatten(output)).toBe("justify-content:space-around!important;");
   });
 
   it("should render justify-content appropriate (input: 'space-between')", () => {
@@ -61,9 +54,7 @@ describe("renderJustifyContent", () => {
     const output = renderJustifyContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "justify-content:space-between!important;"
-    );
+    expect(flatten(output)).toBe("justify-content:space-between!important;");
   });
 
   it("should render justify-content appropriate (input: undefined)", () => {
@@ -74,6 +65,6 @@ describe("renderJustifyContent", () => {
     const output = renderJustifyContent(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });

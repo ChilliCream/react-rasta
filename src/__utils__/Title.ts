@@ -4,15 +4,11 @@ import * as _StyledComponents from "styled-components";
 // -------------------------------------------------------------------
 import styled from "styled-components";
 
-const BlueSquare = styled.div`
-  background: #0a5991;
-  border: 5px solid #ccc;
-  color #fff;
-  font-size: 2em;
-  padding: 30px 0;
+const Title = styled.div`
+  color: #0a5991;
+  font-size: 3em;
+  margin: 30px 0;
   text-align: center;
-  width: 100%;
-  height: 100%;
 `;
 
-export default BlueSquare;
+export default Title;

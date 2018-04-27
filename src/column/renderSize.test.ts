@@ -1,4 +1,5 @@
 import renderSize from "./renderSize";
+import flatten from "../__utils__/flatten";
 
 describe("renderSize", () => {
   it("should render css for flex size (input: 'auto')", () => {
@@ -9,9 +10,7 @@ describe("renderSize", () => {
     const output = renderSize(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "flex-basis:0;flex-grow:1;max-width:100%;"
-    );
+    expect(flatten(output)).toBe("flex-basis:0;flex-grow:1;max-width:100%;");
   });
 
   it("should render css for flex size (input: 'none')", () => {
@@ -22,9 +21,7 @@ describe("renderSize", () => {
     const output = renderSize(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "flex:00auto;width:auto;max-width:none;"
-    );
+    expect(flatten(output)).toBe("flex:00auto;width:auto;max-width:none;");
   });
 
   it("should render css for flex size (input: undefined)", () => {
@@ -35,7 +32,7 @@ describe("renderSize", () => {
     const output = renderSize(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 
   it("should render css for flex size (input: 6)", () => {
@@ -46,8 +43,6 @@ describe("renderSize", () => {
     const output = renderSize(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "flex:0050.000000%;max-width:50.000000%;"
-    );
+    expect(flatten(output)).toBe("flex:0050.000000%;max-width:50.000000%;");
   });
 });

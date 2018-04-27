@@ -1,4 +1,5 @@
 import renderWidth from "./renderWidth";
+import flatten from "../__utils__/flatten";
 
 describe("renderWidth", () => {
   it("should render container width (input: 500)", () => {
@@ -9,7 +10,7 @@ describe("renderWidth", () => {
     const output = renderWidth(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("max-width:500px;");
+    expect(flatten(output)).toBe("max-width:500px;");
   });
 
   it("should render container width (input: undefined)", () => {
@@ -20,6 +21,6 @@ describe("renderWidth", () => {
     const output = renderWidth(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });

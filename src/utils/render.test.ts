@@ -1,4 +1,5 @@
 import render from "./render";
+import flatten from "../__utils__/flatten";
 
 describe("render", () => {
   it("should render as expected (input: { width: { xs: 111 } })", () => {
@@ -16,7 +17,7 @@ describe("render", () => {
     const output = render(valueMap, renderer);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("width:111px;");
+    expect(flatten(output)).toBe("width:111px;");
   });
 
   it("should render as expected (input: { width: { md: 222 } })", () => {
@@ -34,9 +35,7 @@ describe("render", () => {
     const output = render(valueMap, renderer);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "@media(min-width:768px){width:222px;}"
-    );
+    expect(flatten(output)).toBe("@media(min-width:768px){width:222px;}");
   });
 
   it("should render as expected (input: { width: { xs: 111, sm: 111, md: 222 } })", () => {
@@ -56,7 +55,7 @@ describe("render", () => {
     const output = render(valueMap, renderer);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
+    expect(flatten(output)).toBe(
       "width:111px;@media(min-width:768px){width:222px;}"
     );
   });
@@ -74,7 +73,7 @@ describe("render", () => {
     const output = render(valueMap, renderer);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 
   it("should render as expected (input: {})", () => {
@@ -88,6 +87,6 @@ describe("render", () => {
     const output = render(valueMap, renderer);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });

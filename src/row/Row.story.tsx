@@ -1,9 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
-import Story from "../__storybook__/Story";
-import Title from "../__storybook__/Title";
+import Story from "../__utils__/Story";
+import Title from "../__utils__/Title";
 
 import { Column, Container, Row } from "..";
 import { ThemeProvider } from "../theme/StyledComponents";
@@ -23,15 +22,9 @@ const containerWidth = {
 storiesOf("Row", module).add("noGutter", () => (
   <Story>
     <Title>noGutter</Title>
-    <Container>
-      <Row noGutter>
-        <Column size={6}>
-          <BlueSquare>1</BlueSquare>
-        </Column>
-        <Column size={6}>
-          <BlueSquare>2</BlueSquare>
-        </Column>
-      </Row>
-    </Container>
+    <Row noGutter>
+      <Column size={6}>1</Column>
+      <Column size={6}>2</Column>
+    </Row>
   </Story>
 ));

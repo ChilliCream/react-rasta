@@ -1,4 +1,5 @@
 import renderOffset from "./renderOffset";
+import flatten from "../__utils__/flatten";
 
 describe("renderOffset", () => {
   it("should return css for offset (input: 1)", () => {
@@ -9,7 +10,7 @@ describe("renderOffset", () => {
     const output = renderOffset(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("margin-left:8.333333%;");
+    expect(flatten(output)).toBe("margin-left:8.333333%;");
   });
 
   it("should return empty string (input: undefined)", () => {
@@ -20,6 +21,6 @@ describe("renderOffset", () => {
     const output = renderOffset(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });

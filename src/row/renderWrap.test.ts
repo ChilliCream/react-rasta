@@ -1,4 +1,5 @@
 import renderWrap from "./renderWrap";
+import flatten from "../__utils__/flatten";
 
 describe("renderWrap", () => {
   it("should render wrap appropriate (input: 'nowrap')", () => {
@@ -9,7 +10,7 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:nowrap;");
+    expect(flatten(output)).toBe("flex-wrap:nowrap;");
   });
 
   it("should render wrap appropriate (input: 'wrap')", () => {
@@ -20,7 +21,7 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:wrap;");
+    expect(flatten(output)).toBe("flex-wrap:wrap;");
   });
 
   it("should render wrap appropriate (input: 'wrap-reverse')", () => {
@@ -31,7 +32,7 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:wrap-reverse;");
+    expect(flatten(output)).toBe("flex-wrap:wrap-reverse;");
   });
 
   it("should render wrap appropriate (input: undefined)", () => {
@@ -42,6 +43,6 @@ describe("renderWrap", () => {
     const output = renderWrap(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("flex-wrap:wrap;");
+    expect(flatten(output)).toBe("flex-wrap:wrap;");
   });
 });

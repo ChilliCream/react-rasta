@@ -1,9 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import BlueSquare from "../__storybook__/BlueSquare";
-import Story from "../__storybook__/Story";
-import Title from "../__storybook__/Title";
+import Story from "../__utils__/Story";
+import Title from "../__utils__/Title";
 
 import { Column, Container, Row } from "..";
 
@@ -13,18 +12,10 @@ storiesOf("RowWrap", module)
       <Title>nowrap</Title>
       <Container>
         <Row wrap={"nowrap"}>
-          <Column size={6}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={6}>1</Column>
+          <Column size={6}>2</Column>
+          <Column size={6}>3</Column>
+          <Column size={6}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -34,18 +25,10 @@ storiesOf("RowWrap", module)
       <Title>wrap</Title>
       <Container>
         <Row wrap={"wrap"}>
-          <Column size={6}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={6}>1</Column>
+          <Column size={6}>2</Column>
+          <Column size={6}>3</Column>
+          <Column size={6}>4</Column>
         </Row>
       </Container>
     </Story>
@@ -55,18 +38,10 @@ storiesOf("RowWrap", module)
       <Title>wrap-reverse</Title>
       <Container>
         <Row wrap={"wrap-reverse"}>
-          <Column size={6}>
-            <BlueSquare>1</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>2</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>3</BlueSquare>
-          </Column>
-          <Column size={6}>
-            <BlueSquare>4</BlueSquare>
-          </Column>
+          <Column size={6}>1</Column>
+          <Column size={6}>2</Column>
+          <Column size={6}>3</Column>
+          <Column size={6}>4</Column>
         </Row>
       </Container>
     </Story>

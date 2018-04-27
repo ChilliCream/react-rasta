@@ -1,4 +1,5 @@
 import renderGutter from "./renderGutter";
+import flatten from "../__utils__/flatten";
 
 describe("renderGutter", () => {
   it("should render container width (input: true)", () => {
@@ -9,7 +10,7 @@ describe("renderGutter", () => {
     const output = renderGutter(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toMatch(
+    expect(flatten(output)).toMatch(
       /margin\-right:0;margin\-left:0;>.*?{padding\-right:0;padding\-left:0;}/gi
     );
   });
@@ -22,7 +23,7 @@ describe("renderGutter", () => {
     const output = renderGutter(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toMatch(
+    expect(flatten(output)).toMatch(
       /margin\-right:\-15px;margin\-left:\-15px;>.*?{padding\-right:15px;padding\-left:15px;}/gi
     );
   });
@@ -35,7 +36,7 @@ describe("renderGutter", () => {
     const output = renderGutter(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toMatch(
+    expect(flatten(output)).toMatch(
       /margin\-right:\-15px;margin\-left:\-15px;>.*?{padding\-right:15px;padding\-left:15px;}/gi
     );
   });

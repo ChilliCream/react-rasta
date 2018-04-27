@@ -1,4 +1,5 @@
 import renderOrder from "./renderOrder";
+import flatten from "../__utils__/flatten";
 
 describe("renderOrder", () => {
   it("should render css for flex order (input: 'first')", () => {
@@ -9,7 +10,7 @@ describe("renderOrder", () => {
     const output = renderOrder(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("order:-1;");
+    expect(flatten(output)).toBe("order:-1;");
   });
 
   it("should render css for flex order (input: 0)", () => {
@@ -20,7 +21,7 @@ describe("renderOrder", () => {
     const output = renderOrder(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("order:-1;");
+    expect(flatten(output)).toBe("order:-1;");
   });
 
   it("should render css for flex order (input: 5)", () => {
@@ -31,7 +32,7 @@ describe("renderOrder", () => {
     const output = renderOrder(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("order:4;");
+    expect(flatten(output)).toBe("order:4;");
   });
 
   it("should render css for flex order (input: 'last')", () => {
@@ -42,7 +43,7 @@ describe("renderOrder", () => {
     const output = renderOrder(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("order:12;");
+    expect(flatten(output)).toBe("order:12;");
   });
 
   it("should render css for flex order (input: 13)", () => {
@@ -53,6 +54,6 @@ describe("renderOrder", () => {
     const output = renderOrder(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("order:12;");
+    expect(flatten(output)).toBe("order:12;");
   });
 });

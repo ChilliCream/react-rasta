@@ -1,4 +1,5 @@
 import renderAlignItems from "./renderAlignItems";
+import flatten from "../__utils__/flatten";
 
 describe("renderAlignItems", () => {
   it("should render align-items appropriate (input: 'baseline')", () => {
@@ -9,9 +10,7 @@ describe("renderAlignItems", () => {
     const output = renderAlignItems(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-items:baseline!important;"
-    );
+    expect(flatten(output)).toBe("align-items:baseline!important;");
   });
 
   it("should render align-items appropriate (input: 'center')", () => {
@@ -22,9 +21,7 @@ describe("renderAlignItems", () => {
     const output = renderAlignItems(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-items:center!important;"
-    );
+    expect(flatten(output)).toBe("align-items:center!important;");
   });
 
   it("should render align-items appropriate (input: 'flex-end')", () => {
@@ -35,9 +32,7 @@ describe("renderAlignItems", () => {
     const output = renderAlignItems(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-items:flex-end!important;"
-    );
+    expect(flatten(output)).toBe("align-items:flex-end!important;");
   });
 
   it("should render align-items appropriate (input: 'flex-start')", () => {
@@ -48,9 +43,7 @@ describe("renderAlignItems", () => {
     const output = renderAlignItems(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-items:flex-start!important;"
-    );
+    expect(flatten(output)).toBe("align-items:flex-start!important;");
   });
 
   it("should render align-items appropriate (input: 'stretch')", () => {
@@ -61,9 +54,7 @@ describe("renderAlignItems", () => {
     const output = renderAlignItems(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe(
-      "align-items:stretch!important;"
-    );
+    expect(flatten(output)).toBe("align-items:stretch!important;");
   });
 
   it("should render allign-items appropriate (input: undefined)", () => {
@@ -74,6 +65,6 @@ describe("renderAlignItems", () => {
     const output = renderAlignItems(input);
 
     // assert
-    expect(output.replace(/\n|\r|\s|\t/gi, "")).toBe("");
+    expect(flatten(output)).toBe("");
   });
 });
