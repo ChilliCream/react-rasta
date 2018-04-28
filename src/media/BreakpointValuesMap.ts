@@ -1,5 +1,7 @@
 import PropertyValues from "./PropertyValues";
 
-export default interface BreakpointValuesMap {
+interface BreakpointValuesMap {
   [key: string]: PropertyValues;
-};
+}
+
+export default BreakpointValuesMap;

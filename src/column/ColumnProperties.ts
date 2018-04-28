@@ -6,10 +6,12 @@ import ColumnSize from "./ColumnSize";
 import { BreakpointValue } from "../media";
 import { ThemeProperties } from "../theme";
 
-export default interface ColumnProperties extends ThemeProperties {
+interface ColumnProperties extends ThemeProperties {
   alignSelf?: BreakpointValue<ColumnAlignSelf>;
   flex?: BreakpointValue<ColumnFlex>;
   offset?: BreakpointValue<ColumnOffset>;
   order?: BreakpointValue<ColumnOrder>;
   size?: BreakpointValue<ColumnSize>;
-};
+}
+
+export default ColumnProperties;

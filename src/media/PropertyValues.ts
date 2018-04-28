@@ -1,5 +1,7 @@
 import PropertyValue from "./PropertyValue";
 
-export default interface PropertyValues {
+interface PropertyValues {
   [key: string]: PropertyValue;
-};
+}
+
+export default PropertyValue;

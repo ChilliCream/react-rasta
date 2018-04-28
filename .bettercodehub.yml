@@ -1,1 +1,11 @@
 component_depth: 2
+languages:
+- name: typescript
+  production:
+    exclude:
+      - .*/__snapshots__/.*\.snap
+      - .*/__utils__/.*\.ts
+      - .*/__utils__/.*\.tsx
+      - .*\.story\.tsx
+      - .*\.test\.ts
+      - .*\.test\.tsx
