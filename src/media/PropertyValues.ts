@@ -4,4 +4,4 @@ interface PropertyValues {
   [key: string]: PropertyValue;
 }
 
-export default PropertyValue;
+export default PropertyValues;
