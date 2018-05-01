@@ -1,5 +1,7 @@
 import Theme from "./Theme";
 
-export default interface ThemeProperties {
+interface ThemeProperties {
   theme?: Theme;
-};
+}
+
+export default ThemeProperties;

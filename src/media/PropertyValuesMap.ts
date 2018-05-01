@@ -1,6 +1,8 @@
 import BreakpointValue from "./BreakpointValue";
 import PropertyValue from "./PropertyValue";
 
-export default interface PropertyValuesMap {
+interface PropertyValuesMap {
   [key: string]: BreakpointValue<PropertyValue>;
-};
+}
+
+export default PropertyValuesMap;

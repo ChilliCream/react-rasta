@@ -17,13 +17,14 @@
     "build-storybook": "build-storybook",
     "cover": "coveralls < coverage/lcov.info",
     "lint": "tslint -c tslint.json 'src/**/*.ts*'",
+    "precommit": "lint-staged",
     "prettier": "prettier \"./*.+(js|json|md)\" \"./src/**/*.*\" --write",
     "storybook": "start-storybook -p 6006",
     "test": "jest --runInBand --config jest.config.json",
     "test:coverage": "jest --runInBand --coverage --config jest.config.json"
   },
   "peerDependencies": {
-    "styled-components": ">= 1 < 4"
+    "styled-components": ">= 3 < 4"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.0",
@@ -44,9 +45,11 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
+    "husky": "^0.14.3",
     "jest": "^22.0.5",
     "jest-junit": "^3.6.0",
     "jest-styled-components": "^5.0.1",
+    "lint-staged": "^7.0.5",
     "prettier": "^1.11.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

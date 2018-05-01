@@ -6,9 +6,9 @@
 
 **The most powerful and flexible grid system for _React_**
 
-_React Rasta_ is a 12 column grid system and works underneath with the _CSS flexbox_ layout.
-But because it can be difficult to work with _CSS flexbox_, _React Rasta_ offers a simple _API_
-so you don't have to worry about that.
+_React Rasta_ is a 12 column grid system built on top of `styled-components` which works underneath
+with the _CSS flexbox_ layout. _React Rasta_ implements all features from the _Bootstrap V4.1_ grid
+system but adds more flexibility on top of it.
 
 ## Getting Started
 
@@ -30,9 +30,16 @@ And when using _npm_ it looks like this.
 npm install react-rasta --save
 ```
 
-### Code Example
+#### Required Dependencies
 
-_React Rasta_ implements all features from the _Bootstrap V4_ grid system and adds more flexibility on top of it.
+_React Rasta_ depends on the following packages which need to be installed manually.
+
+| Package             | Version      |
+| ------------------- | ------------ |
+| `react`             | 16 or higher |
+| `styled-components` | 3 or higher  |
+
+### Code Examples
 
 ```tsx
 import { Component } from "react";

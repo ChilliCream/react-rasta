@@ -1,7 +1,10 @@
 import { BreakpointValues } from "../media";
 import { ThemeProperties } from "../theme";
 
-export default interface ContainerProperties extends ThemeProperties {
+interface ContainerProperties extends ThemeProperties {
   fluid?: boolean;
+  fullscreen?: boolean;
   width?: BreakpointValues<number>;
-};
+}
+
+export default ContainerProperties;

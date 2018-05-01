@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[
-  `<Container /> should match the snapshot (fluid property set to true)  1`
+  `<Container /> should match the snapshot (fluid property set to true) 1`
 ] = `
 .c0 {
   width: 100%;
@@ -13,6 +13,55 @@ exports[
 
 <div
   className="c0"
+/>
+`;
+
+exports[
+  `<Container /> should match the snapshot (fullscreen property set to true) 1`
+] = `
+.c0 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 100%;
+}
+
+.c0 > .sc-bwzfXH {
+  height: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[
+  `<Container /> should match the snapshot (ignores fluid and width when fullscreen is set) 1`
+] = `
+.c0 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 100%;
+}
+
+.c0 > .sc-bwzfXH {
+  height: 100%;
+}
+
+<div
+  className="c0"
+  width={
+    Object {
+      "md": 300,
+      "sm": 200,
+      "xs": 100,
+    }
+  }
 />
 `;
 

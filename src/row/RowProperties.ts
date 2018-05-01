@@ -6,11 +6,13 @@ import RowWrap from "./RowWrap";
 import { BreakpointValue } from "../media";
 import { ThemeProperties } from "../theme";
 
-export default interface RowProperties extends ThemeProperties {
+interface RowProperties extends ThemeProperties {
   alignContent?: BreakpointValue<RowAlignContent>;
   alignItems?: BreakpointValue<RowAlignItems>;
   direction?: BreakpointValue<RowDirection>;
   justifyContent?: BreakpointValue<RowJustifyContent>;
   noGutter?: BreakpointValue<boolean>;
   wrap?: BreakpointValue<RowWrap>;
-};
+}
+
+export default RowProperties;

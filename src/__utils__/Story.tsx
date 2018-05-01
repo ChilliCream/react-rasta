@@ -3,6 +3,7 @@ import * as _React from "react";
 import * as _StyledComponents from "styled-components";
 // -------------------------------------------------------------------
 import styled from "styled-components";
+import StoryProperties from "./StoryProperties";
 import Column from "../column";
 import Container from "../container";
 import Row from "../row";
@@ -11,11 +12,12 @@ const Story = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
+  ${(props: StoryProperties) => (props.fullscreen ? "height: 100%;" : "")}
 
   ${Container},
   ${Row} {
     background: #ccc;
-    height: 300px;
+    ${(props: StoryProperties) => (props.fullscreen ? "" : "height: 300px;")}
   }
 
   ${Row} > ${Column} {

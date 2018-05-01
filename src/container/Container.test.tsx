@@ -13,9 +13,17 @@ describe("<Container />", () => {
     expect(result).toMatchSnapshot();
   });
 
-  it("should match the snapshot (fluid property set to true) ", () => {
+  it("should match the snapshot (fluid property set to true)", () => {
     // act
     const result = shallow(<Container fluid />);
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
+  it("should match the snapshot (fullscreen property set to true)", () => {
+    // act
+    const result = shallow(<Container fullscreen />);
 
     // assert
     expect(result).toMatchSnapshot();
@@ -32,7 +40,17 @@ describe("<Container />", () => {
   it("should match the snapshot (ignores width when fluid is set)", () => {
     // act
     const result = shallow(
-      <Container fluid={true} width={{ xs: 100, sm: 200, md: 300 }} />
+      <Container fluid width={{ xs: 100, sm: 200, md: 300 }} />
+    );
+
+    // assert
+    expect(result).toMatchSnapshot();
+  });
+
+  it("should match the snapshot (ignores fluid and width when fullscreen is set)", () => {
+    // act
+    const result = shallow(
+      <Container fluid fullscreen width={{ xs: 100, sm: 200, md: 300 }} />
     );
 
     // assert

@@ -1,5 +1,7 @@
 import { PropertyValue } from "../media";
 
-export default interface RenderProvider {
+interface RenderProvider {
   [key: string]: (value?: PropertyValue) => string;
-};
+}
+
+export default RenderProvider;

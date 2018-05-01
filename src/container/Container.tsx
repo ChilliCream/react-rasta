@@ -2,11 +2,13 @@ import "../utils/bootstrap";
 import { ClassAttributes, HTMLAttributes } from "react";
 import { StyledComponentClass } from "styled-components";
 import ContainerProperties from "./ContainerProperties";
+import fullscreen from "./fullscreen";
 import renderWidth from "./renderWidth";
 import getWidth from "./width";
 import { PropertyValue } from "../media";
+import Row from "../row";
 import { gutterWidth, styled, Theme } from "../theme";
-import { render } from "../utils";
+import { css, render } from "../utils";
 
 const Container = styled.div`
   width: 100%;
@@ -21,7 +23,17 @@ const Container = styled.div`
       padding-left: ${width}px;
     `;
   }} ${(props: ContainerProperties) => {
-    if (props.fluid) {
+    if (props.fullscreen) {
+      fullscreen();
+
+      return css`
+        height: 100%;
+
+        > ${Row} {
+          height: 100%;
+        }
+      `;
+    } else if (props.fluid) {
       return "";
     } else {
       const renderer = {

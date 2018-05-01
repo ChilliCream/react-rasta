@@ -1,3 +1,5 @@
-export default interface BreakpointMap {
+interface BreakpointMap {
   [key: string]: number;
-};
+}
+
+export default BreakpointMap;

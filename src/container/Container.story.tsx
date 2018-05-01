@@ -30,6 +30,15 @@ storiesOf("Container", module)
       </Container>
     </Story>
   ))
+  .add("fullscreen", () => (
+    <Story fullscreen>
+      <Container fullscreen>
+        <Row>
+          <Column>fullscreen</Column>
+        </Row>
+      </Container>
+    </Story>
+  ))
   .add("themeProvider", () => (
     <Story>
       <Title>themeProvider</Title>

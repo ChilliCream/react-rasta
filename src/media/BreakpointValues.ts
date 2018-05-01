@@ -1,5 +1,7 @@
 import PropertyValue from "./PropertyValue";
 
-export default interface BreakpointValues<TValue extends PropertyValue> {
+interface BreakpointValues<TValue extends PropertyValue> {
   [key: string]: TValue;
-};
+}
+
+export default BreakpointValues;
