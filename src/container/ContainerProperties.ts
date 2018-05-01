@@ -3,6 +3,7 @@ import { ThemeProperties } from "../theme";
 
 interface ContainerProperties extends ThemeProperties {
   fluid?: boolean;
+  fullscreen?: boolean;
   width?: BreakpointValues<number>;
 }
 

@@ -13,7 +13,7 @@
   "license": "MIT",
   "keywords": ["grid", "layout", "css", "flexbox"],
   "scripts": {
-    "build": "yarn lint && yarn test:coverage && tsc",
+    "build": "yarn prettier && yarn lint && yarn test:coverage && tsc",
     "build-storybook": "build-storybook",
     "cover": "coveralls < coverage/lcov.info",
     "lint": "tslint -c tslint.json 'src/**/*.ts*'",
