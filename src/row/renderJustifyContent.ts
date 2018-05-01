@@ -1,16 +1,18 @@
 import RowJustifyContent from "./RowJustifyContent";
-import { css } from "../utils";
+import { css, equals } from "../utils";
 
 export default (contentJustify?: RowJustifyContent): string => {
   if (
-    contentJustify === "center" ||
-    contentJustify === "flex-end" ||
-    contentJustify === "flex-start" ||
-    contentJustify === "space-around" ||
-    contentJustify === "space-between"
+    equals(contentJustify, [
+      "center",
+      "flex-end",
+      "flex-start",
+      "space-around",
+      "space-between"
+    ])
   ) {
     return css`
-      justify-content: ${contentJustify} !important;
+      justify-content: ${contentJustify + ""} !important;
     `;
   } else {
     return "";

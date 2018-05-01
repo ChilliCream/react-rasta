@@ -1,4 +1,5 @@
 export { default as css } from "./css";
+export { default as equals } from "./equals";
 export { default as flatten } from "./flatten";
 export { default as map } from "./map";
 export { default as percentage } from "./percentage";

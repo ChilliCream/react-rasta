@@ -1,17 +1,19 @@
 import RowAlignContent from "./RowAlignContent";
-import { css } from "../utils";
+import { css, equals } from "../utils";
 
 export default (alignContent?: RowAlignContent): string => {
   if (
-    alignContent === "center" ||
-    alignContent === "flex-end" ||
-    alignContent === "flex-start" ||
-    alignContent === "space-around" ||
-    alignContent === "space-between" ||
-    alignContent === "stretch"
+    equals(alignContent, [
+      "center",
+      "flex-end",
+      "flex-start",
+      "space-around",
+      "space-between",
+      "stretch"
+    ])
   ) {
     return css`
-      align-content: ${alignContent} !important;
+      align-content: ${alignContent + ""} !important;
     `;
   } else {
     return "";
