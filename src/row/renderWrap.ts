@@ -1,12 +1,12 @@
 import RowWrap from "./RowWrap";
-import { css } from "../utils";
+import { css, equals } from "../utils";
 
 function renderWrap(wrap?: RowWrap): string {
   if (wrap == null) {
     return renderWrap("wrap");
   }
 
-  if (wrap === "nowrap" || wrap === "wrap" || wrap === "wrap-reverse") {
+  if (equals(wrap, ["nowrap", "wrap", "wrap-reverse"])) {
     return css`
       flex-wrap: ${wrap};
     `;
