@@ -1,7 +1,3 @@
-// These imports are needed for declaration files
-import * as _React from "react";
-import * as _StyledComponents from "styled-components";
-// -------------------------------------------------------------------
 import styled from "styled-components";
 import StoryProperties from "./StoryProperties";
 import Column from "../column";
