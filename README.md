@@ -8,8 +8,7 @@
 
 **The most powerful and flexible grid system for _React_**
 
-_React Rasta_ is a 12 column grid system built on top of `styled-components` which works underneath
-with the _CSS flexbox_ layout.
+_React Rasta_ is a 12 column grid system built on top of the _CSS flexbox_ layout and `styled-components`.
 
 ## Getting Started
 
