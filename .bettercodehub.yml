@@ -9,3 +9,7 @@ languages:
       - .*\.story\.tsx
       - .*\.test\.ts
       - .*\.test\.tsx
+  test:
+    include:
+      - .*\.test\.ts
+      - .*\.test\.tsx
