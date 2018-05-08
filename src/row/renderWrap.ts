@@ -2,17 +2,13 @@ import RowWrap from "./RowWrap";
 import { css, equals } from "../utils";
 
 function renderWrap(wrap?: RowWrap): string {
-  if (wrap == null) {
+  if (wrap == null || !equals(wrap, ["nowrap", "wrap", "wrap-reverse"])) {
     return renderWrap("wrap");
-  }
-
-  if (equals(wrap, ["nowrap", "wrap", "wrap-reverse"])) {
+  } else {
     return css`
       flex-wrap: ${wrap};
     `;
   }
-
-  return "";
 }
 
 export default renderWrap;
