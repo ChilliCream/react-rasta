@@ -1,5 +1,5 @@
+import {shallow} from "enzyme";
 import "jest-styled-components";
-import { shallow } from "enzyme";
 import React from "react";
 import styled from "styled-components";
 import Row from "./Row";
@@ -28,9 +28,9 @@ describe("<Row />", () => {
         alignContent={{
           xs: "space-around",
           sm: "flex-end",
-          md: "flex-start"
+          md: "flex-start",
         }}
-      />
+      />,
     );
 
     // assert
@@ -48,7 +48,7 @@ describe("<Row />", () => {
   it("should match the snapshot (alignItems: { xs: 'baseline', sm: 'center', md: 'flex-end' })", () => {
     // act
     const result = shallow(
-      <Row alignItems={{ xs: "baseline", sm: "center", md: "flex-end" }} />
+      <Row alignItems={{xs: "baseline", sm: "center", md: "flex-end"}} />,
     );
 
     // assert
@@ -66,7 +66,7 @@ describe("<Row />", () => {
   it("should match the snapshot (direction: { xs: 'row', sm: 'row-reverse', md: 'column' })", () => {
     // act
     const result = shallow(
-      <Row direction={{ xs: "row", sm: "row-reverse", md: "column" }} />
+      <Row direction={{xs: "row", sm: "row-reverse", md: "column"}} />,
     );
 
     // assert
@@ -88,9 +88,9 @@ describe("<Row />", () => {
         justifyContent={{
           xs: "space-around",
           sm: "flex-end",
-          md: "flex-start"
+          md: "flex-start",
         }}
-      />
+      />,
     );
 
     // assert
@@ -107,9 +107,7 @@ describe("<Row />", () => {
 
   it("should match the snapshot (noGutter: { xs: true, sm: false, md: true })", () => {
     // act
-    const result = shallow(
-      <Row noGutter={{ xs: true, sm: false, md: true }} />
-    );
+    const result = shallow(<Row noGutter={{xs: true, sm: false, md: true}} />);
 
     // assert
     expect(result).toMatchSnapshot();
@@ -126,7 +124,7 @@ describe("<Row />", () => {
   it("should match the snapshot (wrap: { xs: 'nowrap', sm: 'wrap-reverse', md: 'wrap' })", () => {
     // act
     const result = shallow(
-      <Row wrap={{ xs: "nowrap", sm: "wrap-reverse", md: "wrap" }} />
+      <Row wrap={{xs: "nowrap", sm: "wrap-reverse", md: "wrap"}} />,
     );
 
     // assert
@@ -143,7 +141,7 @@ describe("<Row />", () => {
         justifyContent={"center"}
         noGutter={true}
         wrap={"nowrap"}
-      />
+      />,
     );
 
     // assert

@@ -2,13 +2,13 @@ import {
   BreakpointValue,
   BreakpointValues,
   defaultBreakpointKey,
-  PropertyValue
+  PropertyValue,
 } from "../media";
-import { Theme } from "../theme";
+import {Theme} from "../theme";
 
 export default (
   values?: BreakpointValue<PropertyValue>,
-  theme?: Theme
+  theme?: Theme,
 ): BreakpointValues<PropertyValue> => {
   const defaultKey = defaultBreakpointKey(theme);
 

@@ -1,5 +1,5 @@
-import renderOffset from "./renderOffset";
 import flatten from "../__utils__/flatten";
+import renderOffset from "./renderOffset";
 
 describe("renderOffset", () => {
   it("should return css for offset (input: 1)", () => {

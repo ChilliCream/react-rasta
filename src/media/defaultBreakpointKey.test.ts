@@ -1,4 +1,4 @@
-import { defaultBreakpointKey } from ".";
+import {defaultBreakpointKey} from ".";
 
 describe("defaultBreakpointKey", () => {
   it("should return 'xs'", () => {
@@ -17,8 +17,8 @@ describe("defaultBreakpointKey", () => {
     const input = {
       breakpoints: {
         small: 0,
-        big: 500
-      }
+        big: 500,
+      },
     };
 
     // act
@@ -33,8 +33,8 @@ describe("defaultBreakpointKey", () => {
     const input = {
       breakpoints: {
         small: 200,
-        big: 500
-      }
+        big: 500,
+      },
     };
 
     // act

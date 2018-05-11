@@ -1,9 +1,10 @@
-import { injectGlobal } from "../theme/StyledComponents";
+import {injectGlobal} from "../theme/StyledComponents";
 
-let _initialized: boolean = false;
+let initialized: boolean = false;
 
 function bootstrap() {
-  if (!_initialized) {
+  if (!initialized) {
+    // tslint:disable-next-line:no-unused-expression
     injectGlobal`
       @-ms-viewport {
         width: device-width;
@@ -20,7 +21,7 @@ function bootstrap() {
         box-sizing: inherit;
       }
     `;
-    _initialized = true;
+    initialized = true;
   }
 }
 

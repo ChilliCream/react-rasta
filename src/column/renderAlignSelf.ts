@@ -1,16 +1,16 @@
+import {css} from "../utils";
 import ColumnAlignSelf from "./ColumnAlignSelf";
-import { css, equals } from "../utils";
 
 export default (alignSelf?: ColumnAlignSelf): string => {
-  if (
-    equals(alignSelf, [
-      "baseline",
-      "center",
-      "flex-end",
-      "flex-start",
-      "stretch"
-    ])
-  ) {
+  const allowedValues = [
+    "baseline",
+    "center",
+    "flex-end",
+    "flex-start",
+    "stretch",
+  ];
+
+  if (allowedValues.includes(alignSelf!)) {
     return css`
       align-self: ${alignSelf + ""} !important;
     `;

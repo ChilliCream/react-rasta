@@ -6,12 +6,12 @@ describe("map", () => {
     const input = {
       number: {
         xs: 540,
-        md: 670
+        md: 670,
       },
       string: {
         sm: "value 1",
-        md: "value 2"
-      }
+        md: "value 2",
+      },
     };
 
     // act
@@ -20,22 +20,22 @@ describe("map", () => {
     // arrange
     expect(output).toEqual({
       xs: {
-        number: 540
+        number: 540,
       },
       sm: {
-        string: "value 1"
+        string: "value 1",
       },
       md: {
         number: 670,
-        string: "value 2"
-      }
+        string: "value 2",
+      },
     });
   });
 
   it("should map if a property is set to 5", () => {
     // arrange
     const input = {
-      number: 5
+      number: 5,
     };
 
     // act
@@ -44,15 +44,15 @@ describe("map", () => {
     // arrange
     expect(output).toEqual({
       xs: {
-        number: 5
-      }
+        number: 5,
+      },
     });
   });
 
   it("should map if a property is set to undefined", () => {
     // arrange
     const input = {
-      number: undefined
+      number: undefined,
     };
 
     // act
@@ -61,8 +61,8 @@ describe("map", () => {
     // arrange
     expect(output).toEqual({
       xs: {
-        number: undefined
-      }
+        number: undefined,
+      },
     });
   });
 

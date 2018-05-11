@@ -1,5 +1,5 @@
-import renderAlignItems from "./renderAlignItems";
 import flatten from "../__utils__/flatten";
+import renderAlignItems from "./renderAlignItems";
 
 describe("renderAlignItems", () => {
   it("should render align-items appropriate (input: 'baseline')", () => {

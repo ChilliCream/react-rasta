@@ -1,17 +1,17 @@
+import {css} from "../utils";
 import RowAlignContent from "./RowAlignContent";
-import { css, equals } from "../utils";
 
 export default (alignContent?: RowAlignContent): string => {
-  if (
-    equals(alignContent, [
-      "center",
-      "flex-end",
-      "flex-start",
-      "space-around",
-      "space-between",
-      "stretch"
-    ])
-  ) {
+  const allowedValues = [
+    "center",
+    "flex-end",
+    "flex-start",
+    "space-around",
+    "space-between",
+    "stretch",
+  ];
+
+  if (allowedValues.includes(alignContent!)) {
     return css`
       align-content: ${alignContent + ""} !important;
     `;

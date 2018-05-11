@@ -1,5 +1,5 @@
-import renderDirection from "./renderDirection";
 import flatten from "../__utils__/flatten";
+import renderDirection from "./renderDirection";
 
 describe("renderDirection", () => {
   it("should render direction appropriate (input: 'column')", () => {

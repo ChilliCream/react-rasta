@@ -1,6 +1,6 @@
 import Column from "../column";
-import { Theme, gutterWidth } from "../theme";
-import { css } from "../utils";
+import {gutterWidth, Theme} from "../theme";
+import {css} from "../utils";
 
 export default (noGutter?: boolean, theme?: Theme): string => {
   if (noGutter != null && typeof noGutter === "boolean" && noGutter) {

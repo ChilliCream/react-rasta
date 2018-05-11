@@ -1,5 +1,5 @@
+import {percentage} from "../utils";
 import ColumnSize from "./ColumnSize";
-import { percentage } from "../utils";
 
 export default (size?: ColumnSize): string => {
   if (size == null || typeof size === "object" || size < 1 || size > 12) {

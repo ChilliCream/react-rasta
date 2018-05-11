@@ -1,5 +1,5 @@
+import {percentage} from "../utils";
 import ColumnOffset from "./ColumnOffset";
-import { percentage } from "../utils";
 
 export default (offset?: ColumnOffset): string => {
   if (

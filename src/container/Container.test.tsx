@@ -1,5 +1,5 @@
+import {shallow} from "enzyme";
 import "jest-styled-components";
-import { shallow } from "enzyme";
 import React from "react";
 import styled from "styled-components";
 import Container from "./Container";
@@ -31,7 +31,7 @@ describe("<Container />", () => {
 
   it("should match the snapshot (width property set to { xs: 100, sm: 200, md: 300 })", () => {
     // act
-    const result = shallow(<Container width={{ xs: 100, sm: 200, md: 300 }} />);
+    const result = shallow(<Container width={{xs: 100, sm: 200, md: 300}} />);
 
     // assert
     expect(result).toMatchSnapshot();
@@ -40,7 +40,7 @@ describe("<Container />", () => {
   it("should match the snapshot (ignores width when fluid is set)", () => {
     // act
     const result = shallow(
-      <Container fluid width={{ xs: 100, sm: 200, md: 300 }} />
+      <Container fluid width={{xs: 100, sm: 200, md: 300}} />,
     );
 
     // assert
@@ -50,7 +50,7 @@ describe("<Container />", () => {
   it("should match the snapshot (ignores fluid and width when fullscreen is set)", () => {
     // act
     const result = shallow(
-      <Container fluid fullscreen width={{ xs: 100, sm: 200, md: 300 }} />
+      <Container fluid fullscreen width={{xs: 100, sm: 200, md: 300}} />,
     );
 
     // assert

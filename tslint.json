@@ -1,8 +1,17 @@
 {
-  "extends": ["tslint-sonarts", "tslint-react"],
+  "extends": ["tslint:recommended", "tslint-sonarts", "tslint-react"],
   "rules": {
+    "interface-name": false,
     "jsx-boolean-value": false,
     "jsx-no-multiline-js": false,
+    "max-line-length": [
+      true,
+      {
+        "limit": 80,
+        // single quoted string, double quoted string, string literal, comment, regex
+        "ignore-pattern": "'.+'|\".+\"|`(.|[\r\n])+`|/.*/"
+      }
+    ],
     "no-extra-semicolon": false,
     "no-array-delete": false,
     "no-accessor-field-mismatch": false,
@@ -21,8 +30,16 @@
     "no-useless-cast": false,
     "no-useless-intersection": false,
     "no-variable-usage-before-declaration": false,
+    "object-literal-sort-keys": false,
     "parameters-max-number": false,
     "prefer-immediate-return": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
     "use-type-alias": false
   }
 }

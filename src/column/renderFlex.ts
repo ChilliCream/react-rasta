@@ -1,5 +1,5 @@
+import {css} from "../utils";
 import ColumnFlex from "./ColumnFlex";
-import { css } from "../utils";
 
 export default (flex?: ColumnFlex): string => {
   switch (flex) {

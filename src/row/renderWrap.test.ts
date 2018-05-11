@@ -1,5 +1,5 @@
-import renderWrap from "./renderWrap";
 import flatten from "../__utils__/flatten";
+import renderWrap from "./renderWrap";
 
 describe("renderWrap", () => {
   it("should render wrap appropriate (input: 'nowrap')", () => {

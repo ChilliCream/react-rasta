@@ -14,7 +14,7 @@ describe("gutterWidth", () => {
 
   it("should return 20 if set to 40", () => {
     // arrange
-    const theme = { gutterWidth: 40 };
+    const theme = {gutterWidth: 40};
 
     // act
     const output = gutterWidth(theme);

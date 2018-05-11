@@ -1,5 +1,5 @@
-import renderFlex from "./renderFlex";
 import flatten from "../__utils__/flatten";
+import renderFlex from "./renderFlex";
 
 describe("renderFlex", () => {
   it("should render flex appropriate (input: 'grow')", () => {

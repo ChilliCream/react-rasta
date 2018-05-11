@@ -1,9 +1,10 @@
-import { injectGlobal } from "../theme/StyledComponents";
+import {injectGlobal} from "../theme/StyledComponents";
 
-let _applied: boolean = false;
+let applied: boolean = false;
 
 export default () => {
-  if (!_applied) {
+  if (!applied) {
+    // tslint:disable-next-line:no-unused-expression
     injectGlobal`
       html,
       body,
@@ -13,6 +14,6 @@ export default () => {
         padding: 0 !important;
       }
     `;
-    _applied = true;
+    applied = true;
   }
 };

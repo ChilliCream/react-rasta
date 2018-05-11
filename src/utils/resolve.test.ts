@@ -1,6 +1,6 @@
-import resolve from "./resolve";
-import { breakpoints } from "../media";
 import flatten from "../__utils__/flatten";
+import {breakpoints} from "../media";
+import resolve from "./resolve";
 
 describe("resolve", () => {
   it("should resolve media breakpoints (input: 'xs')", () => {

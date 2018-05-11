@@ -1,5 +1,5 @@
-import renderJustifyContent from "./renderJustifyContent";
 import flatten from "../__utils__/flatten";
+import renderJustifyContent from "./renderJustifyContent";
 
 describe("renderJustifyContent", () => {
   it("should render justify-content appropriate (input: 'center')", () => {
