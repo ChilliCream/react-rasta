@@ -42,7 +42,7 @@ _React Rasta_ depends on the following packages which need to be installed manua
 ### Code Examples
 
 ```tsx
-import { Component } from "react";
+import React, { Component } from "react";
 import { Column, Container, Row } from "react-rasta";
 
 export default class App extends Component {
@@ -64,7 +64,7 @@ export default class App extends Component {
 Breakpoints (which will end up in media queries) could be redefined via `ThemeProvider`.
 
 ```tsx
-import { Component } from "react";
+import React, { Component } from "react";
 import { Column, Container, Row, ThemeProvider } from "react-rasta";
 
 const breakpoints = {
