@@ -1,5 +1,5 @@
-import renderWidth from "./renderWidth";
 import flatten from "../__utils__/flatten";
+import renderWidth from "./renderWidth";
 
 describe("renderWidth", () => {
   it("should render container width (input: 500)", () => {

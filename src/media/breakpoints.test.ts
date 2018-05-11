@@ -5,14 +5,14 @@ describe("breakpoints", () => {
   it("should get breakpoints from the theme", () => {
     // arrange
     const input = {
-      breakpoints: { phone: 30, tablet: 60 }
+      breakpoints: {phone: 30, tablet: 60},
     };
 
     // act
     const output = breakpoints(input);
 
     // assert
-    expect({ phone: 30, tablet: 60 }).toEqual(output);
+    expect({phone: 30, tablet: 60}).toEqual(output);
   });
 
   it("should get default breakpoints (input: {})", () => {

@@ -1,10 +1,10 @@
+import {action} from "@storybook/addon-actions";
+import {storiesOf} from "@storybook/react";
 import React from "react";
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import Story from "../__utils__/Story";
 import Title from "../__utils__/Title";
 
-import { Column, Container, Row } from "..";
+import {Column, Container, Row} from "..";
 
 storiesOf("ColumnAlignSelf", module)
   .add("baseline", () => (

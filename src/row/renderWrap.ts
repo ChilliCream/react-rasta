@@ -1,8 +1,10 @@
+import {css} from "../utils";
 import RowWrap from "./RowWrap";
-import { css, equals } from "../utils";
 
 function renderWrap(wrap?: RowWrap): string {
-  if (wrap == null || !equals(wrap, ["nowrap", "wrap", "wrap-reverse"])) {
+  const allowedValues = ["nowrap", "wrap", "wrap-reverse"];
+
+  if (wrap == null || !allowedValues.includes(wrap!)) {
     return renderWrap("wrap");
   } else {
     return css`

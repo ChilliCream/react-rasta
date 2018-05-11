@@ -1,5 +1,5 @@
-import renderAlignSelf from "./renderAlignSelf";
 import flatten from "../__utils__/flatten";
+import renderAlignSelf from "./renderAlignSelf";
 
 describe("renderAlignSelf", () => {
   it("should render align-self appropriate (input: 'baseline')", () => {

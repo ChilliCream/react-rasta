@@ -42,8 +42,8 @@ _React Rasta_ depends on the following packages which need to be installed manua
 ### Code Examples
 
 ```tsx
-import React, { Component } from "react";
-import { Column, Container, Row } from "react-rasta";
+import React, {Component} from "react";
+import {Column, Container, Row} from "react-rasta";
 
 export default class App extends Component {
   render() {
@@ -51,8 +51,8 @@ export default class App extends Component {
       <Container>
         <Row>
           <Column size={3}>Left</Column>
-          <Column size={{ xs: 9, md: 3 }}>Middle 1</Column>
-          <Column size={{ xs: 9, md: 3 }}>Middle 2</Column>
+          <Column size={{xs: 9, md: 3}}>Middle 1</Column>
+          <Column size={{xs: 9, md: 3}}>Middle 2</Column>
           <Column size={3}>Right</Column>
         </Row>
       </Container>
@@ -64,30 +64,30 @@ export default class App extends Component {
 Breakpoints (which will end up in media queries) could be redefined via `ThemeProvider`.
 
 ```tsx
-import React, { Component } from "react";
-import { Column, Container, Row, ThemeProvider } from "react-rasta";
+import React, {Component} from "react";
+import {Column, Container, Row, ThemeProvider} from "react-rasta";
 
 const breakpoints = {
   phone: 0,
   tablet: 600,
-  desktop: 800
+  desktop: 800,
 };
 
 const containerWidth = {
   // do not specify phone here
   tablet: 560,
-  desktop: 760
+  desktop: 760,
 };
 
 export default class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={{ breakpoints, containerWidth }}>
+      <ThemeProvider theme={{breakpoints, containerWidth}}>
         <Container>
           <Row>
             <Column size={3}>Left</Column>
-            <Column size={{ phone: 9, tablet: 3 }}>Middle 1</Column>
-            <Column size={{ phone: 9, tablet: 3 }}>Middle 2</Column>
+            <Column size={{phone: 9, tablet: 3}}>Middle 1</Column>
+            <Column size={{phone: 9, tablet: 3}}>Middle 2</Column>
             <Column size={3}>Right</Column>
           </Row>
         </Container>

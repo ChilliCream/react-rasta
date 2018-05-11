@@ -1,16 +1,16 @@
+import {css} from "../utils";
 import RowAlignItems from "./RowAlignItems";
-import { css, equals } from "../utils";
 
 export default (alignItems?: RowAlignItems): string => {
-  if (
-    equals(alignItems, [
-      "baseline",
-      "center",
-      "flex-end",
-      "flex-start",
-      "stretch"
-    ])
-  ) {
+  const allowedValues = [
+    "baseline",
+    "center",
+    "flex-end",
+    "flex-start",
+    "stretch",
+  ];
+
+  if (allowedValues.includes(alignItems!)) {
     return css`
       align-items: ${alignItems + ""} !important;
     `;

@@ -1,5 +1,5 @@
+import {shallow} from "enzyme";
 import "jest-styled-components";
-import { shallow } from "enzyme";
 import React from "react";
 import styled from "styled-components";
 import Break from "./Break";

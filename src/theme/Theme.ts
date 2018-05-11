@@ -1,4 +1,4 @@
-import { BreakpointMap, BreakpointValues } from "../media";
+import {BreakpointMap, BreakpointValues} from "../media";
 
 interface Theme {
   breakpoints?: BreakpointMap;

@@ -1,8 +1,10 @@
+import {css} from "../utils";
 import RowDirection from "./RowDirection";
-import { css, equals } from "../utils";
 
 export default (direction?: RowDirection): string => {
-  if (equals(direction, ["column", "column-reverse", "row", "row-reverse"])) {
+  const allowedValues = ["column", "column-reverse", "row", "row-reverse"];
+
+  if (allowedValues.includes(direction!)) {
     return css`
       flex-direction: ${direction + ""} !important;
     `;

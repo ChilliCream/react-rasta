@@ -1,28 +1,28 @@
-import map from "./map";
-import RenderProvider from "./RenderProvider";
-import resolve from "./resolve";
 import {
   BreakpointMap,
   breakpoints,
   PropertyValues,
-  PropertyValuesMap
+  PropertyValuesMap,
 } from "../media";
-import { Theme } from "../theme";
+import {Theme} from "../theme";
+import map from "./map";
+import RenderProvider from "./RenderProvider";
+import resolve from "./resolve";
 
 export default (
   valueMap: PropertyValuesMap,
   renderer: RenderProvider,
-  theme?: Theme
+  theme?: Theme,
 ): string => {
   const breakpointsMap = breakpoints(theme);
   const breakpointValues = map(valueMap, theme) || {};
   const breakpointKeys = Object.keys(breakpointValues).filter(
-    breakpointKey =>
+    (breakpointKey) =>
       breakpointsMap[breakpointKey] != null &&
-      typeof breakpointValues[breakpointKey] === "object"
+      typeof breakpointValues[breakpointKey] === "object",
   );
   const propertyKeys = Object.keys(valueMap).filter(
-    propertyKey => renderer[propertyKey] != null
+    (propertyKey) => renderer[propertyKey] != null,
   );
   const previousValues: PropertyValues = {};
   let count = 0;

@@ -5,7 +5,7 @@ describe("prepare", () => {
     // arrange
     const input = {
       xs: 444,
-      md: 666
+      md: 666,
     };
 
     // act
@@ -14,14 +14,14 @@ describe("prepare", () => {
     // arrange
     expect(output).toEqual({
       xs: 444,
-      md: 666
+      md: 666,
     });
   });
 
   it("should return { xs: undefined, md: 999 }", () => {
     // arrange
     const input = {
-      md: 999
+      md: 999,
     };
 
     // act
@@ -30,14 +30,14 @@ describe("prepare", () => {
     // arrange
     expect(output).toEqual({
       xs: undefined,
-      md: 999
+      md: 999,
     });
   });
 
   it("should return { xs: 888 }", () => {
     // arrange
     const input = {
-      xs: 888
+      xs: 888,
     };
 
     // act
@@ -45,7 +45,7 @@ describe("prepare", () => {
 
     // arrange
     expect(output).toEqual({
-      xs: 888
+      xs: 888,
     });
   });
 
@@ -58,7 +58,7 @@ describe("prepare", () => {
 
     // arrange
     expect(output).toEqual({
-      xs: 777
+      xs: 777,
     });
   });
 
@@ -71,7 +71,7 @@ describe("prepare", () => {
 
     // arrange
     expect(output).toEqual({
-      xs: undefined
+      xs: undefined,
     });
   });
 });

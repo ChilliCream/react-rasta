@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import StoryProperties from "./StoryProperties";
 import Column from "../column";
 import Container from "../container";
 import Row from "../row";
+import StoryProperties from "./StoryProperties";
 
 const Story = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

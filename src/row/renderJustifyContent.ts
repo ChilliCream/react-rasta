@@ -1,16 +1,16 @@
+import {css} from "../utils";
 import RowJustifyContent from "./RowJustifyContent";
-import { css, equals } from "../utils";
 
 export default (contentJustify?: RowJustifyContent): string => {
-  if (
-    equals(contentJustify, [
-      "center",
-      "flex-end",
-      "flex-start",
-      "space-around",
-      "space-between"
-    ])
-  ) {
+  const allowedValues = [
+    "center",
+    "flex-end",
+    "flex-start",
+    "space-around",
+    "space-between",
+  ];
+
+  if (allowedValues.includes(contentJustify!)) {
     return css`
       justify-content: ${contentJustify + ""} !important;
     `;

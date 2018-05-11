@@ -1,5 +1,5 @@
-import renderAlignContent from "./renderAlignContent";
 import flatten from "../__utils__/flatten";
+import renderAlignContent from "./renderAlignContent";
 
 describe("renderAlignContent", () => {
   it("should render align-content appropriate (input: 'center')", () => {

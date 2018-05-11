@@ -1,5 +1,5 @@
-import renderOrder from "./renderOrder";
 import flatten from "../__utils__/flatten";
+import renderOrder from "./renderOrder";
 
 describe("renderOrder", () => {
   it("should render css for flex order (input: 'first')", () => {

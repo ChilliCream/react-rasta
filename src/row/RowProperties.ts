@@ -1,10 +1,10 @@
+import {BreakpointValue} from "../media";
+import {ThemeProperties} from "../theme";
 import RowAlignContent from "./RowAlignContent";
 import RowAlignItems from "./RowAlignItems";
 import RowDirection from "./RowDirection";
 import RowJustifyContent from "./RowJustifyContent";
 import RowWrap from "./RowWrap";
-import { BreakpointValue } from "../media";
-import { ThemeProperties } from "../theme";
 
 interface RowProperties extends ThemeProperties {
   alignContent?: BreakpointValue<RowAlignContent>;

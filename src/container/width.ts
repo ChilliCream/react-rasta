@@ -1,6 +1,6 @@
+import {BreakpointValues} from "../media";
 import ContainerProperties from "./ContainerProperties";
 import defaultWidth from "./defaultWidth";
-import { BreakpointValues } from "../media";
 
 export default (props?: ContainerProperties): BreakpointValues<number> => {
   return (

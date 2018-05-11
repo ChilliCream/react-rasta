@@ -1,6 +1,9 @@
+import {ClassAttributes, HTMLAttributes} from "react";
+import {StyledComponentClass} from "styled-components";
+import {BreakpointValue, PropertyValue} from "../media";
+import {styled, Theme} from "../theme";
+import {render} from "../utils";
 import "../utils/bootstrap";
-import { ClassAttributes, HTMLAttributes } from "react";
-import { StyledComponentClass } from "styled-components";
 import renderAlignContent from "./renderAlignContent";
 import renderAlignItems from "./renderAlignItems";
 import renderDirection from "./renderDirection";
@@ -13,9 +16,6 @@ import RowDirection from "./RowDirection";
 import RowJustifyContent from "./RowJustifyContent";
 import RowProperties from "./RowProperties";
 import RowWrap from "./RowWrap";
-import { BreakpointValue, PropertyValue } from "../media";
-import { styled, Theme } from "../theme";
-import { render } from "../utils";
 
 const Row = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ const Row = styled.div`
       direction: (value?: PropertyValue) =>
         renderDirection(value as RowDirection),
       gutter: (value?: PropertyValue) => renderGutter(value as boolean),
-      wrap: (value?: PropertyValue) => renderWrap(value as RowWrap)
+      wrap: (value?: PropertyValue) => renderWrap(value as RowWrap),
     };
     const valueMap = {
       alignContent: props!.alignContent as BreakpointValue<RowAlignContent>,
@@ -41,7 +41,7 @@ const Row = styled.div`
       >,
       direction: props!.direction as BreakpointValue<RowDirection>,
       gutter: props!.noGutter as BreakpointValue<boolean>,
-      wrap: props!.wrap as BreakpointValue<RowWrap>
+      wrap: props!.wrap as BreakpointValue<RowWrap>,
     };
 
     return render(valueMap, renderer, props!.theme);

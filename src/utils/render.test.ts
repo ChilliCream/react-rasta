@@ -1,16 +1,16 @@
-import render from "./render";
 import flatten from "../__utils__/flatten";
+import render from "./render";
 
 describe("render", () => {
   it("should render as expected (input: { width: { xs: 111 } })", () => {
     // arrange
     const renderer = {
-      width: (value?) => (value && `width: ${value}px;`) || ""
+      width: (value?) => (value && `width: ${value}px;`) || "",
     };
     const valueMap = {
       width: {
-        xs: 111
-      }
+        xs: 111,
+      },
     };
 
     // act
@@ -23,12 +23,12 @@ describe("render", () => {
   it("should render as expected (input: { width: { md: 222 } })", () => {
     // arrange
     const renderer = {
-      width: (value?) => (value && `width: ${value}px;`) || ""
+      width: (value?) => (value && `width: ${value}px;`) || "",
     };
     const valueMap = {
       width: {
-        md: 222
-      }
+        md: 222,
+      },
     };
 
     // act
@@ -41,14 +41,14 @@ describe("render", () => {
   it("should render as expected (input: { width: { xs: 111, sm: 111, md: 222 } })", () => {
     // arrange
     const renderer = {
-      width: (value?) => (value && `width: ${value}px;`) || ""
+      width: (value?) => (value && `width: ${value}px;`) || "",
     };
     const valueMap = {
       width: {
         xs: 111,
         sm: 111,
-        md: 222
-      }
+        md: 222,
+      },
     };
 
     // act
@@ -56,17 +56,17 @@ describe("render", () => {
 
     // assert
     expect(flatten(output)).toBe(
-      "width:111px;@media(min-width:768px){width:222px;}"
+      "width:111px;@media(min-width:768px){width:222px;}",
     );
   });
 
   it("should render as expected (input: { width: {} })", () => {
     // arrange
     const renderer = {
-      width: (value?) => (value && `width: ${value}px;`) || ""
+      width: (value?) => (value && `width: ${value}px;`) || "",
     };
     const valueMap = {
-      width: {}
+      width: {},
     };
 
     // act
@@ -79,7 +79,7 @@ describe("render", () => {
   it("should render as expected (input: {})", () => {
     // arrange
     const renderer = {
-      width: (value?) => (value && `width: ${value}px;`) || ""
+      width: (value?) => (value && `width: ${value}px;`) || "",
     };
     const valueMap = {};
 

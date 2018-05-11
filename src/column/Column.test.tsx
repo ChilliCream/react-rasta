@@ -1,5 +1,5 @@
+import {shallow} from "enzyme";
 import "jest-styled-components";
-import { shallow } from "enzyme";
 import React from "react";
 import styled from "styled-components";
 import Column from "./Column";
@@ -24,7 +24,7 @@ describe("<Column />", () => {
   it("should match the snapshot (alignSelf: { xs: 'baseline', sm: 'center', md: 'flex-end' })", () => {
     // act
     const result = shallow(
-      <Column alignSelf={{ xs: "baseline", sm: "center", md: "flex-end" }} />
+      <Column alignSelf={{xs: "baseline", sm: "center", md: "flex-end"}} />,
     );
 
     // assert
@@ -44,7 +44,7 @@ describe("<Column />", () => {
 
   it("should match the snapshot (offset: { xs: 3, sm: 4, md: 8 }) ", () => {
     // act
-    const result = shallow(<Column offset={{ xs: 3, sm: 4, md: 8 }} />);
+    const result = shallow(<Column offset={{xs: 3, sm: 4, md: 8}} />);
 
     // assert
     expect(result).toMatchSnapshot();
@@ -60,9 +60,7 @@ describe("<Column />", () => {
 
   it("should match the snapshot (order: { xs: 'first', sm: 3, md: 'last' }) ", () => {
     // act
-    const result = shallow(
-      <Column order={{ xs: "first", sm: 3, md: "last" }} />
-    );
+    const result = shallow(<Column order={{xs: "first", sm: 3, md: "last"}} />);
 
     // assert
     expect(result).toMatchSnapshot();
@@ -78,7 +76,7 @@ describe("<Column />", () => {
 
   it("should match the snapshot (size: { xs: 'auto', sm: 7, md: 'none' }) ", () => {
     // act
-    const result = shallow(<Column size={{ xs: "auto", sm: 7, md: "none" }} />);
+    const result = shallow(<Column size={{xs: "auto", sm: 7, md: "none"}} />);
 
     // assert
     expect(result).toMatchSnapshot();
@@ -92,7 +90,12 @@ describe("<Column />", () => {
 
     // act
     const result = shallow(
-      <Column alignSelf={"stretch"} offset={offset} order={order} size={size} />
+      <Column
+        alignSelf={"stretch"}
+        offset={offset}
+        order={order}
+        size={size}
+      />,
     );
 
     // assert

@@ -1,5 +1,5 @@
-import renderSize from "./renderSize";
 import flatten from "../__utils__/flatten";
+import renderSize from "./renderSize";
 
 describe("renderSize", () => {
   it("should render css for flex size (input: 'auto')", () => {

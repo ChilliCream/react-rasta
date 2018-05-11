@@ -1,5 +1,5 @@
-import { BreakpointValues } from "../media";
-import { ThemeProperties } from "../theme";
+import {BreakpointValues} from "../media";
+import {ThemeProperties} from "../theme";
 
 interface ContainerProperties extends ThemeProperties {
   fluid?: boolean;
