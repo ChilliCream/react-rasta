@@ -36,6 +36,7 @@
     "trailing-comma": [
       true,
       {
+        "esSpecCompliant": true,
         "multiline": "always",
         "singleline": "never"
       }
