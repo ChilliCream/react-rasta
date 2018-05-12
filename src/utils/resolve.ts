@@ -5,8 +5,6 @@ import _css from "./css";
 export default (breakpoints: BreakpointMap, key: string) => {
   return (
     strings: TemplateStringsArray,
-    // note: work-a-round -> tslint is expecting trailing comma here but this is a bug
-    // tslint:disable-next-line:trailing-comma
     ...interpolations: SimpleInterpolation[]
   ): string => {
     const minWidth = breakpoints[key];
