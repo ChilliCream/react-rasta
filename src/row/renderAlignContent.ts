@@ -13,7 +13,7 @@ export default (alignContent?: RowAlignContent): string => {
 
   if (allowedValues.includes(alignContent!)) {
     return css`
-      align-content: ${alignContent + ""} !important;
+      align-content: ${alignContent!} !important;
     `;
   } else {
     return "";

@@ -11,9 +11,7 @@ const renderOrder = (order?: ColumnOrder | 0 | 13): string => {
     }
 
     if (typeof order === "number") {
-      return `
-        order: ${order - 1};
-      `;
+      return `order: ${order - 1};`;
     }
   }
 

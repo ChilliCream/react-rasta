@@ -8,9 +8,7 @@ export default (offset?: ColumnOffset): string => {
     offset > 0 &&
     offset < 12
   ) {
-    return `
-      margin-left: ${percentage(offset)}%;
-    `;
+    return `margin-left: ${percentage(offset)}%;`;
   }
 
   return "";

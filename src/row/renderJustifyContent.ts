@@ -12,7 +12,7 @@ export default (contentJustify?: RowJustifyContent): string => {
 
   if (allowedValues.includes(contentJustify!)) {
     return css`
-      justify-content: ${contentJustify + ""} !important;
+      justify-content: ${contentJustify!} !important;
     `;
   } else {
     return "";
