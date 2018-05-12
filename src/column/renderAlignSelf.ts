@@ -12,7 +12,7 @@ export default (alignSelf?: ColumnAlignSelf): string => {
 
   if (allowedValues.includes(alignSelf!)) {
     return css`
-      align-self: ${alignSelf + ""} !important;
+      align-self: ${alignSelf!} !important;
     `;
   } else {
     return "";

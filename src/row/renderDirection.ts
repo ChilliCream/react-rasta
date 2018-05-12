@@ -6,7 +6,7 @@ export default (direction?: RowDirection): string => {
 
   if (allowedValues.includes(direction!)) {
     return css`
-      flex-direction: ${direction + ""} !important;
+      flex-direction: ${direction!} !important;
     `;
   } else {
     return "";

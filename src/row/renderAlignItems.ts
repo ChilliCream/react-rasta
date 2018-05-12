@@ -12,7 +12,7 @@ export default (alignItems?: RowAlignItems): string => {
 
   if (allowedValues.includes(alignItems!)) {
     return css`
-      align-items: ${alignItems + ""} !important;
+      align-items: ${alignItems!} !important;
     `;
   } else {
     return "";
