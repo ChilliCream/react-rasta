@@ -7,18 +7,19 @@ export default (
   theme?: Theme,
 ): BreakpointValuesMap | null => {
   if (source != null) {
-    const destination: BreakpointValuesMap = {};
+    return Object.keys(source).reduce<BreakpointValuesMap>(
+      (destination, propertyKey) => {
+        const values = prepare(source[propertyKey], theme);
 
-    Object.keys(source).forEach((propertyKey) => {
-      const values = prepare(source[propertyKey], theme);
+        Object.keys(values).forEach((breakpointKey) => {
+          destination[breakpointKey] = destination[breakpointKey] || {};
+          destination[breakpointKey][propertyKey] = values[breakpointKey];
+        });
 
-      Object.keys(values).forEach((breakpointKey) => {
-        destination[breakpointKey] = destination[breakpointKey] || {};
-        destination[breakpointKey][propertyKey] = values[breakpointKey];
-      });
-    });
-
-    return destination;
+        return destination;
+      },
+      {},
+    );
   }
 
   return null;
