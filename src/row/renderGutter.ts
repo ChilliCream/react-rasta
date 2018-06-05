@@ -8,7 +8,7 @@ export default (noGutter?: boolean, theme?: Theme): string => {
       margin-right: 0;
       margin-left: 0;
 
-      > ${Column} {
+      > ${/* sc-selector */ Column} {
         padding-right: 0;
         padding-left: 0;
       }
@@ -20,7 +20,7 @@ export default (noGutter?: boolean, theme?: Theme): string => {
       margin-right: -${width}px;
       margin-left: -${width}px;
 
-      > ${Column} {
+      > ${/* sc-selector */ Column} {
         padding-right: ${width}px;
         padding-left: ${width}px;
       }
