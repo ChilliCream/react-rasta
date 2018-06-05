@@ -58,7 +58,7 @@ workflows:
             branches:
               ignore: master
             tags:
-              ignore: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
+              ignore: /^(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(\-\w*?\.[1-9]\d*)?$/
   build_and_cover:
     jobs:
       - cover:
@@ -66,7 +66,7 @@ workflows:
             branches:
               only: master
             tags:
-              ignore: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
+              ignore: /^(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(\-\w*?\.[1-9]\d*)?$/
   build_and_deploy:
     jobs:
       - deploy:
@@ -74,4 +74,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /^\d+\.\d+\.\d+(\-\w*?\.\d+)?$/
+              only: /^(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(\-\w*?\.[1-9]\d*)?$/
