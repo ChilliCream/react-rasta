@@ -4,21 +4,28 @@
   "description": "The most powerful and flexible grid system for React",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "maintainers": ["Rafael Staib"],
+  "maintainers": [
+    "Rafael Staib"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ChilliCream/react-rasta"
   },
   "author": "ChilliCream",
   "license": "MIT",
-  "keywords": ["grid", "layout", "css", "flexbox"],
+  "keywords": [
+    "grid",
+    "layout",
+    "css",
+    "flexbox"
+  ],
   "scripts": {
     "build": "yarn prettier && yarn lint && yarn test:coverage && tsc",
     "build-storybook": "build-storybook",
     "cover": "coveralls < coverage/lcov.info",
     "lint": "yarn lint:code && yarn lint:style",
-    "lint:code": "tslint -c tslint.json 'src/**/*.ts*'",
-    "lint:style": "stylelint src/**/*.ts*"
+    "lint:code": "tslint -c tslint.json './src/**/*.ts*'",
+    "lint:style": "stylelint src/**/*.ts*",
     "precommit": "pretty-quick --staged",
     "prettier": "prettier \"./*.+(js|json|md)\" \"./src/**/*.*\" --write",
     "storybook": "start-storybook -p 6006",
