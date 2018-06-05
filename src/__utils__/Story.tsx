@@ -10,16 +10,16 @@ const Story = styled.div`
     "Segoe UI Symbol";
   ${(props: StoryProperties) => (props.fullscreen ? "height: 100%;" : "")}
 
-  ${Container},
-  ${Row} {
+  ${/*sc-selector*/ Container},
+  ${/*sc-selector*/ Row} {
     background: #ccc;
     ${(props: StoryProperties) => (props.fullscreen ? "" : "height: 300px;")}
   }
 
-  ${Row} > ${Column} {
+  ${/*sc-selector*/ Row} > ${/*sc-selector*/ Column} {
     background: #0a5991;
     border: 5px solid #ccc;
-    color #fff;
+    color: #fff;
     font-size: 2em;
     line-height: 65px;
     text-align: center;
