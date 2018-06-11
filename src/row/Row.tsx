@@ -30,7 +30,8 @@ const Row = styled.div`
         renderJustifyContent(value as RowJustifyContent),
       direction: (value?: PropertyValue) =>
         renderDirection(value as RowDirection),
-      gutter: (value?: PropertyValue) => renderGutter(value as boolean),
+      gutter: (value?: PropertyValue) =>
+        renderGutter(value as boolean, props.theme),
       wrap: (value?: PropertyValue) => renderWrap(value as RowWrap),
     };
     const valueMap = {
