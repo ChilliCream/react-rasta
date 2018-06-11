@@ -19,6 +19,8 @@ const containerWidth = {
   desktop: 760,
 };
 
+const gutterWidth = 100;
+
 storiesOf("Container", module)
   .add("fluid", () => (
     <Story>
@@ -48,6 +50,21 @@ storiesOf("Container", module)
             <Column size={3}>1</Column>
             <Column size={{phone: 9, tablet: 3}}>2</Column>
             <Column size={{phone: 9, tablet: 3}}>3</Column>
+            <Column size={3}>4</Column>
+          </Row>
+        </Container>
+      </ThemeProvider>
+    </Story>
+  ))
+  .add("gutterWidth100", () => (
+    <Story>
+      <Title>themeProvider</Title>
+      <ThemeProvider theme={{gutterWidth}}>
+        <Container>
+          <Row>
+            <Column size={3}>1</Column>
+            <Column size={3}>2</Column>
+            <Column size={3}>3</Column>
             <Column size={3}>4</Column>
           </Row>
         </Container>
