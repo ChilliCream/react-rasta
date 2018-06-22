@@ -43,7 +43,7 @@ const Container = styled.div`
         width: getWidth(props),
       };
 
-      return render(valueMap, renderer, props!.theme);
+      return render(valueMap, renderer, props.theme);
     }
   }};
 `;

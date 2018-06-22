@@ -1,6 +1,6 @@
 import {injectGlobal} from "../theme/StyledComponents";
 
-let applied: boolean = false;
+let applied = false;
 
 export default () => {
   if (!applied) {

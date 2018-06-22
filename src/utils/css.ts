@@ -5,6 +5,4 @@ import flatten from "./flatten";
 export default (
   strings: TemplateStringsArray,
   ...interpolations: SimpleInterpolation[]
-): string => {
-  return flatten(css(strings, ...interpolations));
-};
+): string => flatten(css(strings, ...interpolations));

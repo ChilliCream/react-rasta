@@ -17,7 +17,7 @@
     "build-storybook": "build-storybook",
     "cover": "coveralls < coverage/lcov.info",
     "lint": "yarn lint:code && yarn lint:style",
-    "lint:code": "tslint -c tslint.json \"./src/**/*.ts*\"",
+    "lint:code": "tslint -p ./tsconfig.json \"./src/**/*.ts*\"",
     "lint:style": "stylelint \"./src/**/*.ts*\"",
     "precommit": "pretty-quick --staged",
     "prettier": "prettier \"./*.+(js|json|md)\" \"./src/**/*.*\" --write",

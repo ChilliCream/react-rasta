@@ -11,22 +11,21 @@ export default (
   theme?: Theme,
 ): BreakpointValues<PropertyValue> => {
   const defaultKey = defaultBreakpointKey(theme);
+  let output = values || {};
 
-  values = values || {};
-
-  if (typeof values !== "object") {
+  if (typeof output !== "object") {
     const newValues = {};
 
     if (defaultKey != null) {
-      newValues[defaultKey] = values;
+      newValues[defaultKey] = output;
     }
 
-    values = newValues;
+    output = newValues;
   }
 
-  if (defaultKey != null && values[defaultKey] == null) {
-    values[defaultKey] = undefined;
+  if (defaultKey != null && output[defaultKey] == null) {
+    output[defaultKey] = undefined;
   }
 
-  return values;
+  return output;
 };

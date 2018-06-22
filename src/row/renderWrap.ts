@@ -4,7 +4,7 @@ import RowWrap from "./RowWrap";
 function renderWrap(wrap?: RowWrap): string {
   const allowedValues = ["nowrap", "wrap", "wrap-reverse"];
 
-  if (wrap == null || !allowedValues.includes(wrap!)) {
+  if (wrap == null || !allowedValues.includes(wrap)) {
     return renderWrap("wrap");
   } else {
     return css`

@@ -35,6 +35,28 @@ describe("renderSize", () => {
     expect(flatten(output)).toBe("");
   });
 
+  it("should render css for flex size (input: 0)", () => {
+    // arrange
+    const input = 0;
+
+    // act
+    const output = renderSize(input as any);
+
+    // assert
+    expect(flatten(output)).toBe("");
+  });
+
+  it("should render css for flex size (input: -1)", () => {
+    // arrange
+    const input = -1;
+
+    // act
+    const output = renderSize(input as any);
+
+    // assert
+    expect(flatten(output)).toBe("");
+  });
+
   it("should render css for flex size (input: 6)", () => {
     // arrange
     const input = 6;

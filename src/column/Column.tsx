@@ -31,14 +31,14 @@ const Column = styled.div`
       size: (value?: PropertyValue) => renderSize(value as ColumnSize),
     };
     const valueMap = {
-      alignSelf: props!.alignSelf as BreakpointValue<ColumnAlignSelf>,
-      flex: props!.flex as BreakpointValue<ColumnFlex>,
-      offset: props!.offset as BreakpointValue<ColumnOffset>,
-      order: props!.order as BreakpointValue<ColumnOrder>,
-      size: props!.size as BreakpointValue<ColumnSize>,
+      alignSelf: props.alignSelf,
+      flex: props.flex,
+      offset: props.offset,
+      order: props.order,
+      size: props.size,
     };
 
-    return render(valueMap, renderer, props!.theme);
+    return render(valueMap, renderer, props.theme);
   }};
 `;
 

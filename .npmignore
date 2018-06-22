@@ -1,6 +1,7 @@
 # Build
 .circleci/
 .storybook/
+linting/
 node_modules/
 *.tgz
 tslint.json
@@ -26,6 +27,10 @@ src/**/*.test.*
 
 # Config
 /.bettercodehub.yml
+/.editorconfig
+/.gitattributes
+/.prettierrc.json
+/.stylelintrc.json
 /jest.config.json
 /test.config.ts
 /tsconfig.json
