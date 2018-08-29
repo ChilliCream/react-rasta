@@ -1,6 +1,7 @@
 # Build
 .circleci/
 .storybook/
+linting/
 node_modules/
 *.tgz
 tslint.json

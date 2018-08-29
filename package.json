@@ -2,8 +2,8 @@
   "name": "react-rasta",
   "version": "1.0.0",
   "description": "The most powerful and flexible grid system for React",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./lib/es6/index.js",
+  "types": "./lib/es6/index.d.ts",
   "maintainers": ["Rafael Staib"],
   "repository": {
     "type": "git",
@@ -13,7 +13,8 @@
   "license": "MIT",
   "keywords": ["grid", "layout", "css", "flexbox"],
   "scripts": {
-    "build": "yarn prettier && yarn lint && yarn test:coverage && tsc",
+    "build":
+      "yarn prettier && yarn lint && yarn test:coverage && (tsc & tsc -p ./tsconfig.es5.json)",
     "build-storybook": "build-storybook",
     "cover": "coveralls < coverage/lcov.info",
     "lint": "yarn lint:code && yarn lint:style",
