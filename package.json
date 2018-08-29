@@ -14,7 +14,7 @@
   "keywords": ["grid", "layout", "css", "flexbox"],
   "scripts": {
     "build":
-      "yarn prettier && yarn lint && yarn test:coverage && tsc & tsc -p ./tsconfig.es5.json",
+      "yarn prettier && yarn lint && yarn test:coverage && (tsc & tsc -p ./tsconfig.es5.json)",
     "build-storybook": "build-storybook",
     "cover": "coveralls < coverage/lcov.info",
     "lint": "yarn lint:code && yarn lint:style",
