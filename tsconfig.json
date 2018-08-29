@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "lib/es6",
     "module": "commonjs",
     "target": "es6",
     "lib": ["esnext", "dom"],

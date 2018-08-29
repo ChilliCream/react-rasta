@@ -4,7 +4,6 @@
 linting/
 node_modules/
 *.tgz
-tslint.json
 
 # Editors & OS
 .DS_Store
@@ -34,5 +33,7 @@ src/**/*.test.*
 /jest.config.json
 /test.config.ts
 /tsconfig.json
+/tsconfig.*.json
 /tslint.config
+/tslint.json
 /yarn.lock
