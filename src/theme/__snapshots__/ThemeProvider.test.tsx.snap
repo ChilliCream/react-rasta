@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ThemeProvider /> should match the snapshot (gutterWidth set to 100) 1`] = `
+exports[
+  `<ThemeProvider /> should match the snapshot (gutterWidth set to 100) 1`
+] = `
 .c3 {
   position: relative;
   width: 100%;

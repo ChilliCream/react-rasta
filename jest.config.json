@@ -1,6 +1,7 @@
 {
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
+    "!src/**/__snapshots__/**/*.*",
     "!src/__utils__/**/*.*",
     "!src/**/*.story.{js,jsx,ts,tsx}"
   ],
