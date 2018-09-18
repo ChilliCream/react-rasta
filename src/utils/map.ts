@@ -6,7 +6,7 @@ export default (
   source?: PropertyValuesMap,
   theme?: Theme,
 ): BreakpointValuesMap | null => {
-  if (source != null) {
+  if (source !== undefined) {
     return Object.keys(source).reduce<BreakpointValuesMap>(
       (destination, propertyKey) => {
         const values = prepare(source[propertyKey], theme);

@@ -35,17 +35,15 @@ const Row = styled.div`
       wrap: (value?: PropertyValue) => renderWrap(value as RowWrap),
     };
     const valueMap = {
-      alignContent: props!.alignContent as BreakpointValue<RowAlignContent>,
-      alignItems: props!.alignItems as BreakpointValue<RowAlignItems>,
-      justifyContent: props!.justifyContent as BreakpointValue<
-        RowJustifyContent
-      >,
-      direction: props!.direction as BreakpointValue<RowDirection>,
-      gutter: props!.noGutter as BreakpointValue<boolean>,
-      wrap: props!.wrap as BreakpointValue<RowWrap>,
+      alignContent: props.alignContent,
+      alignItems: props.alignItems,
+      justifyContent: props.justifyContent,
+      direction: props.direction,
+      gutter: props.noGutter,
+      wrap: props.wrap,
     };
 
-    return render(valueMap, renderer, props!.theme);
+    return render(valueMap, renderer, props.theme);
   }};
 `;
 

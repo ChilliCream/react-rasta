@@ -16,6 +16,5 @@ test/
 junit.xml
 
 # Output
-*.js
 *.js.map
 *.d.ts

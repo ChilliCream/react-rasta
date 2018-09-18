@@ -4,7 +4,6 @@
 linting/
 node_modules/
 *.tgz
-tslint.json
 
 # Editors & OS
 .DS_Store
@@ -27,8 +26,14 @@ src/**/*.test.*
 
 # Config
 /.bettercodehub.yml
+/.editorconfig
+/.gitattributes
+/.prettierrc.json
+/.stylelintrc.json
 /jest.config.json
 /test.config.ts
 /tsconfig.json
+/tsconfig.*.json
 /tslint.config
+/tslint.json
 /yarn.lock

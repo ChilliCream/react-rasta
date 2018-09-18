@@ -1,6 +1,6 @@
 import {injectGlobal} from "../theme/StyledComponents";
 
-let initialized: boolean = false;
+let initialized = false;
 
 function bootstrap() {
   if (!initialized) {
