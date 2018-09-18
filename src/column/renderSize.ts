@@ -2,7 +2,9 @@ import {percentage} from "../utils";
 import ColumnSize from "./ColumnSize";
 
 export default (size?: ColumnSize): string => {
-  if (size == null || typeof size === "object" || size < 1 || size > 12) {
+  // the next expression is for JS projects
+  // tslint:disable-next-line:strict-type-predicates
+  if (size === undefined || typeof size === "object" || size < 1 || size > 12) {
     return "";
   }
 

@@ -16,14 +16,14 @@ export default (
   if (typeof output !== "object") {
     const newValues = {};
 
-    if (defaultKey != null) {
+    if (defaultKey !== null) {
       newValues[defaultKey] = output;
     }
 
     output = newValues;
   }
 
-  if (defaultKey != null && output[defaultKey] == null) {
+  if (defaultKey !== null && output[defaultKey] === undefined) {
     output[defaultKey] = undefined;
   }
 

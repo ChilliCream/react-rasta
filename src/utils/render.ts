@@ -16,6 +16,8 @@ export default (
 ): string => {
   const breakpointsMap = breakpoints(theme);
   const breakpointValues = map(valueMap, theme) || {};
+  // the next expression is for JS projects
+  // tslint:disable:strict-type-predicates
   const breakpointKeys = Object.keys(breakpointValues).filter(
     (breakpointKey) =>
       breakpointsMap[breakpointKey] != null &&
@@ -24,6 +26,7 @@ export default (
   const propertyKeys = Object.keys(valueMap).filter(
     (propertyKey) => renderer[propertyKey] != null,
   );
+  // tslint:enable:strict-type-predicates
   const previousValues: PropertyValues = {};
   let count = 0;
 
