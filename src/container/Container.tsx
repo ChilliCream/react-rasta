@@ -4,7 +4,7 @@ import {PropertyValue} from "../media";
 import Row from "../row";
 import {gutterWidth, styled, Theme} from "../theme";
 import {css, render} from "../utils";
-import "../utils/bootstrap";
+import "../utils/BootstrapStyles";
 import ContainerProperties from "./ContainerProperties";
 import fullscreen from "./fullscreen";
 import renderWidth from "./renderWidth";

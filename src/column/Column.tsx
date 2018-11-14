@@ -3,7 +3,7 @@ import {StyledComponentClass} from "styled-components";
 import {BreakpointValue, PropertyValue} from "../media";
 import {styled, Theme} from "../theme";
 import {render} from "../utils";
-import "../utils/bootstrap";
+import "../utils/BootstrapStyles";
 import ColumnAlignSelf from "./ColumnAlignSelf";
 import ColumnFlex from "./ColumnFlex";
 import ColumnOffset from "./ColumnOffset";

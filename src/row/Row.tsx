@@ -1,9 +1,6 @@
-import {ClassAttributes, HTMLAttributes} from "react";
-import {StyledComponentClass} from "styled-components";
-import {BreakpointValue, PropertyValue} from "../media";
-import {styled, Theme} from "../theme";
-import {render} from "../utils";
-import "../utils/bootstrap";
+import {PropertyValue} from "../media";
+import {styled} from "../theme";
+import {BootstrapStyles, render} from "../utils";
 import renderAlignContent from "./renderAlignContent";
 import renderAlignItems from "./renderAlignItems";
 import renderDirection from "./renderDirection";

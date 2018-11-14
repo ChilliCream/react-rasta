@@ -1,7 +1,7 @@
 import {ClassAttributes, HTMLAttributes} from "react";
 import {StyledComponentClass} from "styled-components";
 import {styled, Theme} from "../theme";
-import "../utils/bootstrap";
+import "../utils/BootstrapStyles";
 
 const Break = styled.div`
   width: 100%;

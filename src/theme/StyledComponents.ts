@@ -5,10 +5,10 @@ import Theme from "./Theme";
 const {
   default: styled,
   css,
-  injectGlobal,
+  createGlobalStyle,
   keyframes,
   ThemeProvider,
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<Theme>;
 
 export default styled;
-export {css, injectGlobal, keyframes, ThemeProvider};
+export {css, createGlobalStyle, keyframes, ThemeProvider};
